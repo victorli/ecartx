@@ -1,0 +1,80 @@
+/* block top search */
+#search_block_top{
+    margin-right: 0;
+    border: 1px solid #ccc;
+    padding: 2px 0 2px 10px;
+    position: absolute;
+    top: 0px;
+    z-index: 1001;
+    right: 15px;
+}
+@media (max-width: 767px) {
+    #search_block_top{
+    top: 10px;
+    right: auto;
+    left:45px
+}
+}
+#search_block_top p {padding:0;}
+#search_block_top #search_query_top {
+	color:#ccc;
+	float: left;
+    background: none;
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+    width: 150px;
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    #search_block_top #search_query_top {
+        width: 110px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    #search_block_top #search_query_top {
+        width: 80px;
+    }
+}
+#search_block_top #search_query_top:focus{
+    width: 250px;
+}
+#search_block_top .search_button{
+    background: url("img/search_icon.png") no-repeat right center transparent;
+    border: 0;
+    margin-right: 5px;
+    padding: 3px 7px;
+}
+#search_block_top .search_button{
+
+}
+#search_block_top .search_query, #search_block_top .search_query:focus{
+    border: 0;
+    padding: 3px 0;
+    outline: none;
+}
+#search_block_top .button {
+	border:none;
+	border-radius:0;
+	color:#fff;
+	text-transform:uppercase;
+	background:url(img/bg_search_submit.png) repeat-x 0 0 #101010;
+	float: left;
+	height: 25px;
+}
+.ac_results{border: none;}
+.ac_results li{
+    background: #f7f7f7;
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+}
+.ac_results li img{
+    vertical-align: middle;
+}
+.ac_results .ac_product_name{
+    padding-left: 5px;
+    color:#666;
+}
+.ac_results li:hover .ac_product_name{
+    color:#fff;
+}

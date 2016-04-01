@@ -1,0 +1,24 @@
+/* BLOCK #ovicreinsurance_block ******************************************************************** */
+#ovicreinsurance_block {background:url(../blockreinsurance/img/bg_ovicreinsurance_block.gif) repeat-x 0 0 #c3c7cb}
+#ovicreinsurance_block li {
+	float:left;
+	padding:15px 10px !important;
+	font-size:13px;
+	color:#333;
+	text-transform:uppercase;
+	text-shadow:0 1px 0 #fff
+}
+#ovicreinsurance_block .width1 li {width:960px}
+#ovicreinsurance_block .width2 li {width:470px}
+#ovicreinsurance_block .width3 li {width:305px}
+#ovicreinsurance_block .width4 li {width:224px}
+#ovicreinsurance_block .width5 li {width:175px}
+#ovicreinsurance_block li img {
+	float:left;
+	margin-right:10px;
+}
+#ovicreinsurance_block li span {
+	float:left;
+	padding-top:12px;
+	width:65%;
+}

@@ -1,0 +1,70 @@
+#responsive_slides .bx-wrapper .bx-pager {display: none;}
+#responsive_slides .bx-wrapper .bx-controls-direction a {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    outline: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 0;
+    z-index: 99;
+    border: none;
+    opacity: 0;
+    transition:opacity 0.15s ease;
+    -webkit-transition:opacity 0.15s ease;
+    -moz-transition:opacity 0.15s ease;
+    -o-transition:opacity 0.15s ease;
+}
+#responsive_slides:hover .bx-wrapper .bx-controls-direction a {
+    opacity: 1;
+}
+#responsive_slides .bx-wrapper .bx-controls-direction a.bx-prev {
+    left: 0;
+}
+#responsive_slides .bx-wrapper .bx-controls-direction a.bx-next {
+    right: 0;
+}
+#responsive_slides .bx-wrapper .bx-controls-direction a:before {
+    height: 40px;
+    width: 40px;
+    display: block;
+    background: #000;
+    content: ".";
+    opacity: 0.6;
+    text-indent: -9999px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    transition:background 0.15s ease;
+    -webkit-transition:background 0.15s ease;
+    -moz-transition:background 0.15s ease;
+    -o-transition:background 0.15s ease;
+}
+#responsive_slides .bx-wrapper .bx-controls-direction a:after {
+    display: block;
+    font-family: "FontAwesome";
+    font-size: 14px;
+    line-height: 40px;
+    color: #FFF;
+    vertical-align: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-weight: normal;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+#responsive_slides .bx-wrapper .bx-controls-direction a.bx-next:after {
+    content: "\f105";
+}
+#responsive_slides .bx-wrapper .bx-controls-direction a.bx-prev:after {
+    content: "\f104";
+}
+#responsive_slides .bx-wrapper .bx-controls-direction a:hover:before {
+    background: #fe983d;
+    opacity: 1;
+}

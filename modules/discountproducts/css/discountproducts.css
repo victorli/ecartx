@@ -1,0 +1,73 @@
+/********* discount products ***********/
+#discountproducts{
+    margin: 0 0 16px;
+    padding: 0;
+    padding-right: 8px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .carousel-list ul.product_list.grid > li{
+        height:406px;
+    }
+    #discountproducts ul.product_list.grid > li .product-container .product-image-container {
+        height: 254px;
+    }
+    #discountproducts ul.product_list.grid > li:hover .product-image-container img {
+        top: -254px;
+    }
+    #discountproducts ul.product_list.grid .product-image-container img.second-img {
+        top: 254px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    #discountproducts ul.product_list.grid > li{
+        height:452px;
+    }
+    #discountproducts ul.product_list.grid > li .product-container .product-image-container {
+        height: 301px;
+    }
+    #discountproducts ul.product_list.grid > li:hover .product-image-container img {
+        top: -301px;
+    }
+    #discountproducts ul.product_list.grid .product-image-container img.second-img {
+        display: block;
+        top: 301px;
+    }
+    #discountproducts ul.product_list.grid > li:hover .product-container .functional-buttons div.wishlist {
+        right: 25px;
+      }
+    #discountproducts ul.product_list.grid > li:hover .product-container .functional-buttons div.compare {
+        left: 25px;
+      }
+
+}
+#discountproducts ul.product_list.grid > li:hover .product-image-container img.second-img {
+    top: 0;
+}
+
+h1.heading-title{
+    font-size: 30px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color:#393939;
+    line-height: 24px;
+    margin: 0 0 25px;
+}
+h1.heading-title .coundown-title{
+    display: table;
+    color:#858785;
+}
+h1.heading-title .coundown-title span{
+    display: table-cell;
+    vertical-align: middle;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+}
+h1.heading-title .coundown-title i.icon-time{
+    font-size: 22px;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 5px;
+    color: #fe983d;
+}

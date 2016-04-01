@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>ovicstoremap</name>
+	<displayName><![CDATA[Supershop - Store Map]]></displayName>
+	<version><![CDATA[1]]></version>
+	<description><![CDATA[Displays store location with google map.]]></description>
+	<author><![CDATA[OvicSoft]]></author>
+	<tab><![CDATA[front_office_features]]></tab>
+	<is_configurable>1</is_configurable>
+	<need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

@@ -1,0 +1,35 @@
+.style-0 .box-header{
+    background: #A6CADA;
+}
+.style-0 .group-types{
+    background: #B2D7E8;
+}
+.style-0 .category-list li a:hover,
+.style-0 .category-list li.active a{
+	border-left: 3px solid #A6CADA;
+	color: #A6CADA;
+} 
+.style-0 .manufacturer-list-paginations:hover, 
+.style-0 .group-products-paginations:hover{
+    background: #A6CADA;
+    color: #fff;
+}
+.style-0 .group-banners{
+	/*background: #A6CADA;*/
+    background: #a6cada; /* Old browsers */
+    background: -moz-linear-gradient(top,  #a6cada 0%, #b2d2de 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a6cada), color-stop(100%,#b2d2de)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #a6cada 0%,#b2d2de 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #a6cada 0%,#b2d2de 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #a6cada 0%,#b2d2de 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #a6cada 0%,#b2d2de 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6cada', endColorstr='#b2d2de',GradientType=0 ); /* IE6-9 */
+
+
+}
+.style-0 .add-to-cart{
+	background: #A6CADA;
+}
+.style-0 .product-price-new{
+	color: #A6CADA;
+}

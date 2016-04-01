@@ -1,0 +1,60 @@
+.modal-footer{
+	position: relative;
+}
+p.ajax-loader{width: 100%;height: 100%;position: absolute;top: 0px;left: 0px;z-index: 1000; text-align:center;background-color:rgba(0, 0, 0, 0.1)}
+p.ajax-loader i{
+	font-size: 32px;
+	margin-top: 20%;
+	color: #009AFD;
+}
+.modal-footer p.ajax-loader i{
+	margin-top: 15px;
+	font-size: 24px;
+} 
+.fa {
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.fa-spinner:before {
+  content: "\f110";
+}
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+  
+}
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.tr-selected td{
+    background: #D7DBE3 !important;
+}
+.lik-menu-item-status, 
+.lik-module-status, 
+.lik-menu-status, 
+.lik-group-status{
+    cursor: pointer;
+}

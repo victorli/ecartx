@@ -1,0 +1,166 @@
+[05-Jan-2015 09:30:35 Europe/Paris] PHP Warning:  Creating default object from empty value in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 261
+[09-Jan-2015 02:49:26 Europe/Paris] PHP Strict Standards:  Non-static method VerticalMegaMenusAjax::saveMenu() should not be called statically in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 32
+[09-Jan-2015 02:49:26 Europe/Paris] PHP Warning:  Creating default object from empty value in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 262
+[09-Jan-2015 02:51:23 Europe/Paris] PHP Warning:  Creating default object from empty value in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 262
+[09-Jan-2015 02:55:36 Europe/Paris] PHP Notice:  Undefined index:  in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 583
+[08-Jan-2015 20:04:23 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 152
+[08-Jan-2015 20:04:56 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 327
+[12-Jan-2015 04:26:08 Europe/Paris] PHP Warning:  Creating default object from empty value in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 696
+[12-Jan-2015 04:26:16 Europe/Paris] PHP Warning:  Creating default object from empty value in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 696
+[12-Jan-2015 04:26:17 Europe/Paris] PHP Warning:  Creating default object from empty value in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 696
+[12-Jan-2015 04:26:20 Europe/Paris] PHP Warning:  Creating default object from empty value in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 696
+[12-Jan-2015 04:26:22 Europe/Paris] PHP Warning:  Creating default object from empty value in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 696
+[12-Jan-2015 04:26:32 Europe/Paris] PHP Warning:  Creating default object from empty value in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 696
+[12-Jan-2015 04:27:08 Europe/Paris] PHP Warning:  Creating default object from empty value in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 696
+[12-Jan-2015 04:28:24 Europe/Paris] PHP Warning:  Creating default object from empty value in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 696
+[12-Jan-2015 04:34:22 Europe/Paris] PHP Warning:  Creating default object from empty value in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 701
+[11-Jan-2015 22:28:29 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 673
+[12-Jan-2015 08:09:08 Europe/Paris] PHP Fatal error:  Uncaught You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's wear' Where `group_id` = 7 AND `id_lang` = 1 AND `id_shop` = 1' at line 1<br /><br /><pre>Update ps_verticalmegamenus_group_lang Set title = 'Men's wear' Where `group_id` = 7 AND `id_lang` = 1 AND `id_shop` = 1</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[12-Jan-2015 08:09:26 Europe/Paris] PHP Fatal error:  Uncaught You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's wear' Where `group_id` = 7 AND `id_lang` = 1 AND `id_shop` = 1' at line 1<br /><br /><pre>Update ps_verticalmegamenus_group_lang Set title = 'Men's wear' Where `group_id` = 7 AND `id_lang` = 1 AND `id_shop` = 1</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[12-Jan-2015 08:10:41 Europe/Paris] PHP Fatal error:  Uncaught You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's wear' Where `group_id` = 7 AND `id_lang` = 1 AND `id_shop` = 1' at line 1<br /><br /><pre>Update ps_verticalmegamenus_group_lang Set title = 'men's wear' Where `group_id` = 7 AND `id_lang` = 1 AND `id_shop` = 1</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[12-Jan-2015 08:10:54 Europe/Paris] PHP Fatal error:  Uncaught You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's wear' Where `group_id` = 7 AND `id_lang` = 1 AND `id_shop` = 1' at line 1<br /><br /><pre>Update ps_verticalmegamenus_group_lang Set title = 'men's wear' Where `group_id` = 7 AND `id_lang` = 1 AND `id_shop` = 1</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[12-Jan-2015 08:11:11 Europe/Paris] PHP Fatal error:  Uncaught You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's wear' Where `group_id` = 7 AND `id_lang` = 1 AND `id_shop` = 1' at line 1<br /><br /><pre>Update ps_verticalmegamenus_group_lang Set title = 'men's wear' Where `group_id` = 7 AND `id_lang` = 1 AND `id_shop` = 1</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[12-Jan-2015 08:14:17 Europe/Paris] PHP Fatal error:  Uncaught You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's wear' Where `group_id` = 7 AND `id_lang` = 1 AND `id_shop` = 1' at line 1<br /><br /><pre>Update ps_verticalmegamenus_group_lang Set title = 'Men's wear' Where `group_id` = 7 AND `id_lang` = 1 AND `id_shop` = 1</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[12-Jan-2015 08:14:33 Europe/Paris] PHP Fatal error:  Uncaught You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's wear' Where `group_id` = 7 AND `id_lang` = 1 AND `id_shop` = 1' at line 1<br /><br /><pre>Update ps_verticalmegamenus_group_lang Set title = 'Men's wear' Where `group_id` = 7 AND `id_lang` = 1 AND `id_shop` = 1</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[12-Jan-2015 08:14:49 Europe/Paris] PHP Fatal error:  Uncaught You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's wear')' at line 1<br /><br /><pre>Insert Into ps_verticalmegamenus_group_lang (`group_id`, `id_lang`, `id_shop`, `title`) Values ('9', '1', '1', 'Men's wear')</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[12-Jan-2015 08:14:57 Europe/Paris] PHP Fatal error:  Uncaught You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's wear')' at line 1<br /><br /><pre>Insert Into ps_verticalmegamenus_group_lang (`group_id`, `id_lang`, `id_shop`, `title`) Values ('10', '1', '1', 'Men's wear')</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[12-Jan-2015 08:15:05 Europe/Paris] PHP Fatal error:  Uncaught You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's wear')' at line 1<br /><br /><pre>Insert Into ps_verticalmegamenus_group_lang (`group_id`, `id_lang`, `id_shop`, `title`) Values ('11', '1', '1', 'woMen's wear')</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[12-Jan-2015 08:15:18 Europe/Paris] PHP Fatal error:  Uncaught You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's wear')' at line 1<br /><br /><pre>Insert Into ps_verticalmegamenus_group_lang (`group_id`, `id_lang`, `id_shop`, `title`) Values ('12', '1', '1', 'woMen's wear')</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[12-Jan-2015 08:15:18 Europe/Paris] PHP Fatal error:  Uncaught You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's wear')' at line 1<br /><br /><pre>Insert Into ps_verticalmegamenus_group_lang (`group_id`, `id_lang`, `id_shop`, `title`) Values ('13', '1', '1', 'woMen's wear')</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[12-Jan-2015 08:16:25 Europe/Paris] PHP Fatal error:  Uncaught You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 's gfdgdfgf')' at line 1<br /><br /><pre>Insert Into ps_verticalmegamenus_group_lang (`group_id`, `id_lang`, `id_shop`, `title`) Values ('16', '1', '1', 'men's gfdgdfgf')</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[12-Jan-2015 08:16:45 Europe/Paris] PHP Fatal error:  Uncaught Unknown column 'menu_id' in 'where clause'<br /><br /><pre>Delete From ps_verticalmegamenus_group_lang Where menu_id = 13</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[12-Jan-2015 08:16:52 Europe/Paris] PHP Fatal error:  Uncaught Unknown column 'menu_id' in 'where clause'<br /><br /><pre>Delete From ps_verticalmegamenus_group_lang Where menu_id = 12</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[12-Jan-2015 08:17:00 Europe/Paris] PHP Fatal error:  Uncaught Unknown column 'menu_id' in 'where clause'<br /><br /><pre>Delete From ps_verticalmegamenus_group_lang Where menu_id = 11</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[12-Jan-2015 08:17:28 Europe/Paris] PHP Fatal error:  Uncaught Unknown column 'menu_id' in 'where clause'<br /><br /><pre>Delete From ps_verticalmegamenus_group_lang Where menu_id = 9</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[12-Jan-2015 08:17:33 Europe/Paris] PHP Fatal error:  Uncaught Unknown column 'menu_id' in 'where clause'<br /><br /><pre>Delete From ps_verticalmegamenus_group_lang Where menu_id = 10</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[12-Jan-2015 08:18:08 Europe/Paris] PHP Fatal error:  Uncaught Unknown column 'menu_id' in 'where clause'<br /><br /><pre>Delete From ps_verticalmegamenus_group_lang Where menu_id = 7</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[12-Jan-2015 08:32:03 Europe/Paris] PHP Notice:  Use of undefined constant escape - assumed 'escape' in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 466
+[12-Jan-2015 08:50:31 Europe/Paris] PHP Fatal error:  Uncaught You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''dsfsdfdsfds'' Where `group_id` = 15 AND `id_lang` = 1 AND `id_shop` = 1' at line 1<br /><br /><pre>Update ps_verticalmegamenus_group_lang Set title = 'dsfsdfdsfds'' Where `group_id` = 15 AND `id_lang` = 1 AND `id_shop` = 1</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[12-Jan-2015 08:52:52 Europe/Paris] PHP Warning:  mysql_real_escape_string(): Access denied for user 'dev04ovi'@'localhost' (using password: NO) in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 471
+[12-Jan-2015 08:52:52 Europe/Paris] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 471
+[12-Jan-2015 08:55:13 Europe/Paris] PHP Deprecated:  mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 472
+[12-Jan-2015 08:56:18 Europe/Paris] PHP Warning:  mysql_real_escape_string(): Access denied for user 'dev04ovi'@'localhost' (using password: NO) in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 472
+[12-Jan-2015 08:56:18 Europe/Paris] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 472
+[13-Jan-2015 09:15:14 Europe/Paris] PHP Notice:  Undefined index: iamgeAlt in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 236
+[13-Jan-2015 09:15:22 Europe/Paris] PHP Notice:  Undefined index: iamgeAlt in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 236
+[13-Jan-2015 09:16:08 Europe/Paris] PHP Notice:  Undefined index: iamgeAlt in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 236
+[13-Jan-2015 09:16:09 Europe/Paris] PHP Notice:  Undefined index: iamgeAlt in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 236
+[13-Jan-2015 09:16:09 Europe/Paris] PHP Notice:  Undefined index: iamgeAlt in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 236
+[13-Jan-2015 09:16:09 Europe/Paris] PHP Notice:  Undefined index: iamgeAlt in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 236
+[13-Jan-2015 09:16:44 Europe/Paris] PHP Notice:  Undefined index: iamgeAlt in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 236
+[13-Jan-2015 09:18:10 Europe/Paris] PHP Notice:  Undefined index: iamgeAlt in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 236
+[13-Jan-2015 09:18:45 Europe/Paris] PHP Notice:  Undefined index: iamgeAlt in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 236
+[13-Jan-2015 09:19:10 Europe/Paris] PHP Notice:  Undefined index: iamgeAlt in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 236
+[13-Jan-2015 09:19:14 Europe/Paris] PHP Notice:  Undefined index: iamgeAlt in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 236
+[13-Jan-2015 09:19:41 Europe/Paris] PHP Notice:  Undefined index: iamgeAlt in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 236
+[13-Jan-2015 09:20:08 Europe/Paris] PHP Notice:  Undefined index: iamgeAlt in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 236
+[13-Jan-2015 09:20:33 Europe/Paris] PHP Notice:  Undefined index: iamgeAlt in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 236
+[13-Jan-2015 09:21:11 Europe/Paris] PHP Notice:  Undefined index: iamgeAlt in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 236
+[13-Jan-2015 09:21:12 Europe/Paris] PHP Notice:  Undefined index: iamgeAlt in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 236
+[14-Jan-2015 03:19:21 Europe/Paris] PHP Notice:  Undefined index: iamgeAlt in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 236
+[14-Jan-2015 03:19:29 Europe/Paris] PHP Notice:  Undefined index: iamgeAlt in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 236
+[14-Jan-2015 03:34:18 Europe/Paris] PHP Notice:  Undefined index: iamgeAlt in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 236
+[14-Jan-2015 04:53:00 Europe/Paris] PHP Warning:  Creating default object from empty value in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 93
+[14-Jan-2015 04:53:32 Europe/Paris] PHP Warning:  Creating default object from empty value in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 93
+[14-Jan-2015 04:53:40 Europe/Paris] PHP Warning:  Creating default object from empty value in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 93
+[14-Jan-2015 04:54:02 Europe/Paris] PHP Warning:  Creating default object from empty value in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 93
+[14-Jan-2015 04:56:18 Europe/Paris] PHP Notice:  Undefined index: itemId in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 83
+[13-Jan-2015 22:02:50 America/Chicago] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 327
+[14-Jan-2015 07:36:29 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:36:29 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:36:29 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:36:29 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:36:29 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:36:29 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:36:29 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:36:29 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:36:29 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:36:29 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:36:29 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:36:29 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:36:29 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:36:29 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:36:29 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:36:29 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:36:51 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:36:51 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:36:51 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:36:51 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:36:51 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:36:51 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:36:51 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:36:51 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:36:51 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:36:51 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:36:51 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:36:51 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:36:51 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:36:51 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:36:51 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:36:51 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:37:16 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:37:16 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:37:16 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:37:16 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:37:16 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:37:16 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:37:16 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:37:16 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:37:16 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:37:16 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:37:16 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:37:16 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:37:16 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:37:16 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:37:16 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:37:16 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:54:28 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:54:28 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:54:28 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:54:28 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:54:28 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:54:28 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:54:28 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:54:28 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:54:28 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:54:28 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:54:28 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:54:28 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:54:28 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:54:28 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[14-Jan-2015 07:54:28 Europe/Paris] PHP Notice:  Undefined index: col-sm-12 in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 345
+[14-Jan-2015 07:54:28 Europe/Paris] PHP Notice:  Undefined index: link in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 346
+[19-Jan-2015 03:37:41 Europe/Paris] PHP Fatal error:  Cannot access empty property in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 637
+[19-Jan-2015 03:37:49 Europe/Paris] PHP Fatal error:  Cannot access empty property in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 637
+[19-Jan-2015 03:37:57 Europe/Paris] PHP Fatal error:  Cannot access empty property in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 637
+[19-Jan-2015 03:38:12 Europe/Paris] PHP Fatal error:  Cannot access empty property in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 637
+[19-Jan-2015 03:39:13 Europe/Paris] PHP Fatal error:  Cannot access empty property in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 637
+[19-Jan-2015 03:40:53 Europe/Paris] PHP Fatal error:  Cannot access empty property in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 637
+[25-Mar-2015 03:29:24 Europe/Paris] PHP Fatal error:  Uncaught Column count doesn't match value count at row 2<br /><br /><pre>INSERT INTO `ps_verticalmegamenus_menu_item_lang` (`menuId`, `id_lang`, `id_shop`, `title`, `image`, `imageAlt`, `html`) VALUES ('69', '1', '1', 'dfgfdg', '69-1-1-item-banner.jpg', 'hgjgh', ''), ('69', '2', '1', '', '', '')</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[25-Mar-2015 03:33:35 Europe/Paris] PHP Fatal error:  Uncaught Column count doesn't match value count at row 2<br /><br /><pre>INSERT INTO `ps_verticalmegamenus_menu_item_lang` (`menuId`, `id_lang`, `id_shop`, `title`, `image`, `imageAlt`, `html`) VALUES ('70', '1', '1', 'test', '70-1-1-item-banner.png', 'fsdfd', ''), ('70', '2', '1', '', '', '')</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[20-Apr-2015 11:51:41 Europe/Paris] PHP Notice:  Undefined variable: insertId in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 75
+[20-Apr-2015 11:53:24 Europe/Paris] PHP Notice:  Undefined variable: insertId in /home/dev04ovi/public_html/tu/supershop/modules/verticalmegamenus/ajax.php on line 75
+[20-Apr-2015 11:53:24 Europe/Paris] PHP Fatal error:  Uncaught Duplicate entry '0-3-1' for key 'PRIMARY'<br /><br /><pre>INSERT INTO `ps_verticalmegamenus_module_lang` (`module_id`, `id_lang`, `id_shop`, `name`) VALUES ('', '3', '1', 'asdasdsadsa')</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635

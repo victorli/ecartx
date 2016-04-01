@@ -1,0 +1,48 @@
+.style-{#ID#} .box-header{
+    background: {#backgroundColorHeader#}
+}
+.style-{#ID#} .group-types{
+    background: {#colorBackgroundType#}
+}
+.style-{#ID#} .category-list li a:hover,
+.style-{#ID#} .category-list li.active a{
+    border-left: 3px solid {#colorList#};
+    color: {#colorList#}
+}
+.style-{#ID#} .manufacturer-list-paginations:hover,
+.style-{#ID#} .group-products-paginations:hover{
+    background: {#backgroundColorHeader#};
+    color: #fff
+}
+.style-{#ID#} .div-quick-view a:hover{
+    color: {#backgroundColorHeader#}
+}
+.style-{#ID#} .group-banners{
+    background: {#bannerColorFrom#};
+    background: -moz-linear-gradient(top,  {#bannerColorFrom#} 0%, {#bannerColorTo#} 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,{#bannerColorFrom#}), color-stop(100%,{#bannerColorTo#}));
+    background: -webkit-linear-gradient(top,  {#bannerColorFrom#} 0%,{#bannerColorTo#} 100%);
+    background: -o-linear-gradient(top,  {#bannerColorFrom#} 0%,{#bannerColorTo#} 100%);
+    background: -ms-linear-gradient(top,  {#bannerColorFrom#} 0%,{#bannerColorTo#} 100%);
+    background: linear-gradient(to bottom,  {#bannerColorFrom#} 0%,{#bannerColorTo#} 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='{#bannerColorFrom#}', endColorstr='{#bannerColorTo#}',GradientType=0 )
+}
+.style-{#ID#} .add-to-cart{
+    background: {#backgroundColorHeader#}
+}
+.style-{#ID#} .product-price-new{
+    color: {#colorList#}
+}
+.style-{#ID#} .owl-nav .owl-prev:hover,
+.style-{#ID#} .owl-nav .owl-next:hover{
+    background: {#backgroundColorHeader#} !important;
+}
+.style-{#ID#}.option3 ul.list li.active, 
+.style-{#ID#}.option3 ul.list li:hover{
+    border-top-color: {#backgroundColorHeader#};   
+    border-bottom-color: {#backgroundColorHeader#};
+}
+.style-{#ID#}.option3 ul.list li.active:before, 
+.style-{#ID#}.option3 ul.list li:hover:before{
+    color: {#backgroundColorHeader#};    
+}

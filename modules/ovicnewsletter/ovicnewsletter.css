@@ -1,0 +1,192 @@
+.fa {
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    
+}
+.fa-time:before {
+  content: "\f00d";
+}
+
+#overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9999;
+    opacity:0.8;
+    filter:alpha(opacity=80);
+    background: black;
+    width: 100%;
+    height: 100%;
+}
+
+.ovicnewsletter{
+    
+    background: #fff;
+    z-index: 99991;
+    position: fixed;    
+    top: 50%;
+    left: 50%;
+    
+}
+.ovicnewsletter .inner{
+    position:  relative;
+}
+.ovicnewsletter-close{
+    width: 28px;
+    height: 28px;
+    background: #E52E04;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+}
+.ovicnewsletter-close:hover{
+    background-color:rgba(229, 46, 4, 0.8)
+}
+.ovicnewsletter-close a{
+    display: block;
+    line-height: 26px;
+    color: #fff !important;
+    font-family: monospace;
+    font-size: 20px;
+    font-size: 18px;
+} 
+.ovicnewsletter .inner{
+    padding: 15px 20px;
+}
+
+
+.newsletter-form a.button:hover{
+    background-color:rgba(102, 102, 102, 0.8)
+}
+
+@font-face {
+    font-family: "UTM banqueB";
+    src: url("fonts/UTM BanqueB.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UTM banqueR";
+    src: url("fonts/UTM BanqueR.ttf") format("truetype");
+}
+@font-face {
+    font-family: "UTM Bitsumishi Pro";
+    src: url("fonts/UTM Bitsumishi Pro.ttf") format("truetype");
+}
+
+
+.input-email{
+    color: #666;
+}
+#regisNewsletterMessage{
+    height: 16px;
+    width: 100%;
+    display: block;
+    color: red;
+}
+.newsletter-form{
+    font-size: 13px !important;
+    margin-top: 6px;
+}
+.input-email{
+	    background: #fff;
+	    border: 1px solid #CCCCCC;
+	    height: 30px;
+	    margin-right: -1px;
+	    padding: 0 10px;
+		float:left;
+	}
+	.newsletter-form .button{
+	    overflow: hidden;    
+	    padding: 5px 15px;
+	    background: #666;
+	    color: #fff !important;
+	    border: none;
+	    height: 30px;
+	    overflow: hidden;
+		float:left;
+	    
+	}
+@media (min-width: 768px){
+	.ovicnewsletter{
+	    width: 500px;
+	    margin-left: -250px;
+	    margin-top: -150px;
+	}
+	.input-email{
+	    width: 230px;
+	}	
+    p.text-n1{
+	    color: #666;
+	    font-family: sans-serif;
+	}
+	p.text-n2{
+	    font-family: UTM banqueR;
+	    font-size: 48px;
+	    height: 40px;
+	    line-height: 40px;
+	}
+	p.text-n3{
+	    height: 60px;
+	    overflow: hidden;
+	    line-height: 60px;
+	    margin-top: 15px;
+	}
+	p.text-n3 strong{
+	    color: #E52E04;
+	    font-family: UTM Bitsumishi Pro;
+	    font-size: 92px;   
+	}
+	span.text-4{
+	    margin-left: 10px;
+	    font-size: 32px;
+	}
+	p.text-n6{
+	    font-family: sans-serif;
+	    margin-bottom: 0px;
+	}
+}
+@media (max-width: 767px){
+    .ovicnewsletter{
+	    width: 320px;
+	    margin-left: -160px;
+	    margin-top: -150px;
+	}
+	
+	.input-email{
+	    width: 185px;
+	}	
+    p.text-n1{
+	    color: #666;
+	    font-family: sans-serif;
+	}
+	p.text-n2{
+	    font-family: UTM banqueR;
+	    font-size: 48px;
+	    height: 40px;
+	    line-height: 40px;
+	}
+	p.text-n3{
+	    height: 60px;
+	    overflow: hidden;
+	    line-height: 60px;
+	    margin-top: 15px;
+	}
+	p.text-n3 strong{
+	    color: #E52E04;
+	    font-family: UTM Bitsumishi Pro;
+	    font-size: 92px;   
+	}
+	span.text-4{
+	    margin-left: 10px;
+	    font-size: 32px;
+	}
+	p.text-n6{
+	    font-family: sans-serif;
+	    margin-bottom: 0px;
+	}
+}

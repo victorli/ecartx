@@ -1,0 +1,175 @@
+.clearBoth{
+    clear: both;
+}
+.icon-AdminThemeConfig:before{
+    content: "\f0d0";
+}
+.process-icon-new{
+    display: inline-block;
+}
+#content.bootstrap h3:not(.modal-title) .panel-heading-action a.list-toolbar-btn.newoption, #content.bootstrap .panel-heading .panel-heading-action a.list-toolbar-btn.newoption{
+    width: 150px;
+    text-transform: capitalize;
+}
+#content.bootstrap .disabled h3:not(.modal-title), #content.bootstrap .disabled .panel-heading{
+    color:#ccc;
+}
+#content.bootstrap .panel .panel h3:not(.modal-title) .panel-heading-action a.list-toolbar-btn.newmodulehook, #content.bootstrap .panel .panel .panel-heading .panel-heading-action a.list-toolbar-btn.newmodulehook{
+    width: 145px;
+}
+#content.bootstrap .panel .panel h3:not(.modal-title) .panel-heading-action a.list-toolbar-btn.newmodulehook.btn, #content.bootstrap .panel .panel .panel-heading .panel-heading-action a.list-toolbar-btn.newmodulehook.btn{
+    padding: 0;
+    font-size: 14px;
+}
+#content.bootstrap .panel .panel.col-sm-3 h3:not(.modal-title) .panel-heading-action a.list-toolbar-btn.newmodulehook, #content.bootstrap .panel .panel.col-sm-3 .panel-heading .panel-heading-action a.list-toolbar-btn.newmodulehook{
+    width: 60px;
+    font-size: 0px;
+    text-align: center;
+}
+
+input.colsetting{
+    display: none;
+}
+.colsetting-container label{
+    background: #b0b0b0;
+    margin-right: 10px;
+}
+.colsetting-container label:last-child{
+    margin-right: 0;
+}
+.colsetting-container label.colactive{
+    background: #fe983d;
+    position: relative;
+}
+.colsetting-container label.colactive:before {
+    content: "\f14a";
+    font-size: 14px;
+    font-weight: normal;
+    font-family: "FontAwesome";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -10px 0 0 -6px;
+    color: #00aff0;
+}
+img.img-thumbnail{
+    max-height: 200px;
+}
+#content.bootstrap #ovicLayoutSeting h3:not(.modal-title), #content.bootstrap #ovicLayoutSeting .panel-heading{
+    margin-bottom: 10px;
+}
+#content.bootstrap #ovicLayoutSeting .panel  .panel{
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+/*********************/
+#center_column.hide_left{
+    padding-left: 0;
+}
+#center_column.hide_right{
+    padding-right: 0;
+}
+.hookContainer{
+    min-height: 10px;
+}
+.moduleContainer{
+    border: solid 1px #9ed0ec;
+    max-width: 400px;
+    padding: 3px 5px;
+    margin-bottom: 5px;
+    position: relative;
+    cursor: move;
+}
+.moduleContainer.disable_sort{
+    cursor: default;
+}
+.moduleContainer img{
+    vertical-align: middle;
+}
+.moduleContainer span{
+    margin-right: 5px;
+}
+.moduleContainer .module-position{
+    border: solid 1px #ccc;
+    background-color: #eee;
+    padding: 0 5px;
+    font-size: 1.4em;
+    color: #aaa;
+    cursor: move;
+    text-shadow: #fff 1px 1px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: rgba(0,0,0,0.2) 0 1px 3px inset;
+    box-shadow: rgba(0,0,0,0.2) 0 1px 3px inset;
+    margin-right: 10px;
+}
+.moduleContainer .module-action{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: right;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+.moduleContainer:hover .module-action{
+    display: block;
+}
+.moduleContainer:hover .module-action a{
+    display: inline-block;
+    line-height: 22px;
+    background: #fff;
+    padding: 3px 5px;
+}
+.moduleContainer:hover .module-action a:hover{
+    text-decoration: none;
+}
+.popup_form option{
+    padding: 0 5px;
+}
+.placeholder{
+    border: 1px solid #fe983d;
+    max-width: 400px;
+    margin-bottom: 5px;
+    padding: 3px;
+}
+.popup_form .form-horizontal{
+    padding: 0 5px;
+}
+#idTab1 .colsetting-container{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    background: rgba(255,255,255,0.5);
+}
+#idTab1 .colsetting-wrapper{
+    display: inline-block;
+}
+#idTab1 .colsetting-container img{
+    width: 50px;
+    max-width: 50px;
+}
+#idTab1 .colsetting-container h4.theme-title{
+    background: none;
+    color: #4d576e;
+}
+#idTab1 .theme-container .action-buttons{
+    top: 35%;
+}
+#idTab1 .theme-container:hover .action-wrapper{
+    display: block;
+    width: 262px;
+    height: 300px;
+}
+#curent_option .colsetting-container{
+    position: relative;
+    text-align: left;
+}
+#curent_option .colsetting-container label{
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    max-height: 64px;
+}

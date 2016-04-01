@@ -1,0 +1,7 @@
+.clearBoth{
+    clear: both;
+}
+.language_flags{
+    float: left;
+    display: none;
+}

@@ -1,0 +1,279 @@
+p.ajax-loader{
+    width: 100%;
+    height: 100%;    
+    background-image: url("../images/loader.gif");
+    background-repeat: no-repeat;
+    background-position:  center center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;    
+}
+.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.vertical-megamenus .navbar-collapse{
+    padding: 0;
+}
+.alpha{
+    padding-left: 0;   
+}
+.beta{
+    padding-right: 0;
+}
+.vertical-megamenus h4.title{
+    color: #fff;
+    padding: 10px 15px;
+    background: #FF9933;
+    text-transform: uppercase;
+    margin: 0px;
+	height:40px;
+}
+.vertical-megamenus .dropdown-menu{
+    border: none;
+    box-shadow:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+}
+.vertical-groups{
+    border: 1px solid #cccccc;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    padding: 24px 15px;
+}
+.vertical-megamenus ul.megamenus-ul li .vertical-groups a{
+    border: none !important;
+    padding-left: 0;
+}
+.vertical-megamenus span.new-price{
+    color: #A6CADA;
+}
+.vertical-megamenus span.old-price{
+    color: #999;
+    text-decoration: line-through;
+	margin-left: 10px;
+}
+.vertical-megamenus .navbar-collapse{
+    max-height: none;
+}
+.megamenus-ul li .icon-angle-down{
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.megamenus-ul li.open .icon-angle-down:before{
+    content: "\f106";
+}
+.vertical-megamenus li.parent a.parent{
+    display: block;
+}
+.vertical-megamenus .icon-reorder{
+    cursor: pointer;
+}
+.mega-group-header{
+     border-bottom: 1px solid #E8E8E8;
+}
+.mega-group-header span{
+    display: block;
+    border-left: 3px solid #E62E04;
+    padding: 8px 15px;
+    
+}
+.vertical-groups .product-avatar img{
+	width: 100%;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .vertical-megamenus h4.title{
+        font-size: 13px;    
+    }
+}
+@media (min-width: 768px) {
+    .vertical-megamenus{}
+    .mega-products .mega-product:first-child{
+        border-left: none;
+    }
+    .mega-product{
+        border-left: 1px solid #ccc;
+        padding-bottom: 15px;
+    }    
+    .vertical-megamenus ul.megamenus-ul{
+        position: relative;    
+    }
+    .vertical-megamenus ul.megamenus-ul li{
+        color: #666;
+        border-left: 3px solid #fff;
+        width: 100%;
+        position:  static;
+        background: #fff;        
+    }
+    .open > .dropdown-menu{
+        display: none;
+    }
+    .vertical-megamenus ul.megamenus-ul li.parent:hover .dropdown-menu{
+        display:  block;
+    }
+    .vertical-megamenus .dropdown-menu{
+        position: absolute;
+        top: 0;
+        left: 100%;
+        z-index: 1000;
+    }
+    
+    .vertical-megamenus ul.megamenus-ul li:hover{
+        border-left: 3px solid #E62E04;
+    }
+    .vertical-megamenus ul.megamenus-ul li:hover a.parent{
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+    }
+    .vertical-megamenus ul.megamenus-ul li.parent:hover a.parent:after{
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        right: -2px;
+        border-right: 12px solid #fff;
+        width: 0;
+        content: "";
+        z-index: 9999;
+    }
+    .vertical-megamenus ul.megamenus-ul li a.parent{
+        color: #666;
+        display: block;
+        border-bottom: 1px solid transparent;
+        border-top: 1px solid transparent;
+        padding: 6px 0 6px 12px;
+        position: relative;
+    }
+    .vertical-megamenus ul.megamenus-ul li a.parent span{
+    	padding-left: 10px;
+    }
+	.vertical-megamenus{
+		position: relative;
+	}
+	.vertical-menu-content{
+		width: 100%;
+		position: absolute;
+		top: 40px;
+		left:0px;
+		z-index: 1002;
+		
+	}
+	.vertical-dropdown-menu{
+		padding:0px !important;
+		margin:0px !important;
+	}
+	.vertical-menu-content ul{
+		
+	}
+}
+@media (max-width: 767px) {
+    .abc{}
+    .vertical-megamenus li.parent .dropdown-menu{
+        position: static;
+        float: none;
+    }
+    .vertical-megamenus li.parent{
+        margin: 5px 0;
+        border-bottom: 1px dashed #ccc;
+    }
+    .vertical-megamenus li.parent a.parent{
+        padding: 5px 15px;
+    }
+    .vertical-megamenus li.parent.open{
+        background: #E62E04;
+        border-bottom: none;
+    }
+    
+    .vertical-megamenus li.parent.open a.parent, 
+    .vertical-megamenus li.parent.open .icon-angle-down{
+        color: #fff;
+    }    
+}
+
+
+
+
+.home-top #nav_topmenu{
+	margin-top:0;
+}
+
+#home-popular-tabs{
+	border: 1px solid #E8E8E8;
+}
+#home-popular-tabs > li.active > a:hover{
+	border-color:transparent;
+}
+
+#home-popular-tabs  > li > a:hover {
+        border-color: transparent; 
+		background: transparent;
+}
+#home-popular-tabs  > li{
+	padding:1px 0 1px 1px;
+	margin: -1px 1px -1px -1px;
+	-moz-transition: background 0.4s ease;
+	-webkit-transition: background 0.4s ease;
+	-o-transition: background 0.4s ease;
+	-ms-transition: background 0.4s ease;
+	transition: background 0.4s ease;
+	background: transparent;
+	position: relative; 
+}
+#home-popular-tabs  > li a{
+	border: none;
+	text-transform: uppercase;
+}
+#home-popular-tabs > li:hover{	
+	background: #FF9933;
+}
+#home-popular-tabs > li:hover a{
+	color: #fff;
+}
+#home-popular-tabs > li.active, 
+#home-popular-tabs > li.active:hover{
+	margin-top: -8px;
+	padding-top: 8px;
+	background: #FF9933;
+}
+#home-popular-tabs > li.active a{
+	background: transparent;
+	border: none;
+	color: #fff;
+}
+#home-popular-tabs > li.active:after{
+	background: url("../images/popular-active.png");
+	width: 4px;
+	height: 7px;	
+	position: absolute;
+	top: 0;
+	right: -4px;
+	display: block;
+	content: "";
+}
+
+.home-top{
+	color: #E5E2D6;
+}
+
+
+#topmenu{
+	background: #E62E04;
+}
+#topmenu > li.active{
+	background: #FF9933 !important;
+	
+}
+#topmenu > li.active a{
+	background: none !important;
+}
+#topmenu > li.level-1 a{
+	color: #fff;
+}
+

@@ -1,0 +1,10 @@
+.style-1 .box-header{background: #c75347}.style-1 .group-types{background: #d85c50}.style-1 .category-list li a:hover,.style-1 .category-list li.active a{border-left: 3px solid #c75347;color: #c75347}.style-1 .manufacturer-list-paginations:hover,.style-1 .group-products-paginations:hover{background: #c75347;color: #fff}.style-1 .div-quick-view a:hover{color: #c75347}.style-1 .group-banners{background: #ffffff;background: -moz-linear-gradient(top,  #ffffff 0%, #ffffff 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ffffff));background: -webkit-linear-gradient(top,  #ffffff 0%,#ffffff 100%);background: -o-linear-gradient(top,  #ffffff 0%,#ffffff 100%);background: -ms-linear-gradient(top,  #ffffff 0%,#ffffff 100%);background: linear-gradient(to bottom,  #ffffff 0%,#ffffff 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 )}.style-1 .add-to-cart{background: #c75347}.style-1 .product-price-new{color: #c75347}.style-1  .owl-nav .owl-prev:hover,.style-1  .owl-nav .owl-next:hover{background: #c75347 !important;}
+.style-1.option3 ul.list li.active, 
+.style-1.option3 ul.list li:hover{
+    border-top-color: #c75347;
+    border-bottom-color: #c75347;
+}
+.style-1.option3 ul.list li.active:before, 
+.style-1.option3 ul.list li:hover:before{
+    color: #c75347;    
+}

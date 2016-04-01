@@ -1,0 +1,185 @@
+.language_flags{
+    display: none;
+    float: left;
+}
+.nobootstrap{
+    min-width: inherit;
+}
+.clearBoth{
+    clear: both;
+}
+.idTabs {
+	list-style-type: none;
+	margin-top: 20px;
+	border-bottom: 1px solid #ccc
+}
+ul.idTabs li {
+	float: left;
+	margin-right: 1px
+}
+.idTabs a {
+	display:block;
+	padding:10px 10px 7px 10px;
+	text-decoration:none;
+	color:#000;
+
+}
+.idTabs .selected {
+    font-weight:bold;
+	color:#fff;
+	background:#ccc
+}
+.tabContent{
+    padding-top: 20px;
+}
+.tabContent>fieldset,.tabContent form {
+    clear: both;
+    margin-top: 15px;
+}
+.block_hidden_only_for_screen {
+    display: none;
+}
+/************** add new FBlock **********/
+#newblock{
+    padding: 10px;
+    min-width: 350px;
+}
+#newblock label{
+    width: 100px;
+    float: left;
+}
+#newblock .margin-form{
+    padding-left: 120px;
+    margin-bottom: 15px;
+}
+
+#link_Container .link_detail{
+    display: none;
+}
+/***************** list items *****************/
+.list_item{
+    border:1px solid #ccc;
+    background: #fff;
+}
+.list_item th{
+    padding: 5px;
+    font: bold 12px Tahoma;
+    background: -webkit-gradient(linear, center top ,center bottom, from(#F9F9F9), to(#ECECEC)) repeat scroll 0 0 transparent;
+}
+.list_item th.title{
+    width: 100px;
+}
+.list_item th.type{
+    width: 60px;
+}
+.list_item tbody td{
+    padding: 5px;
+    font: normal 12px Tahoma;
+}
+/***************** new FItems ******************/
+
+.item_type{
+    display: none;
+}
+
+/*******************/
+.help-block.newline{
+    display: block;
+    margin-bottom: 0px;
+}
+.bootstrap .main_list .list-item {
+    display: inline-block;
+    float: left;
+    width: auto;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: white;
+    border: solid 1px #9ed0ec;
+}
+.bootstrap .main_list .sortable .list-item{
+    cursor: move;
+}
+.bootstrap .main_list .list-item .item-name i{
+    margin-right: 10px;
+}
+.bootstrap .main_list .list-item .item-name{
+    font-size: 14px;
+    margin-right: 10px;
+}
+.panel-heading-action.edit{
+    right: 30px!important;
+}
+h3.heading-panel{
+    text-align: right;
+}
+.heading-action{
+    display: inline-block;
+    text-align: right;
+}
+.heading-action.add{
+    float: left;
+}
+.heading-action .list-toolbar-btn{
+    border: 0!important;
+    width: auto!important;
+    text-transform: capitalize;
+}
+
+.heading-action .list-toolbar-btn i{
+    display: inline-block;
+    font-size: 14px;
+    width: 20px!important;
+    height:20px!important ;
+}
+/*************************************/
+.block-container{
+    border: solid 1px #cccccc;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 0, white 0 0 0 3px inset;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 0, white 0 0 0 3px inset;
+    padding: 20px!important;
+    margin-bottom: 15px;
+}
+.block-container.col-sm-1 .heading-action.add,
+.block-container.col-sm-2 .heading-action.add
+{
+    font-size: 0px;
+    line-height: 40px;
+}
+.block-container.col-sm-1 .heading-action.add{
+    left:5px
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .block-container.col-sm-3 .heading-action.add
+    {
+        font-size: 0px;
+        line-height: 40px;
+    }
+}
+.block-items li{
+    display:block;
+    border: solid 1px #9ed0ec;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.block-container .block-items.sortable li{
+    cursor: move;
+}
+.block-container .block-items li .action-container{
+    float: right;
+}
+.panel-heading-action.status{
+
+    right: 60px!important;
+
+    text-align: center;
+
+}
+
+.panel-heading-action.status span{
+
+    padding-top: 6px;
+
+    display: block;
+
+}

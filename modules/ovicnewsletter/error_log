@@ -1,0 +1,88 @@
+[07-Jan-2015 05:09:10 Europe/Paris] PHP Notice:  Undefined variable: 81 in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 163
+[07-Jan-2015 05:09:10 Europe/Paris] PHP Fatal error:  Uncaught Unknown column 'type_default' in 'field list'<br /><br /><pre>Update ps_groupcategory_groups Set 
+                    `position` = 9, 
+                    `categoryId` = '14',
+                    `type_default` = 'saller', 
+                    `style_id` = '1', 
+                    `manufactureConfig` = '{"ids":["1"],"imageWidth":290,"imageHeight":80}', 
+                    `itemConfig` = '{"itemWidth":230,"itemHeight":238,"itemMinWidth":200,"countItem":3}', 
+                    `types` = '["saller","view"]', 
+                    `ordering` = '8', 
+                    `layout` = 'default', 
+                    `status` = '1' Where id = 5</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[07-Jan-2015 05:12:03 Europe/Paris] PHP Notice:  Undefined variable: 81 in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 163
+[07-Jan-2015 05:13:56 Europe/Paris] PHP Notice:  Undefined variable: 81 in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 163
+[07-Jan-2015 07:49:55 Europe/Paris] PHP Notice:  Undefined index: manufacturerIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 158
+[07-Jan-2015 07:50:03 Europe/Paris] PHP Notice:  Undefined index: manufacturerIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 158
+[07-Jan-2015 07:50:08 Europe/Paris] PHP Notice:  Undefined index: manufacturerIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 158
+[07-Jan-2015 07:50:31 Europe/Paris] PHP Notice:  Undefined index: manufacturerIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 158
+[07-Jan-2015 07:50:31 Europe/Paris] PHP Notice:  Undefined index: manufacturerIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 158
+[07-Jan-2015 07:50:34 Europe/Paris] PHP Notice:  Undefined index: manufacturerIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 158
+[07-Jan-2015 07:50:58 Europe/Paris] PHP Notice:  Undefined index: manufacturerIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 158
+[07-Jan-2015 07:51:00 Europe/Paris] PHP Notice:  Undefined index: manufacturerIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 158
+[07-Jan-2015 07:51:14 Europe/Paris] PHP Notice:  Undefined index: manufacturerIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 158
+[07-Jan-2015 07:59:59 Europe/Paris] PHP Notice:  Undefined index: manufacturerIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 158
+[07-Jan-2015 08:02:20 Europe/Paris] PHP Notice:  Undefined index: manufacturerIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 158
+[07-Jan-2015 08:03:15 Europe/Paris] PHP Notice:  Undefined index: manufacturerIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 158
+[08-Jan-2015 02:41:17 Europe/Paris] PHP Notice:  Undefined variable: param in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 64
+[08-Jan-2015 02:41:25 Europe/Paris] PHP Notice:  Undefined variable: param in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 64
+[08-Jan-2015 02:41:26 Europe/Paris] PHP Notice:  Undefined variable: param in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 64
+[08-Jan-2015 02:41:30 Europe/Paris] PHP Notice:  Undefined variable: param in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 64
+[08-Jan-2015 02:41:43 Europe/Paris] PHP Notice:  Undefined variable: param in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 64
+[08-Jan-2015 02:41:46 Europe/Paris] PHP Notice:  Undefined variable: param in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 64
+[08-Jan-2015 02:41:50 Europe/Paris] PHP Notice:  Undefined variable: param in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 64
+[08-Jan-2015 02:42:08 Europe/Paris] PHP Notice:  Undefined variable: param in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 64
+[08-Jan-2015 02:42:09 Europe/Paris] PHP Notice:  Undefined variable: param in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 64
+[08-Jan-2015 02:57:11 Europe/Paris] PHP Notice:  Undefined variable: param in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 64
+[11-Jan-2015 11:31:44 Europe/Paris] PHP Notice:  Undefined property: GroupCategory::$compareProductIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 11:31:44 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 11:31:44 Europe/Paris] PHP Notice:  Undefined property: GroupCategory::$compareProductIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 11:31:44 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 11:31:45 Europe/Paris] PHP Notice:  Undefined property: GroupCategory::$compareProductIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 11:31:45 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 11:32:02 Europe/Paris] PHP Notice:  Undefined property: GroupCategory::$compareProductIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 11:32:02 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 11:32:02 Europe/Paris] PHP Notice:  Undefined property: GroupCategory::$compareProductIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 11:32:02 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 11:32:02 Europe/Paris] PHP Notice:  Undefined property: GroupCategory::$compareProductIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 11:32:02 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 11:43:55 Europe/Paris] PHP Notice:  Undefined property: GroupCategory::$compareProductIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 11:43:55 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 11:43:55 Europe/Paris] PHP Notice:  Undefined property: GroupCategory::$compareProductIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 11:43:55 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 11:43:55 Europe/Paris] PHP Notice:  Undefined property: GroupCategory::$compareProductIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 11:43:55 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 13:36:43 Europe/Paris] PHP Notice:  Undefined property: GroupCategory::$compareProductIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 13:36:43 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 13:36:43 Europe/Paris] PHP Notice:  Undefined property: GroupCategory::$compareProductIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 13:36:43 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 13:36:43 Europe/Paris] PHP Notice:  Undefined property: GroupCategory::$compareProductIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[11-Jan-2015 13:36:43 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[12-Jan-2015 01:39:15 Europe/Paris] PHP Notice:  Undefined property: GroupCategory::$compareProductIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[12-Jan-2015 01:39:15 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[12-Jan-2015 01:39:15 Europe/Paris] PHP Notice:  Undefined property: GroupCategory::$compareProductIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[12-Jan-2015 01:39:15 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[12-Jan-2015 01:39:15 Europe/Paris] PHP Notice:  Undefined property: GroupCategory::$compareProductIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[12-Jan-2015 01:39:15 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[12-Jan-2015 01:39:49 Europe/Paris] PHP Notice:  Undefined property: GroupCategory::$compareProductIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[12-Jan-2015 01:39:49 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[12-Jan-2015 01:39:49 Europe/Paris] PHP Notice:  Undefined property: GroupCategory::$compareProductIds in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[12-Jan-2015 01:39:49 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[12-Jan-2015 01:43:56 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[12-Jan-2015 01:43:56 Europe/Paris] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/groupcategory.php on line 526
+[12-Jan-2015 10:29:37 Europe/Paris] PHP Notice:  Undefined index: types in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 198
+[12-Jan-2015 11:36:40 Europe/Paris] PHP Notice:  Undefined index: banner in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 433
+[12-Jan-2015 11:36:40 Europe/Paris] PHP Fatal error:  Uncaught Unknown column 'banner' in 'field list'<br /><br /><pre>Select id, banner From ps_groupcategory_items Where groupId = 12</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[13-Jan-2015 03:58:05 Europe/Paris] PHP Notice:  Array to string conversion in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 199
+[13-Jan-2015 05:51:28 Europe/Paris] PHP Notice:  Undefined index: banner in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 675
+[14-Jan-2015 02:28:18 Europe/Paris] PHP Notice:  Undefined variable: itemId in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 279
+[14-Jan-2015 02:28:18 Europe/Paris] PHP Fatal error:  Uncaught You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND position = 167' at line 1<br /><br /><pre>Update ps_groupcategory_groups Set ordering = ordering + 1 Where ordering >= 4 AND id <>  AND position = 167</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[14-Jan-2015 03:58:18 Europe/Paris] PHP Notice:  Undefined index: banner in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 436
+[14-Jan-2015 03:58:18 Europe/Paris] PHP Fatal error:  Uncaught Unknown column 'banner' in 'field list'<br /><br /><pre>Select id, banner From ps_groupcategory_items Where groupId = 14</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635
+[14-Jan-2015 03:58:27 Europe/Paris] PHP Notice:  Undefined index: banner in /home/dev04ovi/public_html/tu/supershop/modules/groupcategory/ajax.php on line 436
+[14-Jan-2015 03:58:27 Europe/Paris] PHP Fatal error:  Uncaught Unknown column 'banner' in 'field list'<br /><br /><pre>Select id, banner From ps_groupcategory_items Where groupId = 15</pre>
+  thrown in /home/dev04ovi/public_html/tu/supershop/classes/db/Db.php on line 635

@@ -1,0 +1,11 @@
+.tr-selected td{
+    background: #D7DBE3 !important;
+}
+span.style-value{	
+	margin-right: 10px;
+	padding: 0px 6px;
+}
+.lik-group-status, 
+.lik-item-status{
+	cursor: pointer;
+}

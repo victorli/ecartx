@@ -1,0 +1,131 @@
+#blockhtml_home { margin-bottom: 2em }
+#blockhtml_home .rte { background: transparent none repeat scroll 0 0 }
+#blockhtml_home > h1 {
+	margin:40px 0 10px 0;
+	padding: 0;
+	background: none;
+}
+#blockhtml_home > h2 {
+	padding:0 0 10px 0;
+	font-size: 12px;
+	line-height: 1.2em;
+	color: #666;
+	text-transform: none;
+	background: none;
+}
+#blockhtml_home img:hover {
+    opacity: 0.85;
+}
+#blockhtml_home p { padding-left: 0 }
+#blockhtml_home .rte p {color:#666 }
+
+#blockhtml_home p#editorial_image_legend {
+   margin: 0 0 10px;
+   padding:0;
+	color: #666;
+   font-size: 10px;
+}
+#blockhtml_home .rte .row{
+    margin-left: -10px;
+    margin-right: -10px;
+}
+#blockhtml_home .rte .col-left{
+    padding: 0 5px 0 10px;
+}
+
+#blockhtml_home .rte .col-right{
+    padding: 0 10px 0 5px;
+}
+#blockhtml_home .rte .col-right div{
+    padding: 0 0 0 5px;
+}
+#blockhtml_home .rte .col-right div:first-child{
+    padding: 0 5px 0 0;
+}
+#blockhtml_home .rte .col-left div:first-child{
+    margin-bottom: 10px;
+}
+#blockhtml_home .rte .col-left div {
+    overflow: hidden;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    #blockhtml_home .rte .col-left div {
+        max-height: 181px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    #blockhtml_home .rte .col-left div {
+        max-height: 134px;
+    }
+}
+@media (max-width: 767px) {
+    #blockhtml_home{
+        max-width: 580px;
+        margin: 30px auto 0;
+    }
+    #blockhtml_home .rte .col-right {
+        padding: 0 5px;
+        margin-top: 10px;
+    }
+    #blockhtml_home .rte .col-right div {
+        max-width: 295px;
+    }
+    #blockhtml_home .rte .col-right div:first-child{
+        padding-left: 5px;
+    }
+}
+#blockhtml_displayTopColumn{margin-bottom: 35px;}
+#blockhtml_displayTopColumn .content{
+    border: 1px solid #eee;
+    padding: 0 4px;
+    margin-bottom: 15px;
+}
+#blockhtml_displayTopColumn .content:hover{
+    border-color: #858785;
+}
+#blockhtml_displayTopColumn h1{
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    color: #393939;
+    background: url("../img/h1bg.jpg") repeat-x #fff;
+    background-position: bottom;
+    margin: 0 0 -1px;
+padding: 18px 0 20px;
+}
+#blockhtml_displayTopColumn h1 i{
+    color: #fe983d;
+    margin-right: 15px;
+}
+#blockhtml_Contact_form p{
+    color:#696969;
+}
+#blockhtml_Contact_form ul{
+    list-style: disc;
+    list-style-position: inside;
+    line-height: 28px;
+    font-style: italic;
+    color: #999;
+    margin: 25px 0 0;
+}
+#blockhtml_Contact_form ul.store_info{
+    font-style: normal;
+    color:#696969;
+    list-style: none;
+}
+#blockhtml_Contact_form ul.store_info i{
+    margin-right: 15px;
+    display: inline-block;
+    width: 15px;
+}
+#blockhtml_displayTopColumn{
+    display: none;
+}
+#index #blockhtml_displayTopColumn{
+    display: block;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    #blockhtml_displayTopColumn h1{
+        font-size: 14px;
+    }
+}
