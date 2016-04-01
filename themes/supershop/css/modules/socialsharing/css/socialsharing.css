@@ -1,0 +1,40 @@
+.socialsharing_product button {
+	margin-bottom: 10px;
+    margin-right: 6px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 24px;
+    padding: 0;
+    border: none
+}
+.socialsharing_product button:hover {
+    opacity: 0.85;
+}
+.socialsharing_product button.btn-twitter {
+    background: #00aaf0;
+    color: #FFF;
+}
+.socialsharing_product button.btn-facebook {
+    color: #FFF;
+    background-color: #435f9f;
+}
+.socialsharing_product button.btn-google-plus {
+    color: #FFF;
+    background-color: #e04b34;
+}
+.socialsharing_product button.btn-pinterest {
+    color: #FFF;
+    background-color:#ce1f21;
+}
+.socialsharing_product button.btn-google-plus i,
+.socialsharing_product button.btn-pinterest i,
+.socialsharing_product button.btn-facebook i,
+.socialsharing_product button.btn-twitter i {
+    color: #fff;   
+}
+p.socialsharing_product.list-inline.no-print {
+    margin-bottom: 0;
+    padding-left: 0;
+    margin-top: 20px;
+}

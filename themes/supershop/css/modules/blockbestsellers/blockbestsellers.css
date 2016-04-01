@@ -1,0 +1,58 @@
+#best-sellers_block_right .carousel-list .product_list {
+    margin: 12px 0 0 0;
+}
+#best-sellers_block_right .lnk {
+    display: none;
+}
+#best-sellers_block_right ul.product_list.grid > li .product-container .functional-buttons div.wishlist, 
+#best-sellers_block_right ul.product_list.grid > li:hover .product-container .functional-buttons div.compare {
+    display: none;
+}
+#best-sellers_block_right ul.product_list.grid > li .product-container,
+#best-sellers_block_right ul.product_list.grid > li.hovered .product-container, 
+#best-sellers_block_right ul.product_list.grid > li:hover .product-container {
+    border: none;
+} 
+#best-sellers_block_right .owl-buttons div.owl-prev {
+    left: -16px;
+}
+#best-sellers_block_right .owl-buttons div.owl-next {
+    right: -16px;
+}
+#best-sellers_block_right .carousel-list ul.product_list.grid > li {
+    height: auto;
+    padding-bottom: 0;
+}
+#best-sellers_block_right ul.product_list.grid .product-image-container img {
+    position: relative;
+    max-width: 100%;
+    top: 0;
+}
+#best-sellers_block_right .carousel-list ul.product_list.grid > li .product-container .product-image-container {
+    height: auto;
+}
+#best-sellers_block_right ul.product_list.grid .product-image-container img.second-img {
+    display: none;
+}
+#best-sellers_block_right ul.product_list .product-image-container .quick-view {
+    display: none;
+}
+#best-sellers_block_right ul.product_list.grid > li .product-container .functional-buttons {
+    display: none;
+}
+#best_sellers_block ul.product_list.grid > li.hovered .product-container .functional-buttons, 
+#best_sellers_block ul.product_list.grid > li.hovered .product-container .button-container {
+    display: none;
+}
+#best_sellers_block ul.product_list .product-name {
+    text-align: center;
+}
+#best_sellers_block ul.product_list.grid > li .product-container .content_price {
+    text-align: center;
+}
+#best_sellers_block ul.product_list.grid > li .product-container .price.product-price {
+    margin: 0;
+}
+#best_sellers_block ul.product_list .comments_note .nb-comments {
+    display: none;
+}

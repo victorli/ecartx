@@ -1,0 +1,111 @@
+/* PS 1.6.0.9 */
+#my-account .addresses-lists {
+    margin-bottom: 20px;  
+}
+#my-account ul.myaccount-link-list li {
+    overflow: hidden;
+    padding-bottom: 10px; 
+}
+#my-account ul.myaccount-link-list li a {
+    display: block;
+    overflow: hidden;
+    color: #555454;
+    text-shadow: 0px 1px white;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    border: 1px solid;
+    border-color: #ccc; 
+}
+#my-account ul.myaccount-link-list li a i {
+    font-size: 25px;
+    color: #666;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 52px;
+    height: 100%;
+    padding: 10px 0 0 0;
+    text-align: center;
+    border: 1px solid white;
+    -moz-border-radius-topleft: 4px;
+    -webkit-border-top-left-radius: 4px;
+    border-top-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    border-bottom-left-radius: 4px; 
+}
+#my-account ul.myaccount-link-list li a span {
+    display: block;
+    padding: 13px 15px;
+    overflow: hidden;
+    border: 1px solid;
+    margin-left: 52px;
+    border-color: white white white #ccc; 
+}
+#my-account ul.myaccount-link-list li a:hover {
+    background: #fafafa;
+    border-color: #999
+}
+ul.myaccount-link-list {
+    margin-bottom: 0;
+}
+p.info-account {
+    margin: -4px 0 24px 0; 
+}
+
+/* PS 1.6.0.111 */
+#myaccount .addresses-lists {
+    margin-bottom: 20px;  
+}
+#myaccount ul.myaccount-link-list li {
+    overflow: hidden;
+    padding-bottom: 10px; 
+}
+#myaccount ul.myaccount-link-list li a {
+    display: block;
+    overflow: hidden;
+    color: #555454;
+    text-shadow: 0px 1px white;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    border: 1px solid;
+    border-color: #ccc; 
+}
+#myaccount ul.myaccount-link-list li a i {
+    font-size: 25px;
+    color: #666;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 52px;
+    height: 100%;
+    padding: 10px 0 0 0;
+    text-align: center;
+    border: 1px solid white;
+    -moz-border-radius-topleft: 4px;
+    -webkit-border-top-left-radius: 4px;
+    border-top-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    border-bottom-left-radius: 4px; 
+}
+#myaccount ul.myaccount-link-list li a span {
+    display: block;
+    padding: 13px 15px;
+    overflow: hidden;
+    border: 1px solid;
+    margin-left: 52px;
+    border-color: white white white #ccc; 
+}
+#myaccount ul.myaccount-link-list li a:hover {
+    background: #fafafa;
+    border-color: #999
+}
+ul.myaccount-link-list {
+    margin-bottom: 0;
+}
+p.info-account {
+    margin: -4px 0 24px 0; 
+}
