@@ -17,6 +17,14 @@
             <default_right_column>0</default_right_column>
             <product_per_page>12</product_per_page>
         </theme>
+        <theme id="supershop">
+            <name>supershop</name>
+            <directory>supershop</directory>
+            <responsive>1</responsive>
+            <default_left_column>1</default_left_column>
+            <default_right_column>0</default_right_column>
+            <product_per_page>6</product_per_page>
+        </theme>
     </entities>
 </entity_theme>
 
