@@ -1,0 +1,340 @@
+===========================================
+Supper Shop Theme(20.04.2015)
+===========================================
+***** Released version 2.5.6.1 *****
+
+1. Update: enable cache on module verticalmegamenu, flexiblecustom, flexiblebrand, oviccustomtags, oviccustombanner
+2. Update: show file attach in product detail
+3. Update: show customizable in product detail
+===========================================
+Supper Shop Theme(16.04.2015)
+===========================================
+***** Released version 2.5.6.1 *****
+
+1. Fixed: seach product with category
+--------------
+Files: 
+../modules/categorysearch/categorysearch.php
+===========================================
+Supper Shop Theme(09.04.2015)
+===========================================
+***** Released version 2.5.6.1 *****
+
+1. Fixed: My Account box - "login" and "compare" link display on 1 line
+--------------
+Files: 
+../themes/theme_name/css/modules/blockuserinfo/blockuserinfo.css
+
+===========================================
+Supper Shop Theme(09.04.2015)
+===========================================
+***** Released version 2.5.6.1 *****
+
+1. Fixed: Not show product desactivate
+--------------
+Files: 
+../modules/groupcategory/groupcategory.php
+
+2. Fixed: Block Cart - Click to checkout on mobile
+--------------
+Files: 
+../themes/theme_name/modules/blockcart/blockcart.tpl
+../themes/theme_name/css/option2.css
+../themes/theme_name/css/option3.css
+
+3. Fixed: Block Cart - Popup when "Add to cart"
+--------------
+Files: 
+../themes/theme_name/js/modules/blockcart/ajax-cart.js
+
+4. Added: Product page - show short description
+--------------
+Files:
+../themes/theme_name/css/product.css
+
+===========================================
+Supper Shop Theme(08.04.2015)
+===========================================
+***** Released version 2.5.6 *****
+
+1. Fixed: Block Cart - Click to checkout on mobile
+--------------
+Files: 
+../themes/theme_name/modules/blockcart/blockcart.tpl
+../themes/theme_name/css/option2.css
+
+===========================================
+Supper Shop Theme(07.04.2015)
+===========================================
+***** Released version 2.5.5 *****
+
+1. Fixed: Slideshow option4
+2. Fixed: Search product in flexiblebrands
+--------------
+Files: 
+../themes/theme_name/css/option4.css
+
+1. Updated: Catelog mode
+--------------
+Files: 
+../themes/theme_name/product.tpl
+../modules/verticalmegamenus/views/templates/hook/group.product.tpl
+../modules/groupcategory/views/templates/hook/default.option1.layout.tpl
+../modules/groupcategory/views/templates/hook/default.option3.layout.tpl
+../modules/groupcategory/views/templates/hook/default.option4.layout.tpl
+
+../modules/flexiblebrands/views/templates/admin/modules.tpl
+===========================================
+Supper Shop Theme(01.04.2015)
+===========================================
+***** Released version 2.5.4 *****
+
+1. Fixed: SHOPPING-CART SUMMARY
+--------------
+Files: 
+themes/blanktheme/js/cart-summary.js
+themes/blanktheme/js/modules/blockcart/ajax-cart.js
+themes/blanktheme/modules/blockcart/blockcart.tpl
+
+===========================================
+Supper Shop Theme(27.03.2015)
+===========================================
+***** Released version 2.5.4 *****
+
+1. Add new option5 for theme
+2. Hidden slideshow on mobile
+
+===========================================
+Supper Shop Theme(24.03.2015)
+===========================================
+***** Released version 2.5.3 *****
+
+1. Remove cache in module (groupcategory, flexiblecustom, flexiblebrands)
+
+2. Multiple store support
+
+3. Fixed: blockCart module
+
+4. Fixed: Categoty search
+
+5. Fixed: enable SSL
+
+6. update generate link in vertical mega menus
+
+7. Fixed: design on safari, ie
+
+8. Fixed: Sizechar and categoryslider uploader
+
+9. Fixed: tinyMCE editor in module advancefooter, advancetopmenu, blockhtml, productextratabs
+
+10. Fixed: upload image in menuitem of vertical mega menu
+
+11. Fixed: send email with email template on ovicnewsletter module
+
+===========================================
+Supper Shop (10.03.2015) - Dev Tu
+===========================================
+
+***** Released version 2.5 *****
+
+1. Updated: replaced revoslideshow module by homeslider module (default) 
+2. Fixed: dropdow blockuserinfo mobile option4
+
+FUNCTIONS
+--------------
+CODE
+	
+--------------
+URL: 
+themes/theme_name/css/modules/homeslider/css/homeslider.css
+themes/theme_name/css/modules/blockuserinfo/blockuserinfo.css
+
+===========================================
+Supper Shop (09.03.2015) - Dev Tu
+===========================================
+
+***** Released version 2.5 *****
+
+1. Fixed: oviclayoutcontrol module 
+2. Fixed: dropdow blockuserinfo mobile option1
+FUNCTIONS
+--------------
+CODE
+	
+--------------
+URL: 
+modules/oviclayoutcontrol/oviclayoutcontrol.php
+modules/oviclayoutcontrol/views/templates/admin/layout_setting/oviclayout.tpl
+modules/oviclayoutcontrol/css/themeconfig.css
+
+themes/theme_name/css/modules/blockuserinfo/blockuserinfo.css
+
+
+===========================================
+Supper Shop (05.03.2015) - Dev SonNC
+===========================================
+
+***** Released version 2.5 *****
+
+1. Fixed: create many new records when click multiple times save action 
+2. Fixed: drag and drop column item in advancetopmenu
+3. Fixed: can't create banner slider in categoryslider
+4. Fixed: can't create category sizechar in oviccategorysizechart
+FUNCTIONS
+--------------
+CODE
+	
+--------------
+URL: 
+modules/flexiblecustom/flexiblecustom.php
+modules/flexiblecustom/css/back-end/style.css
+modules/flexiblecustom/js/back-end/common.js
+
+modules/flexiblebrands/flexiblebrands.php
+modules/flexiblebrands/css/back-end/style.css
+modules/flexiblebrands/js/back-end/common.js
+
+modules/groupcategory/groupcategory.php
+modules/groupcategory/css/back-end/style.css
+modules/groupcategory/js/back-end/common.js
+
+modules/verticalmegamenus/verticalmegamenus.php
+modules/verticalmegamenus/css/back-end/style.css
+modules/verticalmegamenus/js/back-end/common.js
+
+
+modules/oviccustombanner/oviccustombanner.php
+modules/oviccustombanner/css/back-end/style.css
+modules/oviccustombanner/js/back-end/common.js
+
+modules/advancetopmenu/views/templates/admin/admin.tpl
+
+modules/categoryslider/categoryslider.php
+modules/oviccategorysizechart/oviccategorysizechart.php
+
+modules/multistyle/multistyle.php
+
+themes/theme_name/header.tpl
+themes/theme_name/footer.tpl
+themes/theme_name/modules/multistyle/multistyle.tpl
+
+themes/theme_name/js/global.js
+
+themes/theme_name/css/global.css
+themes/theme_name/css/globalmd.css
+themes/theme_name/css/option4.css
+themes/theme_name/css/option3.css
+themes/theme_name/css/option2.css
+themes/theme_name/css/option1.css
+themes/theme_name/css/product.css
+
+===========================================
+Supper Shop (12.2.2015) - Dev SonNC
+===========================================
+1. Fixed: the upper-case & lower-case letters and in the  class name
+2. Fixed: no products in the option 3
+FUNCTIONS
+--------------
+CODE
+	1. Changed Db to DB
+	2. Added id, class for div group
+--------------
+URL: 
+modules/flexiblecustom/flexiblecustom.php
+modules/flexiblecustom/backend.ajax.php
+
+modules/flexiblebrands/flexiblebrands.php
+modules/flexiblebrands/backend.ajax.php
+
+modules/groupcategory/groupcategory.php
+modules/groupcategory/ajax.php
+modules/groupcategory/views/templates/hook/default.option3.layout.tpl
+modules/groupcategory/js/front-end/common3.js
+
+modules/verticalmegamenus/verticalmegamenus.php
+modules/verticalmegamenus/ajax.php
+
+
+===========================================
+Supper Shop (12.2.2015) - Dev Tu
+===========================================
++-- Current version: v2.3 --+
+
+1. Update data demo(option3)
+2. Update alert-info(option3) 
+
+FUNCTIONS
+--------------
+CODE
+
+URL:
+1. (Folder) /modules/ 
+(#) /modules/advancetopmenu/advancetopmenu.php
+(#) /modules/blockhtml/blockhtml.php
+
+2. (Folder) /themes/supershop/css/
+(#) /themes/supershop/css/option3.css
+
+===========================================
+Supper Shop (10.2.2015) - Dev SonNC
+===========================================
+1. Fix: Them module banners
+
+FUNCTIONS
+	buildModule()
+--------------
+CODE
+line 664 - 687
+--------------
+URL: 
+modules/flexiblecustom/flexiblecustom.php
+===========================================
+Supper Shop (10.2.2015) - Dev SonNC
+===========================================
+1. Fix: Add the message Thong bao khi groupcategory khong co du lieu
+
+FUNCTIONS
+	buildModule()
+--------------
+CODE
+if($products['items'])
+	$products['items'] = $this->getProductAttributesOther($products['items']);
+else
+	$products['items'] = array();
+--------------
+URL: 
+modules/groupcategory/groupcategory.php
+===========================================
+Supper Shop (27.1.2015) - Dev SonNC
+===========================================
+1. Fix: Cache automatically for the groupcategory module
+
+FUNCTIONS
+--------------
+CODE
+comment code $module->cache->cleanup() in ajax.php;
+--------------
+URL: 
+modules/groupcategory/ajax.php
+
+===========================================
+Supper Shop (23.1.2014) - Dev Tu
+===========================================
+1. Created option1 
+Module: VerticalMenu
+/modules/verticalmegamenus/verticalmegamenus.php
+/themes/blanktheme/verticalmegamenus/views/templates/hook/verticalmegamenus.tpl
+
+
+===========================================
+Supper Shop (23.1.2014) - Dev SonNC
+===========================================
+1. Fixed: some products in the module and category (they does not show the images bcause cache properties)
+FUNCTIONS
+--------------
+CODE
+Add the cache value for id_image
+--------------
+URL: 
+modules/groupcategory/GroupCategoryLibraries.php
+modules/verticalmegamenus/VerticalMegaMenusLibraries.php
