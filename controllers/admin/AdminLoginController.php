@@ -91,7 +91,9 @@ class AdminLoginControllerCore extends AdminController
         }
 
         if (basename(_PS_ADMIN_DIR_) == 'admin' && file_exists(_PS_ADMIN_DIR_.'/../admin/')) {
-            $rand = 'admin'.sprintf('%03d', rand(0, 999)).Tools::strtolower(Tools::passwdGen(6)).'/';
+            //$rand = 'admin'.sprintf('%03d', rand(0, 999)).Tools::strtolower(Tools::passwdGen(6)).'/';
+            // @TODO: using dashboard to replace admin+randNm
+            $rand = 'dashboard';
             if (@rename(_PS_ADMIN_DIR_.'/../admin/', _PS_ADMIN_DIR_.'/../'.$rand)) {
                 Tools::redirectAdmin('../'.$rand);
             } else {
