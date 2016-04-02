@@ -161,7 +161,7 @@
 {block name="after"}
 	<div class="panel clearfix" id="prestastore-content"></div>
 	<script type="text/javascript">
-		$.ajax({
+		/*$.ajax({
 			type: 'POST',
 			headers: { "cache-control": "no-cache" },
 			url: 'ajax-tab.php?rand=' + new Date().getTime(),
@@ -182,6 +182,6 @@
 
 		// These variable will move the form to another location
 		var formToMove = "appearance";
-		var formDestination = "js_theme_form_container";
+		var formDestination = "js_theme_form_container";*/
 	</script>
 {/block}
