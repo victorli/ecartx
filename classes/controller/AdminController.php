@@ -2076,6 +2076,7 @@ class AdminControllerCore extends Controller
 
     protected function addPageHeaderToolBarModulesListButton()
     {
+    	/*
         $this->filterTabModuleList();
 
         if (is_array($this->tab_modules_list['slider_list']) && count($this->tab_modules_list['slider_list'])) {
@@ -2083,11 +2084,12 @@ class AdminControllerCore extends Controller
                 'href' => '#',
                 'desc' => $this->l('Recommended Modules and Services')
             );
-        }
+        }*/
     }
 
     protected function addToolBarModulesListButton()
     {
+    	/*
         $this->filterTabModuleList();
 
         if (is_array($this->tab_modules_list['slider_list']) && count($this->tab_modules_list['slider_list'])) {
@@ -2095,7 +2097,7 @@ class AdminControllerCore extends Controller
                 'href' => '#',
                 'desc' => $this->l('Recommended Modules and Services')
             );
-        }
+        }*/
     }
 
     protected function filterTabModuleList()
