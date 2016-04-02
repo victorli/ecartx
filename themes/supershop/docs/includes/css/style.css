@@ -1,0 +1,45 @@
+/* CSS Document */
+	
+	*{font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:20px}
+	body{margin:0px}
+	h1{ font-size:22px}
+	h2{border-bottom: 1px solid #333333;
+		font-size: 20px;
+		padding-bottom: 5px;}
+	h3{ font-size:18px}
+	hr{margin:0px}
+	.wp, #buttom{background:#efefef}
+	#top{border-bottom: 2px solid #DDD;
+    padding: 5px;}
+	#left{border: 1px solid #DDD;
+		float: left;
+		margin-left: 4px;
+		margin-top: 3px;
+		min-height: 400px;
+		padding: 5px;
+		width: 250px;
+		max-height: 650px;
+		overflow-y: scroll;}
+	#left ul{margin:0px; padding: 0 0 0 0px; list-style:none}
+	#left ul ul{padding-left:10px; list-style:none}
+	#left a{color: #333333;    text-decoration: none;}
+	#left a:hover{color:#0066FF}
+	#content{margin-left:270px; background:#fff; min-width:400px; padding:10px}
+	li{padding:3px 0px 3px 0px}
+	ol{margin:0px}
+	ul ol{padding-left:8px;}
+	ol ol{padding-left:8px}
+	a.gotop{background: none repeat scroll 0 0 #DDD;
+    border: 1px solid #DDD;
+    bottom: 0;
+    color: #666666;
+    display: block;
+    font-weight: bold;
+    line-height: 27px;
+    position: fixed;
+    right: 8px;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;}
+	#content img{border:1px solid #ccc}
+.style1 {color: #0000FF}
