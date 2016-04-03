@@ -51,7 +51,7 @@ class Wxpay extends PaymentModule
         $this->description = $this->l('WxPay is integrated in the Weixin payment capabilities.
 The user can complete the rapid payment process through mobile. WxPay allows to bind the bank card\'s fast payment basis and to provide users with safe, fast and efficient payment services.');
 
-        //$this->limited_countries = array('CN');
+        $this->limited_countries = array('CN');
 
         $this->limited_currencies = array('CNY');
 
