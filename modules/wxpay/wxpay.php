@@ -300,19 +300,4 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
 
         return $this->display(__FILE__, 'views/templates/hook/confirmation.tpl');
     }
-
-    public function hookDisplayAdminOrder()
-    {
-        /* Place your code here. */
-    }
-
-    public function hookDisplayPayment()
-    {
-        /* Place your code here. */
-    }
-
-    public function hookDisplayPaymentReturn()
-    {
-        /* Place your code here. */
-    }
 }
