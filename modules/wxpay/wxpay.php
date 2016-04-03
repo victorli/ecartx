@@ -79,22 +79,35 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
         }
 
         Configuration::updateValue('WXPAY_LIVE_MODE', false);
+        Configuration::updateValue('WXPAY_APPID','wx426b3015555a46be');
+        Configuration::updateValue('WXPAY_MCHID','1225312702');
+        Configuration::updateValue('WXPAY_KEY','e10adc3949ba59abbe56e057f20f883e');
+        Configuration::updateValue('WXPAY_APPSECRET','01c6d59a3f9024db6336662ac95c8e74');
+        Confirguration::updateValue('WXPAY_GATEWAY_UNIFIED_ORDER','https://api.mch.weixin.qq.com/pay/unifiedorder');
+        
 
         include(dirname(__FILE__).'/sql/install.php');
 
+        $admin_order_hook = (_PS_VERSION_ < '1.6' ? 'displayAdminOrder' : 'displayAdminOrderLeft');
         return parent::install() &&
             $this->registerHook('header') &&
             $this->registerHook('backOfficeHeader') &&
             $this->registerHook('payment') &&
             $this->registerHook('paymentReturn') &&
-            $this->registerHook('displayAdminOrder') &&
-            $this->registerHook('displayPayment') &&
-            $this->registerHook('displayPaymentReturn');
+            $this->registerHook($admin_order_hook);
+            //$this->registerHook('displayAdminOrder') &&
+            //$this->registerHook('displayPayment') &&
+            //$this->registerHook('displayPaymentReturn');
     }
 
     public function uninstall()
     {
         Configuration::deleteByName('WXPAY_LIVE_MODE');
+        Configuration::deleteByName('WXPAY_APPID');
+        Configuration::deleteByName('WXPAY_MCHID');
+        Configuration::deleteByName('WXPAY_KEY');
+        Configuration::deleteByName('WXPAY_APPSECRET');
+        Configuration::deleteByName('WXPAY_GATEWAY_UNIFIED_ORDER');
 
         include(dirname(__FILE__).'/sql/uninstall.php');
 
@@ -180,21 +193,25 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
                         ),
                     ),
                     array(
-                        'col' => 3,
+                        'col' => 4,
                         'type' => 'text',
-                        'prefix' => '<i class="icon icon-envelope"></i>',
-                        'desc' => $this->l('Enter a valid email address'),
-                        'name' => 'WXPAY_ACCOUNT_EMAIL',
-                        'label' => $this->l('Email'),
+                        'prefix' => '<i class="icon icon-user"></i>',
+                        'desc' => $this->l('Enter your APPID provided by Weixin'),
+                        'name' => 'WXPAY_APPID',
+                        'label' => $this->l('APPID'),//公众帐号ID
                     ),
                     array(
-                        'type' => 'password',
-                        'name' => 'WXPAY_ACCOUNT_PASSWORD',
-                        'label' => $this->l('Password'),
+                        'col' => 4,
+                        'type' => 'text',
+                        'prefix' => '<i class="icon icon-user"></i>',
+                        'desc' => $this->l('Enter your MCHID provided by Weixin'),
+                        'name' => 'WXPAY_MCHID',
+                        'label' => $this->l('MCHID'),//商户号
                     ),
                 ),
                 'submit' => array(
                     'title' => $this->l('Save'),
+                	'class'	=>	'btn btn-default pull-right button',
                 ),
             ),
         );
@@ -207,8 +224,8 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
     {
         return array(
             'WXPAY_LIVE_MODE' => Configuration::get('WXPAY_LIVE_MODE', true),
-            'WXPAY_ACCOUNT_EMAIL' => Configuration::get('WXPAY_ACCOUNT_EMAIL', 'contact@prestashop.com'),
-            'WXPAY_ACCOUNT_PASSWORD' => Configuration::get('WXPAY_ACCOUNT_PASSWORD', null),
+            'WXPAY_APPID' => Configuration::get('WXPAY_APPID', null),
+            'WXPAY_MCHID' => Configuration::get('WXPAY_MCHID', null),
         );
     }
 
