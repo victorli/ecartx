@@ -38,7 +38,7 @@ class Wxpay extends PaymentModule
         $this->tab = 'payments_gateways';
         $this->version = '1.0.1';
         $this->author = 'ecartx';
-        $this->need_instance = 1;
+        $this->need_instance = 0;
 
         /**
          * Set $this->bootstrap to true if your module is compliant with bootstrap (PrestaShop 1.6)
