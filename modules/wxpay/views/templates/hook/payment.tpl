@@ -34,7 +34,7 @@
 			{else}
 				<a href="{$link->getModuleLink('wxpay', 'redirect', array(), true)|escape:'htmlall':'UTF-8'}" title="{l s='Pay with my payment module' mod='wxpay'}">
 					<img src="{$module_dir|escape:'htmlall':'UTF-8'}/logo.png" alt="{l s='Pay with my payment module' mod='wxpay'}" width="32" height="32" />
-					{l s='Pay with my payment module' mod='wxpay'}
+					{l s='Pay with WeiXin' mod='wxpay'}
 				</a>
 			{/if}
 		</p>
