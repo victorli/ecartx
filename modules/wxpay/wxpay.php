@@ -51,7 +51,7 @@ class Wxpay extends PaymentModule
         $this->description = $this->l('WxPay is integrated in the Weixin payment capabilities.
 The user can complete the rapid payment process through mobile. WxPay allows to bind the bank card\'s fast payment basis and to provide users with safe, fast and efficient payment services.');
 
-        //$this->limited_countries = array('CN');
+        $this->limited_countries = array('CN');
 
         //$this->limited_currencies = array('RMB');
 
@@ -83,7 +83,7 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
         Configuration::updateValue('WXPAY_MCHID','1225312702');
         Configuration::updateValue('WXPAY_KEY','e10adc3949ba59abbe56e057f20f883e');
         Configuration::updateValue('WXPAY_APPSECRET','01c6d59a3f9024db6336662ac95c8e74');
-        Confirguration::updateValue('WXPAY_GATEWAY_UNIFIED_ORDER','https://api.mch.weixin.qq.com/pay/unifiedorder');
+        Configuration::updateValue('WXPAY_GATEWAY_UNIFIED_ORDER','https://api.mch.weixin.qq.com/pay/unifiedorder');
         
 
         include(dirname(__FILE__).'/sql/install.php');
