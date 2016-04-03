@@ -52,6 +52,7 @@ class Alipay extends PaymentModule
         $this->confirmUninstall = $this->l('Are you sure you want to uninstall Alipay?');
 
         $this->limited_currencies = array(
+        	'CNY',
             'GBP',
             'HKD',
             'USD',
