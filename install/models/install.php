@@ -601,7 +601,8 @@ class InstallModelInstall extends InstallAbstractModel
             }
         } else {
             $modules = array(
-                'socialsharing',
+                'alipay',
+            	'socialsharing',
                 'blockbanner',
                 'bankwire',
                 'blockbestsellers',
