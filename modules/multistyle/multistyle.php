@@ -24,7 +24,7 @@ class MultiStyle extends Module
 
 	public function install()
 	{
-        $defaultfont  = htmlentities("<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>");
+        $defaultfont  = htmlentities("<link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>");
         if (is_string($defaultfont) === true)
         	$defaultfont = urldecode(preg_replace('/((\%5C0+)|(\%00+))/i', '', urlencode($defaultfont)));
         $defaultfont = !is_string($defaultfont)? $defaultfont : stripslashes($defaultfont);
@@ -127,7 +127,7 @@ class MultiStyle extends Module
 						'type' => 'text',
 						'label' => $this->l('Google font link'),
 						'name' => 'FONT_LINK',
-                        'desc' => $this->l("Example: <link href='http://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>"),
+                        'desc' => $this->l("Example: <link href='http://fonts.useso.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>"),
 					),
                     array(
 						'type' => 'color',

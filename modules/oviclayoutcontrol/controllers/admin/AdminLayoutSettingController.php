@@ -133,7 +133,7 @@ class AdminLayoutSettingController extends ModuleAdminController {
 						'type' => 'text',
 						'label' => $this->l('Google font link'),
 						'name' => 'FONT_LINK',
-                        'desc' => $this->l("Example: <link href='http://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>"),
+                        'desc' => $this->l("Example: <link href='http://fonts.useso.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>"),
 					),
                     array(
 						'type' => 'color',
