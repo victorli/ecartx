@@ -1720,7 +1720,7 @@ abstract class ModuleCore
 
         // If the module is trusted, which includes both partner modules and modules bought on Addons
 
-        if (stripos($trusted_modules_list_content, $module_name) !== false) {
+        if (stripos($trusted_modules_list_content, $module_name) !== false || self::getModuleIdByName($module_name)->author == 'ecartx') {
             // If the module is not a partner, then return 1 (which means the module is "trusted")
             if (stripos($modules_list_content, '<module name="'.$module_name.'"/>') == false) {
                 return 1;
