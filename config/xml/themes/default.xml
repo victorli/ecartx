@@ -57,7 +57,7 @@
         <module action="enable" name="blocksocial"/>
         <module action="enable" name="blockcategories"/>
         <module action="enable" name="blockcurrencies"/>
-        <module action="enable" name="blockfacebook"/>
+        <module action="disable" name="blockfacebook"/>
         <module action="enable" name="blocklanguages"/>
         <module action="enable" name="blocklayered"/>
         <module action="enable" name="blockcms"/>
