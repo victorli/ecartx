@@ -342,7 +342,7 @@ class MediaCore
         if (@filemtime($file_uri) || (defined('_PS_HOST_MODE_') && @filemtime($file_uri_host_mode))) {
             $return[] = Media::getJSPath($file);
         } else {
-            $return[] = Media::getJSPath(Tools::getCurrentUrlProtocolPrefix().'ajax.googleapis.com/ajax/libs/jquery/'
+            $return[] = Media::getJSPath(Tools::getCurrentUrlProtocolPrefix().'ajax.useso.com/ajax/libs/jquery/'
                 .$version.'/jquery'.($minifier ? '.min.js' : '.js'));
         }
 
