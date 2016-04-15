@@ -911,19 +911,26 @@ class LanguageCore extends ObjectModel
         $errors = array();
         $file = _PS_TRANSLATIONS_DIR_.(string)$iso.'.gzip';
 
-        if (!$lang_pack_link = Tools::file_get_contents('http://www.prestashop.com/download/lang_packs/get_language_pack.php?version='.$version.'&iso_lang='.Tools::strtolower((string)$iso))) {
-            $errors[] = Tools::displayError('Archive cannot be downloaded from prestashop.com.');
-        } elseif (!$lang_pack = Tools::jsonDecode($lang_pack_link)) {
-            $errors[] = Tools::displayError('Error occurred when language was checked according to your Prestashop version.');
-        } elseif (empty($lang_pack->error) && ($content = Tools::file_get_contents('http://translations.prestashop.com/download/lang_packs/gzip/'.$lang_pack->version.'/'.Tools::strtolower($lang_pack->iso_code.'.gzip')))) {
-            if (!@file_put_contents($file, $content)) {
-                if (is_writable(dirname($file))) {
-                    @unlink($file);
-                    @file_put_contents($file, $content);
-                } elseif (!is_writable($file)) {
-                    $errors[] = Tools::displayError('Server does not have permissions for writing.').' ('.$file.')';
-                }
-            }
+        if(!file_exists($file) && (string)$iso == 'zh'){//if zh.gzip exists, omit download 
+	        if (!$lang_pack_link = Tools::file_get_contents('http://www.prestashop.com/download/lang_packs/get_language_pack.php?version='.$version.'&iso_lang='.Tools::strtolower((string)$iso))) {
+	            $errors[] = Tools::displayError('Archive cannot be downloaded from prestashop.com.');
+	        } elseif (!$lang_pack = Tools::jsonDecode($lang_pack_link)) {
+	            $errors[] = Tools::displayError('Error occurred when language was checked according to your Prestashop version.');
+	        } elseif (empty($lang_pack->error) && ($content = Tools::file_get_contents('http://translations.prestashop.com/download/lang_packs/gzip/'.$lang_pack->version.'/'.Tools::strtolower($lang_pack->iso_code.'.gzip')))) {
+	            if (!@file_put_contents($file, $content)) {
+	                if (is_writable(dirname($file))) {
+	                    @unlink($file);
+	                    @file_put_contents($file, $content);
+	                } elseif (!is_writable($file)) {
+	                    $errors[] = Tools::displayError('Server does not have permissions for writing.').' ('.$file.')';
+	                }
+	            }
+	        }
+        }
+        
+        if((string)$iso == 'zh'){
+        	$lang_pack_link = '{"name":"\u4e2d\u6587 (Simplified Chinese)","iso_code":"zh","version":"1.6.1.1","date_format_lite":"Y-m-d","date_format_full":"Y-m-d H:i:s","is_rtl":"0","language_code":"zh-cn"}';
+        	$lang_pack = Tools::jsonDecode($lang_pack_link);
         }
 
         if (!file_exists($file)) {
