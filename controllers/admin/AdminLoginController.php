@@ -90,7 +90,8 @@ class AdminLoginControllerCore extends AdminController
             $this->context->smarty->assign('wrong_install_name', true);
         }
 
-        if (basename(_PS_ADMIN_DIR_) == 'admin' && file_exists(_PS_ADMIN_DIR_.'/../admin/')) {
+        // @TODO temperately using admin/
+        /*if (basename(_PS_ADMIN_DIR_) == 'admin' && file_exists(_PS_ADMIN_DIR_.'/../admin/')) {
             //$rand = 'admin'.sprintf('%03d', rand(0, 999)).Tools::strtolower(Tools::passwdGen(6)).'/';
             // @TODO: using dashboard to replace admin+randNm
             $rand = 'dashboard';
@@ -103,8 +104,9 @@ class AdminLoginControllerCore extends AdminController
             }
         } else {
             $rand = basename(_PS_ADMIN_DIR_).'/';
-        }
+        }*/
 
+        $rand = basename(_PS_ADMIN_DIR_).'/';
         $this->context->smarty->assign(array(
             'randomNb' => $rand,
             'adminUrl' => Tools::getCurrentUrlProtocolPrefix().Tools::getShopDomain().__PS_BASE_URI__.$rand
