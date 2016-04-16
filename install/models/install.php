@@ -610,7 +610,7 @@ class InstallModelInstall extends InstallAbstractModel
                 'blocksocial',
                 'blockcategories',
                 'blockcurrencies',
-                'blockfacebook',
+                //'blockfacebook',
                 'blocklanguages',
                 'blocklayered',
                 'blockcms',
