@@ -911,7 +911,7 @@ class LanguageCore extends ObjectModel
         $errors = array();
         $file = _PS_TRANSLATIONS_DIR_.(string)$iso.'.gzip';
 
-        if(!file_exists($file) && (string)$iso == 'zh'){//if zh.gzip exists, omit download 
+        if(!file_exists($file) && (string)$iso != 'zh'){//if zh.gzip exists, omit download 
 	        if (!$lang_pack_link = Tools::file_get_contents('http://www.prestashop.com/download/lang_packs/get_language_pack.php?version='.$version.'&iso_lang='.Tools::strtolower((string)$iso))) {
 	            $errors[] = Tools::displayError('Archive cannot be downloaded from prestashop.com.');
 	        } elseif (!$lang_pack = Tools::jsonDecode($lang_pack_link)) {
