@@ -12,7 +12,7 @@
   <tab id="Orders" name="订单"/>
   <tab id="Customers" name="客户"/>
   <tab id="Price_Rules" name="价格规则"/>
-  <tab id="Shipping" name="物流信息"/>
+  <tab id="Shipping" name="配送信息"/>
   <tab id="Localization" name="本地化"/>
   <tab id="Modules" name="模块"/>
   <tab id="Preferences" name="选项"/>
@@ -42,13 +42,13 @@
   <tab id="Shopping_Carts" name="购物车"/>
   <tab id="Customer_Service" name="客户服务"/>
   <tab id="Contacts" name="联系人"/>
-  <tab id="Titles" name="职位"/>
+  <tab id="Titles" name="头衔"/>
   <tab id="Outstanding" name="Outstanding"/>
   <tab id="Cart_Rules" name="购物车规则"/>
   <tab id="Catalog_Price_Rules" name="类目价格规则"/>
   <tab id="Marketing" name="市场营销"/>
   <tab id="Shipping_1" name="配置"/>
-  <tab id="Carriers" name="承运商"/>
+  <tab id="Carriers" name="配送商"/>
   <tab id="Localization_1" name="本地化"/>
   <tab id="Languages" name="语言"/>
   <tab id="Zones" name="时区"/>
@@ -99,6 +99,6 @@
   <tab id="Stock_Coverage" name="库存范围"/>
   <tab id="Supply_orders" name="供应订单"/>
   <tab id="Configuration" name="配置"/>
-  <tab id="CarrierWizard" name="承运商"/>
+  <tab id="CarrierWizard" name="配送商"/>
   <tab id="Gamification" name="店主技能"/>
 </entity_tab>
