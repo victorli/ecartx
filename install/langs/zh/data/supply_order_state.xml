@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <entity_supply_order_state>
   <supply_order_state id="supply_order_state_1">
-    <name>1 - Creation in progress</name>
+    <name>1 - 创建中</name>
   </supply_order_state>
   <supply_order_state id="supply_order_state_2">
-    <name>2 - Order validated</name>
+    <name>2 - 订单已验证</name>
   </supply_order_state>
   <supply_order_state id="supply_order_state_3">
-    <name>3 - Pending receipt</name>
+    <name>3 - 延迟接收</name>
   </supply_order_state>
   <supply_order_state id="supply_order_state_4">
-    <name>4 - Order received in part</name>
+    <name>4 - 订单部分收到</name>
   </supply_order_state>
   <supply_order_state id="supply_order_state_5">
-    <name>5 - Order received completely</name>
+    <name>5 - 订单全部收到</name>
   </supply_order_state>
   <supply_order_state id="supply_order_state_6">
-    <name>6 - Order canceled</name>
+    <name>6 - 订单取消</name>
   </supply_order_state>
 </entity_supply_order_state>

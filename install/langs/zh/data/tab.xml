@@ -44,7 +44,7 @@
   <tab id="Contacts" name="联系人"/>
   <tab id="Titles" name="职位"/>
   <tab id="Outstanding" name="Outstanding"/>
-  <tab id="Cart_Rules" name="购物车规划"/>
+  <tab id="Cart_Rules" name="购物车规则"/>
   <tab id="Catalog_Price_Rules" name="类目价格规则"/>
   <tab id="Marketing" name="市场营销"/>
   <tab id="Shipping_1" name="配置"/>
