@@ -13,8 +13,8 @@
     <template>preparation</template>
   </order_state>
   <order_state id="Shipped">
-    <name>Shipped</name>
-    <template>已发货</template>
+    <name>已发货</name>
+    <template>shipped</template>
   </order_state>
   <order_state id="Delivered">
     <name>已投递</name>
