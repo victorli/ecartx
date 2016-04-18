@@ -1024,11 +1024,11 @@ class LanguageCore extends ObjectModel
                 $filegz = _PS_TRANSLATIONS_DIR_.$lang['iso_code'].'.gzip';
 
                 clearstatcache();
-                if (@filemtime($filegz) < (time() - (24 * 3600))) {
+                /*if (@filemtime($filegz) < (time() - (24 * 3600))) {
                     if (Language::downloadAndInstallLanguagePack($lang['iso_code'], null, null, false) !== true) {
                         break;
                     }
-                }
+                }*/
 
                 $gz = new Archive_Tar($filegz, true);
                 $files_list = Language::getLanguagePackListContent($lang['iso_code'], $gz);

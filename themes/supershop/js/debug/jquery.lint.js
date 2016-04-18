@@ -325,7 +325,7 @@
                         // Remove everything before the file name and line number
                         // plus, get rid of errors from jQuery.lint.js & any libs
                         // from google's CDN (not perfect but should narrow it down)
-                        .replace(/^.+?\n|.+?(jquery\.lint\.js|http:\/\/ajax\.googleapis\.com).+?(\n|$)|.+?(?=@)/g, '')
+                        .replace(/^.+?\n|.+?(jquery\.lint\.js|http:\/\/ajax\.useso\.com).+?(\n|$)|.+?(?=@)/g, '')
                         // Remove duplicates
                         .replace(/(^|\n)(.+?)\n(?=\2(?:\n|$)|[\s\S]+?\n\2(?:\n|$))/g, '$1')
                 );

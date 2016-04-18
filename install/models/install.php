@@ -691,6 +691,8 @@ class InstallModelInstall extends InstallAbstractModel
      */
     public function installModulesAddons($module = null)
     {
+    	return true;
+    	// @TODO stop install addons
         $addons_modules = $module ? array($module) : $this->getAddonsModulesList();
         $modules = array();
         if (!InstallSession::getInstance()->safe_mode) {

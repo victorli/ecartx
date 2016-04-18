@@ -17,7 +17,7 @@
   <tab id="Modules" name="模块"/>
   <tab id="Preferences" name="选项"/>
   <tab id="Advanced_Parameters" name="高级参数"/>
-  <tab id="Administration" name="管理员"/>
+  <tab id="Administration" name="后台管理"/>
   <tab id="Stats" name="统计信息"/>
   <tab id="Stock" name="库存"/>
   <tab id="Products" name="商品"/>
@@ -45,7 +45,7 @@
   <tab id="Titles" name="职位"/>
   <tab id="Outstanding" name="Outstanding"/>
   <tab id="Cart_Rules" name="购物车规划"/>
-  <tab id="Catalog_Price_Rules" name="分类目录价格规则"/>
+  <tab id="Catalog_Price_Rules" name="类目价格规则"/>
   <tab id="Marketing" name="市场营销"/>
   <tab id="Shipping_1" name="配置"/>
   <tab id="Carriers" name="承运商"/>
@@ -100,4 +100,5 @@
   <tab id="Supply_orders" name="供应订单"/>
   <tab id="Configuration" name="配置"/>
   <tab id="CarrierWizard" name="承运商"/>
+  <tab id="Gamification" name="店主技能"/>
 </entity_tab>
