@@ -30,6 +30,7 @@ abstract class PaymentModuleCore extends Module
     public $currentOrder;
     public $currencies = true;
     public $currencies_mode = 'checkbox';
+    public $ref;
 
     const DEBUG_MODE = false;
 
@@ -219,11 +220,14 @@ abstract class PaymentModuleCore extends Module
 
             $order_list = array();
             $order_detail_list = array();
-
-            do {
-                $reference = Order::generateReference();
-            } while (Order::getByReference($reference)->count());
-
+			
+            if(!isset($this->ref)){
+	            do {
+	                $reference = Order::generateReference();
+	            } while (Order::getByReference($reference)->count());
+            }else{
+            	$reference = $this->ref;
+            }
             $this->currentOrderReference = $reference;
 
             $order_creation_failed = false;
@@ -1003,5 +1007,13 @@ abstract class PaymentModuleCore extends Module
             return $this->context->smarty->fetch($default_mail_template_path);
         }
         return '';
+    }
+    
+    public function setRef($ref){
+    	$this->ref = $ref;
+    }
+    
+	public function getRef(){
+    	return $this->ref;
     }
 }

@@ -34,7 +34,7 @@
 {else}
 <h3>{l s='Your order on %s has not been accepted.' sprintf=$shop_name mod='wxpay'}</h3>
 <p>
-	<br />- {l s='Reference' mod='wxpay'} <span class="reference"> <strong>{$reference|escape:'html':'UTF-8'}</strong></span>
+	<br />- {l s='¶©µ¥ºÅ' mod='wxpay'} <span class="reference"> <strong>{$reference|escape:'html':'UTF-8'}</strong></span>
 	<br /><br />{l s='Please, try to order again.' mod='wxpay'}
 	<br /><br />{l s='If you have questions, comments or concerns, please contact our' mod='wxpay'} <a href="{$link->getPageLink('contact', true)|escape:'html':'UTF-8'}">{l s='expert customer support team.' mod='wxpay'}</a>
 </p>

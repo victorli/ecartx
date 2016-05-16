@@ -24,22 +24,21 @@
 *}
 
 <div>
-	<h3>{l s='Redirect your customer' mod='wxpay'}:</h3>
+	<h3>{l s='微信扫描支付' mod='wxpay'}:</h3>
 	<ul class="alert alert-info">
 			<li>{l s='This action should be used to redirect your customer to the website of your payment processor' mod='wxpay'}.</li>
 	</ul>
-	
+<!-- 	
 	<div class="alert alert-warning">
 		{l s='You can redirect your customer with an error message' mod='wxpay'}:
 		<a href="{$link->getModuleLink('wxpay', 'redirect', ['action' => 'error'], true)|escape:'htmlall':'UTF-8'}" title="{l s='Look at the error' mod='wxpay'}">
 			<strong>{l s='Look at the error message' mod='wxpay'}</strong>
 		</a>
 	</div>
-	
+ -->	
 	<div class="alert alert-success">
-		{l s='You can also redirect your customer to the confirmation page' mod='wxpay'}:
-		<a href="{$link->getModuleLink('wxpay', 'confirmation', ['cart_id' => $cart_id, 'secure_key' => $secure_key], true)|escape:'htmlall':'UTF-8'}" title="{l s='Confirm' mod='wxpay'}">
-			<strong>{l s='Go to the confirmation page' mod='wxpay'}</strong>
-		</a>
+		{l s='扫描支付' mod='wxpay'}:
+		<img alt="模式一扫码支付" src="{$url1|escape:'htmlall':'UTF-8'}" style="width:150px;height:150px;"/>
+		
 	</div>
 </div>

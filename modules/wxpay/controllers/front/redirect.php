@@ -37,9 +37,12 @@ class WxpayRedirectModuleFrontController extends ModuleFrontController
         if (Tools::getValue('action') == 'error') {
             return $this->displayError('An error occurred while trying to redirect the customer');
         } else {
+        	$url = "http://paysdk.weixin.qq.com/example/qrcode.php?data=";
+        	$url = $url.Tools::getValue("url1");
             $this->context->smarty->assign(array(
                 'cart_id' => Context::getContext()->cart->id,
                 'secure_key' => Context::getContext()->customer->secure_key,
+            	'url1'=>$url,
             ));
 
             return $this->setTemplate('redirect.tpl');

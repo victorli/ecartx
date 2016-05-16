@@ -411,7 +411,8 @@ class WxPayApi
 	public static function notify($callback, &$msg)
 	{
 		//获取通知的数据
-		$xml = $GLOBALS['HTTP_RAW_POST_DATA'];
+		//$xml = $GLOBALS['HTTP_RAW_POST_DATA'];//file_get_contents("php://input");
+		$xml = isset($GLOBALS['HTTP_RAW_POST_DATA']) ? $GLOBALS['HTTP_RAW_POST_DATA'] : file_get_contents("php://input");
 		//如果返回成功则验证签名
 		try {
 			$result = WxPayResults::Init($xml);
@@ -534,8 +535,8 @@ class WxPayApi
 			curl_setopt($ch,CURLOPT_PROXYPORT, WxPayConfig::CURL_PROXY_PORT);
 		}
 		curl_setopt($ch,CURLOPT_URL, $url);
-		curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,TRUE);
-		curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,2);//严格校验
+		curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,FALSE);
+		curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,FALSE);//严格校验2
 		//设置header
 		curl_setopt($ch, CURLOPT_HEADER, FALSE);
 		//要求结果为字符串且输出到屏幕上

@@ -79,10 +79,10 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
         }
 
         Configuration::updateValue('WXPAY_LIVE_MODE', false);
-        Configuration::updateValue('WXPAY_APPID','wx426b3015555a46be');
-        Configuration::updateValue('WXPAY_MCHID','1225312702');
-        Configuration::updateValue('WXPAY_KEY','e10adc3949ba59abbe56e057f20f883e');
-        Configuration::updateValue('WXPAY_APPSECRET','01c6d59a3f9024db6336662ac95c8e74');
+        Configuration::updateValue('WXPAY_APPID','wx2a77799a8e174cb3');
+        Configuration::updateValue('WXPAY_MCHID','1341788101');
+        Configuration::updateValue('WXPAY_KEY','e10blx3949ba59abbe56e057f20f883e');
+        Configuration::updateValue('WXPAY_APPSECRET','ee41bca1e7be6e6466d6b8ee955027c4');
         Configuration::updateValue('WXPAY_GATEWAY_UNIFIED_ORDER','https://api.mch.weixin.qq.com/pay/unifiedorder');
         
 
@@ -276,26 +276,40 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
         $this->smarty->assign('module_dir', $this->_path);
         
         require_once 'lib/WxPay.NativePay.php';
+        $cart = new Cart($params['cart']->id);
         
+        do {
+                $reference = Order::generateReference();
+            } while (Order::getByReference($reference)->count());
+        
+        $order_id = $reference;
+//        $a = $this->addOrderNo($order_id);
         $notify = new NativePay();
         $input = new WxPayUnifiedOrder();
-        $input->SetBody("test");
+        $input->SetBody($this->getGoodsDescription());
 		$input->SetAttach("test");
-		$input->SetOut_trade_no(WxPayConfig::MCHID.date("YmdHis"));
-		$input->SetTotal_fee("1");
+		//$input->SetOut_trade_no(WxPayConfig::MCHID.date("YmdHis"));
+		$input->SetOut_trade_no($order_id);
+		$input->SetTotal_fee($this->formatTotalFee($cart->getOrderTotal()));
 		$input->SetTime_start(date("YmdHis"));
 		$input->SetTime_expire(date("YmdHis", time() + 600));
-		$input->SetGoods_tag("test");
-		$input->SetNotify_url("http://paysdk.weixin.qq.com/example/notify.php");
+		//$input->SetGoods_tag("test");
+		$input->SetNotify_url(dirname('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']).'/notify.php');
+		//$input->SetNotify_url(dirname('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']).'/index.php?fc=module&module=wxpay&controller=notify');
 		$input->SetTrade_type("NATIVE");
-		$input->SetProduct_id("123456789");
+		$input->SetProduct_id($order_id);
 		$result = $notify->GetPayUrl($input);
 		$url2 = $result["code_url"];
 		
 		require_once 'lib/phpqrcode/phpqrcode.php';
 		$url = urldecode($url2);
 		
-        
+        $this->smarty->assign(
+            array(
+                
+                'wxpay_payment_url' => $url
+            )
+        );
 
         return $this->display(__FILE__, 'views/templates/hook/payment.tpl');
     }
@@ -322,4 +336,33 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
 
         return $this->display(__FILE__, 'views/templates/hook/confirmation.tpl');
     }
+    
+	public function getGoodsName($id_cart)
+    {
+        $cart = new Cart($id_cart);
+        $products = $cart->getProducts();
+        $goods_name = '';
+        foreach ($products as $product) {
+            $goods_name .= $product['name'].', ';
+        }
+        if ($goods_name) {
+            return Tools::substr($goods_name, 0, -2);
+        }
+        return $goods_name;
+    }
+    
+	public function getGoodsDescription()
+    {
+        return $this->context->shop->name;
+    }
+    
+    public function formatTotalFee($total_fee){
+    	return $total_fee*100;
+    }
+    
+	public function addOrderNo($order_no){
+		$res = Db::getInstance()->insert('wxpay', array(
+		    'order_no'      => pSQL($order_no),
+		));
+	}
 }
