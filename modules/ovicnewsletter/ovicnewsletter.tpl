@@ -18,7 +18,7 @@
 					<a onclick="regisNewsletter()" name="submitNewsletter" class="btn btn-default button">{l s="Subscribe"}</a>
 				</div>
                 <div style="margin-top:15px">                    
-                    <div class="checkbox" style="margin-bottom:0"><label><input id="persistent" name="persistent" type="checkbox" value="1">{l s=" Do not show this popup again" mod="ovicnewsletter"}</label></div>
+                    <div class="checkbox" style="margin-bottom:0"><label><input id="persistent" name="persistent" type="checkbox" value="1">{l s="Do not show this popup again" mod="ovicnewsletter"}</label></div>
                 </div>
 				                    
 			</div>
