@@ -26,7 +26,7 @@ public function __construct()
         $this->displayName = $this->l('AlipayX');
         $this->description = $this->l('ALIPAY IS THE WORLDS LEADING E-PAYMENT PROVIDER WITH 400 MILLION ACTIVE USERS IN CHINA. It processes 50% of the total online transactions and is the most preferred payment method by Chinese consumers. Configure Alipay and start selling to China now.');
 
-        $this->confirmUninstall = $this->l('Are you sure you want to uninstall Alipay?');
+        $this->confirmUninstall = $this->l('Are you sure you want to uninstall AlipayX?');
 		$this->limited_countries = array('CN');
         $this->limited_currencies = array(
         	'CNY'
