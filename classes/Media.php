@@ -335,15 +335,15 @@ class MediaCore
         $url_data = parse_url($file);
         $file_uri = _PS_ROOT_DIR_.Tools::str_replace_once(__PS_BASE_URI__, DIRECTORY_SEPARATOR, $url_data['path']);
         $file_uri_host_mode = _PS_CORE_DIR_.Tools::str_replace_once(__PS_BASE_URI__, DIRECTORY_SEPARATOR, $url_data['path']);
-        // check if js files exists, if not try to load query from ajax.useso.com
+        // check if js files exists, if not try to load query from http://lib.sinaapp.com/js/jquery
 
         $return = array();
 
         if (@filemtime($file_uri) || (defined('_PS_HOST_MODE_') && @filemtime($file_uri_host_mode))) {
             $return[] = Media::getJSPath($file);
         } else {
-            $return[] = Media::getJSPath(Tools::getCurrentUrlProtocolPrefix().'ajax.useso.com/ajax/libs/jquery/'
-                .$version.'/jquery'.($minifier ? '.min.js' : '.js'));
+            $return[] = Media::getJSPath(Tools::getCurrentUrlProtocolPrefix().'lib.sinaapp.com/js/jquery/'
+                .$version.'/jquery-'.$version.($minifier ? '.min.js' : '.js'));
         }
 
         if ($add_no_conflict) {

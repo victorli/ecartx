@@ -28,7 +28,7 @@ class MultiStyle extends Module
         if (is_string($defaultfont) === true)
         	$defaultfont = urldecode(preg_replace('/((\%5C0+)|(\%00+))/i', '', urlencode($defaultfont)));
         $defaultfont = !is_string($defaultfont)? $defaultfont : stripslashes($defaultfont);
-        Configuration::updateValue('FONT_LINK', $defaultfont);
+        //Configuration::updateValue('FONT_LINK', $defaultfont);
         Configuration::updateValue('MAIN_COLOR','#ff9933');
         Configuration::updateValue('OPTION1_SECOND_COLOR','#e62e04');
         Configuration::updateValue('OPTION2_SECOND_COLOR','#283442');
