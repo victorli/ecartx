@@ -1,4 +1,4 @@
-{$linkfont|html_entity_decode}
+{*$linkfont|html_entity_decode*}
 <style type="text/css">
     /***  Font default ***/
     .mainFont{ldelim}
