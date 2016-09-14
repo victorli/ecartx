@@ -293,7 +293,7 @@ class MultiStyle extends Module
 
     public function hookDisplayHeader($params)
 	{
-	   $linkfont =  Configuration::get('FONT_LINK');
+	   $linkfont = "";// Configuration::get('FONT_LINK');
        $start = strpos($linkfont,'family');
        $linkfont = substr_replace($linkfont,'',0,$start+7);
        $start = strpos($linkfont,"'");
