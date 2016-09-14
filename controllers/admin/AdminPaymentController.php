@@ -302,11 +302,12 @@ class AdminPaymentControllerCore extends AdminController
                 $fetch = $helper->renderModulesList($active_list);
             }
 
-            $this->context->smarty->assign(array(
+            //隐藏系统推荐支付模块面板
+            /*$this->context->smarty->assign(array(
                 'panel_title' => $this->l('Recommended payment gateways'),
                 'view_all' => true
             ));
-            $fetch .= $helper->renderModulesList($unactive_list);
+            $fetch .= $helper->renderModulesList($unactive_list);*/
             return $fetch;
         }
     }
