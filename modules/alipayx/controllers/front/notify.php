@@ -3,7 +3,7 @@
 
 
 
-class AliNotifyModuleFrontController extends ModuleFrontController
+class AlipayxNotifyModuleFrontController extends ModuleFrontController
 {
 	public function postProcess()
 	{
@@ -14,7 +14,7 @@ class AliNotifyModuleFrontController extends ModuleFrontController
         
         
 		require_once(dirname(__FILE__).'/../../lib/log.php');
-		require_once(_PS_MODULE_DIR_."ali/alipay.config.php");
+		require_once(_PS_MODULE_DIR_."alipayx/alipay.config.php");
 		require_once(dirname(__FILE__)."/../../lib/alipay_notify.class.php");
 		//初始化日志
 		$logHandler= new CLogFileHandler("/var/www/wx/modules/wxpay/logs/".date('Y-m-d').'.log');

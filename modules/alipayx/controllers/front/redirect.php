@@ -24,7 +24,7 @@
 *  International Registered Trademark & Property of PrestaShop SA
 */
 
-class AliRedirectModuleFrontController extends ModuleFrontController
+class AlipayxRedirectModuleFrontController extends ModuleFrontController
 {
     /**
      * Do whatever you have to before redirecting the customer on the website of your payment processor.
