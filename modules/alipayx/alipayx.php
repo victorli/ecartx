@@ -206,7 +206,7 @@ public function __construct()
 	public function hookPayment($params)
     {
 	header("Content-type:text/html;charset=utf-8");
-        include_once(_PS_MODULE_DIR_.'alipay/api/loader.php');
+        include_once(_PS_MODULE_DIR_.'alipayx/api/loader.php');
         require_once(_PS_MODULE_DIR_."alipayx/alipay.config.php");
 		require_once(_PS_MODULE_DIR_."alipayx/lib/alipay_submit.class.php");
 		
