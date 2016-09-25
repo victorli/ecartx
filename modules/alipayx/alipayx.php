@@ -207,8 +207,8 @@ public function __construct()
     {
 	header("Content-type:text/html;charset=utf-8");
         include_once(_PS_MODULE_DIR_.'alipay/api/loader.php');
-        require_once(_PS_MODULE_DIR_."ali/alipay.config.php");
-		require_once(_PS_MODULE_DIR_."ali/lib/alipay_submit.class.php");
+        require_once(_PS_MODULE_DIR_."alipayx/alipay.config.php");
+		require_once(_PS_MODULE_DIR_."alipayx/lib/alipay_submit.class.php");
 		
 		//$cart = $params['cart'];
 
