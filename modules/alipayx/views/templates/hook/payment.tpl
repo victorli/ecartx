@@ -25,7 +25,7 @@
 <script type="text/javascript">
 function alipay(){
 	$.ajax({
-		url:"{$link->getModuleLink('ali', 'redirect', ['order_no'=>$order_no], true)|escape:'htmlall':'UTF-8'}",
+		url:"{$link->getModuleLink('alipayx', 'redirect', ['order_no'=>$order_no], true)|escape:'htmlall':'UTF-8'}",
 		data:{},
 		type:'post',
 		dataType:'json',
@@ -44,13 +44,13 @@ function alipay(){
 		<a href="{$alipay_payment_url|escape:'htmlall':'UTF-8'}" id="pay" style="display:none;"/>
             <!-- <a href="{$alipay_payment_url|escape:'htmlall':'UTF-8'}" title="{l s='Pay with Alipay' mod='alipay'}"> -->
             <a href="#" 
-            title="{l s='Pay with Alipay' mod='ali'}" onclick="alipay()">
+            title="{l s='Pay with Alipay' mod='alipayx'}" onclick="alipay()">
             
                 <span class="label_en">
-                    {l s='Pay with Alipay' mod='ali'}<br />
+                    {l s='Pay with Alipay' mod='alipayx'}<br />
                 </span>
                 <span>
-                    {l s='使用支付宝安全付款' mod='ali'}
+                    {l s='使用支付宝安全付款' mod='alipayx'}
                 </span>
             </a>
 		</p>
