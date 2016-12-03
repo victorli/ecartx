@@ -89,6 +89,7 @@ class AuthControllerCore extends FrontController
     {
         parent::initContent();
 
+        $this->context->smarty->assign('hide_left_column',1);
         $this->context->smarty->assign('genders', Gender::getGenders());
 
         $this->assignDate();
