@@ -161,15 +161,25 @@ class Sociallogin extends Module
                     array(
                         'col' => 3,
                         'type' => 'text',
-                        'prefix' => '<i class="icon icon-envelope"></i>',
-                        'desc' => $this->l('Enter a valid email address'),
-                        'name' => 'SOCIALLOGIN_ACCOUNT_EMAIL',
-                        'label' => $this->l('Email'),
+                        'desc' => $this->l('Enter a qq appid'),
+                        'name' => 'SOCIALLOGIN_QQ_APPID',
+                        'label' => $this->l('QQ APPID'),
                     ),
                     array(
-                        'type' => 'password',
-                        'name' => 'SOCIALLOGIN_ACCOUNT_PASSWORD',
-                        'label' => $this->l('Password'),
+                        'type' => 'text',
+                        'name' => 'SOCIALLOGIN_QQ_SECRET',
+                        'label' => $this->l('QQ Secret'),
+                    ),array(
+                        'col' => 3,
+                        'type' => 'text',
+                        'desc' => $this->l('Enter a weibo appid'),
+                        'name' => 'SOCIALLOGIN_WEIBO_APPID',
+                        'label' => $this->l('Weibo APPID'),
+                    ),
+                    array(
+                        'type' => 'text',
+                        'name' => 'SOCIALLOGIN_WEIBO_SECRET',
+                        'label' => $this->l('Weibo Secret'),
                     ),
                 ),
                 'submit' => array(
@@ -186,8 +196,10 @@ class Sociallogin extends Module
     {
         return array(
             'SOCIALLOGIN_LIVE_MODE' => Configuration::get('SOCIALLOGIN_LIVE_MODE', true),
-            'SOCIALLOGIN_ACCOUNT_EMAIL' => Configuration::get('SOCIALLOGIN_ACCOUNT_EMAIL', 'contact@prestashop.com'),
-            'SOCIALLOGIN_ACCOUNT_PASSWORD' => Configuration::get('SOCIALLOGIN_ACCOUNT_PASSWORD', null),
+            'SOCIALLOGIN_QQ_APPID' => Configuration::get('SOCIALLOGIN_QQ_APPID', null),
+            'SOCIALLOGIN_QQ_SECRET' => Configuration::get('SOCIALLOGIN_QQ_SECRET', null),
+        	'SOCIALLOGIN_WEIBO_APPID' => Configuration::get('SOCIALLOGIN_WEIBO_APPID', null),
+        	'SOCIALLOGIN_WEIBO_SECRET' => Configuration::get('SOCIALLOGIN_WEIBO_SECRET', null),
         );
     }
 
