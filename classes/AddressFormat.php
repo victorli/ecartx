@@ -50,7 +50,7 @@ class AddressFormatCore extends ObjectModel
     );
 
     public static $requireFormFieldsList = array(
-        'firstname',
+        //'firstname', remove firstname from required form fields
         'lastname',
         'address1',
         'city',
