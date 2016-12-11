@@ -461,7 +461,7 @@
 		{$addresses_style.phone_mobile = 'address_phone_mobile'}
 		{$addresses_style.alias = 'address_title'}
 	{/if}
-
+	{*Try to hidden deliver informaion at the first step of Order @victorli*}	{*
 	{if ((!empty($delivery_option) AND !isset($virtualCart)) OR $delivery->id OR $invoice->id) AND !$opc}
 		<div class="order_delivery clearfix row">
 			{if !isset($formattedAddresses) || (count($formattedAddresses.invoice) == 0 && count($formattedAddresses.delivery) == 0) || (count($formattedAddresses.invoice.formated) == 0 && count($formattedAddresses.delivery.formated) == 0)}
@@ -529,7 +529,7 @@
 				{/foreach}
 			{/if}
 		</div>
-	{/if}
+	{/if}	*}		
 	<div id="HOOK_SHOPPING_CART">{$HOOK_SHOPPING_CART}</div>
 	<p class="cart_navigation clearfix">
 		{if !$opc}
