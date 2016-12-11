@@ -49,11 +49,9 @@ phone
 phone_mobile</format>
     </address_format>
     <address_format id="address_format_5" id_country="CN">
-      <format>firstname lastname
+      <format>lastname firstname
 company
-vat_number
 address1
-address2
 postcode city
 Country:name
 phone
