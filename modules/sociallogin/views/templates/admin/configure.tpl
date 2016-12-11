@@ -35,7 +35,7 @@
 		{l s='This module will boost your sales!' mod='sociallogin'}
 	</p>
 </div>
-
+<!--
 <div class="panel">
 	<h3><i class="icon icon-tags"></i> {l s='Documentation' mod='sociallogin'}</h3>
 	<p>
@@ -46,3 +46,4 @@
 		</ul>
 	</p>
 </div>
+-->
