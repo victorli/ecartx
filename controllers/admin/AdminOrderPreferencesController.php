@@ -126,7 +126,14 @@ class AdminOrderPreferencesControllerCore extends AdminController
                         'list' => $cms_tab,
                         'identifier' => 'id',
                         'cast' => 'intval'
-                    )
+                    ),
+                	'ECARTX_USE_INVOICE_ADDRESS' => array(
+                		'title' => $this->l('Use Invoice Address'),
+                		'validation' => 'isBool',	
+                		'hint' => $this->l('Switcher for whether using invoice address'),
+                		'cast'=> 'intval',
+                		'type' => 'bool'
+                	),
                 ),
                 'submit' => array('title' => $this->l('Save'))
             ),
