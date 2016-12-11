@@ -151,6 +151,9 @@ class OrderControllerCore extends ParentOrderController
 
         // Check for alternative payment api
         $is_advanced_payment_api = (bool)Configuration::get('PS_ADVANCED_PAYMENT_API');
+        
+        // Check for using invoice address
+        $this->context->smarty->assign('use_invoice_address',(bool)Configuration::get('ECARTX_USE_INVOICE_ADDRESS'));
 
         // 4 steps to the order
         switch ((int)$this->step) {
