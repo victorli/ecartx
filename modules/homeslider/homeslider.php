@@ -617,7 +617,7 @@ class HomeSlider extends Module
 		return $this->display(__FILE__, 'homeslider.tpl', $this->getCacheId());
 	}
 
-	public function hookDisplayHome()
+	public function hookdisplayHome()
 	{
 		if (!$this->_prepareHook())
 			return false;
