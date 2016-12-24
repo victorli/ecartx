@@ -35,19 +35,3 @@
 		</p>
 	</div>
 </div>
-<!-- 
-<div class="row">
-	<div class="col-xs-12 col-md-12">
-		<p class="payment_module" id="wxpay_payment_button">
-            <a href="{$wxpay_payment_url|escape:'htmlall':'UTF-8'}" title="{l s='Pay with weixinpay' mod='wxpay'}">
-                <span class="label_en">
-                    {l s='Pay with WeiXin' mod='wxpay'}<br />
-                </span>
-                <span>
-                    {l s='使用微信安全付款' mod='wxpay'}
-                </span>
-            </a>
-		</p>
-	</div>
-</div>
- -->

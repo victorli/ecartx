@@ -128,9 +128,9 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
 
         $this->context->smarty->assign('module_dir', $this->_path);
 
-        $output = $this->context->smarty->fetch($this->local_path.'views/templates/admin/configure.tpl');
+        //$output = $this->context->smarty->fetch($this->local_path.'views/templates/admin/configure.tpl');
 
-        return $output.$this->renderForm();
+        return $this->renderForm();//$output.$this->renderForm();
     }
 
     /**
