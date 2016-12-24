@@ -96,9 +96,9 @@ public function __construct()
         
         $this->context->smarty->assign('module_dir', $this->_path);
 
-        $output = $this->context->smarty->fetch($this->local_path.'views/templates/admin/configure.tpl');
+        //$output = $this->context->smarty->fetch($this->local_path.'views/templates/admin/configure.tpl');
 
-        return $output.$this->renderForm();
+        return $this->renderForm(); //$output.$this->renderForm();
     }
     
 	protected function renderForm()
