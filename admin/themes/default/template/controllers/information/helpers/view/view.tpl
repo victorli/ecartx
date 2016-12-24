@@ -26,49 +26,6 @@
 {extends file="helpers/view/view.tpl"}
 
 {block name="override_tpl"}
-	{if !$host_mode}
-	<script type="text/javascript">
-		$(document).ready(function()
-		{
-			$.ajax({
-				type: 'GET',
-				url: '{$link->getAdminLink('AdminInformation')|addslashes}',
-				data: {
-					'action': 'checkFiles',
-					'ajax': 1
-				},
-				dataType: 'json',
-				success: function(json)
-				{
-					var tab = {
-						'missing': '{l s='Missing files'}',
-						'updated': '{l s='Updated files'}'
-					};
-
-					if (json.missing.length || json.updated.length)
-						$('#changedFiles').html('<div class="alert alert-warning">{l s='Changed/missing files have been detected.'}</div>');
-					else
-						$('#changedFiles').html('<div class="alert alert-success">{l s='No change has been detected in your files.'}</div>');
-
-					$.each(tab, function(key, lang)
-					{
-						if (json[key].length)
-						{
-							var html = $('<ul>').attr('id', key+'_files');
-							$(json[key]).each(function(key, file)
-							{
-								html.append($('<li>').html(file))
-							});
-							$('#changedFiles')
-								.append($('<h4>').html(lang+' ('+json[key].length+')'))
-								.append(html);
-						}
-					});
-				}
-			});
-		});
-	</script>
-	{/if}
 	<div class="row">
 		<div class="col-lg-6">
 			<div class="panel">
@@ -241,13 +198,4 @@
 			</div>
 		</div>
 	</div>
-	{if !$host_mode}
-	<div class="panel">
-		<h3>
-			<i class="icon-info"></i>
-			{l s='List of changed files'}
-		</h3>
-		<div id="changedFiles"><i class="icon-spin icon-refresh"></i> {l s='Checking files...'}</div>
-	</div>
-	{/if}
 {/block}
