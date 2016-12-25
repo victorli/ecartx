@@ -38,7 +38,7 @@ $sql[] = 'CREATE TABLE IF NOT EXISTS `'._DB_PREFIX_.'wxpay_unifiedorder` (
 	`detail` text,
 	`attach` varchar(127),
 	`out_trade_no` varchar(32) not null,
-	`fee_type`varchar(16) default `CNY`,sss
+	`fee_type`varchar(16) default `CNY`,
 	`total_fee` int not null,
 	`spbill_create_ip` char(16) not null,
 	`time_start` varchar(14) not null,
@@ -64,6 +64,7 @@ $sql[] = 'CREATE TABLE IF NOT EXISTS `'._DB_PREFIX_.'wxpay_unifiedorder` (
 foreach ($sql as $query) {
     if (Db::getInstance()->execute($query) == false) {
     	PrestaShopLogger::addLog($query);
+    	$this->_errors[] = $this->l('Error to install SQL:'.$query);
         return false;
     }
 }
