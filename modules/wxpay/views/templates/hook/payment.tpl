@@ -24,7 +24,7 @@
 *}
 
 <div class="row">
-	<div class="col-xs-12 col-md-6">
+	<div class="col-xs-12 col-md-12">
 		<p class="payment_module" id="wxpay_payment_button">
 			
 				<a href="{$link->getModuleLink('wxpay', 'redirect', ['url1'=>($wxpay_payment_url|escape:'htmlall':'UTF-8')], true)|escape:'htmlall':'UTF-8'}" title="{l s='Pay with my payment module' mod='wxpay'}">

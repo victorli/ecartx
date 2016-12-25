@@ -283,26 +283,27 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
             } while (Order::getByReference($reference)->count());
         
         $order_id = $reference;
-//        $a = $this->addOrderNo($order_id);
         $notify = new NativePay();
         $input = new WxPayUnifiedOrder();
+        $input->SetAppid(Configuration::get('WXPAY_APPID'));
+        $input->SetMch_id(Configuration::get('WXPAY_MCHID'));
+        $input->SetDevice_info('WEB');
         $input->SetBody($this->getGoodsDescription());
-		$input->SetAttach("test");
-		//$input->SetOut_trade_no(WxPayConfig::MCHID.date("YmdHis"));
+		$input->SetAttach("test");//using for reference
 		$input->SetOut_trade_no($order_id);
 		$input->SetTotal_fee($this->formatTotalFee($cart->getOrderTotal()));
 		$input->SetTime_start(date("YmdHis"));
-		$input->SetTime_expire(date("YmdHis", time() + 600));
+		$input->SetTime_expire(date("YmdHis", time() + 1800));
 		//$input->SetGoods_tag("test");
-		$input->SetNotify_url(dirname('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']).'/notify.php');
-		//$input->SetNotify_url(dirname('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']).'/index.php?fc=module&module=wxpay&controller=notify');
+		$input->SetNotify_url($this->context->link->getModuleLink($this->name,'notify'));
 		$input->SetTrade_type("NATIVE");
 		$input->SetProduct_id($order_id);
 		$result = $notify->GetPayUrl($input);
-		$url2 = $result["code_url"];
+		
+		$this->logUnfiedOrder($input, $result);
 		
 		require_once 'lib/phpqrcode/phpqrcode.php';
-		$url = urldecode($url2);
+		$url = urldecode($result['code_url']);
 		
         $this->smarty->assign(
             array(
@@ -359,10 +360,26 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
     public function formatTotalFee($total_fee){
     	return $total_fee*100;
     }
-    
-	public function addOrderNo($order_no){
-		$res = Db::getInstance()->insert('wxpay', array(
-		    'order_no'      => pSQL($order_no),
-		));
+	
+	public function logUnfiedOrder($input,$result){
+		
+		$data = $input;
+		
+		$data['return_code'] = pSQL($result['return_code']);
+		$data['return_msg']  = pSQL($result['return_msg']);
+		
+		if ($result['return_code'] == 'SUCCESS'){
+			$data['return_nonce_str'] = pSQL($result['nonce_str']);
+			$data['result_code'] = pSQL($result['result_code']);
+			if($data['result_code'] == 'SUCCESS'){
+				$data['prepay_id'] = pSQL($result['prepay_id']);
+				$data['code_url'] = pSQL($result['code_url']);
+			}else{
+				$data['err_code'] = pSQL($result['err_code']);
+				$data['err_code_des'] = pSQL($result['err_code_des']);
+			}
+		}
+		
+		return Db::getInstance()->insert('wxpay_unifiedorder', $data);
 	}
 }
