@@ -198,7 +198,7 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
                         'prefix' => '<i class="icon icon-user"></i>',
                         'desc' => $this->l('Enter your APPID provided by Weixin'),
                         'name' => 'WXPAY_APPID',
-                        'label' => $this->l('APPID'),//鍏紬甯愬彿ID
+                        'label' => $this->l('APPID'),
                     ),
                     array(
                         'col' => 4,
@@ -206,7 +206,8 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
                         'prefix' => '<i class="icon icon-user"></i>',
                         'desc' => $this->l('Enter your MCHID provided by Weixin'),
                         'name' => 'WXPAY_MCHID',
-                        'label' => $this->l('MCHID'),//鍟嗘埛鍙�                    ),
+                        'label' => $this->l('MCHID'), 
+                    ),
                 ),
                 'submit' => array(
                     'title' => $this->l('Save'),
