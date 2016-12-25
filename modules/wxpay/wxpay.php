@@ -380,6 +380,8 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
 			}
 		}
 		
+		$data['created_at'] = date("Y-m-d H:i:s");
+		
 		return Db::getInstance()->insert('wxpay_unifiedorder', $data);
 	}
 }
