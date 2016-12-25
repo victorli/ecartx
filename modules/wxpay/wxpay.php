@@ -198,7 +198,7 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
                         'prefix' => '<i class="icon icon-user"></i>',
                         'desc' => $this->l('Enter your APPID provided by Weixin'),
                         'name' => 'WXPAY_APPID',
-                        'label' => $this->l('APPID'),//公众帐号ID
+                        'label' => $this->l('APPID'),//鍏紬甯愬彿ID
                     ),
                     array(
                         'col' => 4,
@@ -206,8 +206,7 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
                         'prefix' => '<i class="icon icon-user"></i>',
                         'desc' => $this->l('Enter your MCHID provided by Weixin'),
                         'name' => 'WXPAY_MCHID',
-                        'label' => $this->l('MCHID'),//商户号
-                    ),
+                        'label' => $this->l('MCHID'),//鍟嗘埛鍙�                    ),
                 ),
                 'submit' => array(
                     'title' => $this->l('Save'),
@@ -300,7 +299,7 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
 		$input->SetProduct_id($order_id);
 		$result = $notify->GetPayUrl($input);
 		
-		$this->logUnfiedOrder($input, $result);
+		$this->logUnfiedOrder($input->GetValues(), $result);
 		
 		require_once 'lib/phpqrcode/phpqrcode.php';
 		$url = urldecode($result['code_url']);
