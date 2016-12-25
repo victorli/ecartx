@@ -31,7 +31,7 @@ $sql[] = 'CREATE TABLE IF NOT EXISTS `'._DB_PREFIX_.'wxpay_unifiedorder` (
 	`appid` char(32) not null,
 	`mch_id` char(32) not null,
 	`device_info` varchar(32),
-	`nonce_str` varchar（32），
+	`nonce_str` varchar(32)，
 	`sign` varchar(32),
 	`sign_type` varchar(32),
 	`body` varchar(128) not null,
