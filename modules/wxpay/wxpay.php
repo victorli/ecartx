@@ -78,7 +78,7 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
             return false;
         }
 
-        Configuration::updateValue('WXPAY_LIVE_MODE', false);
+        Configuration::updateValue('WXPAY_LIVE_MODE', true);
         Configuration::updateValue('WXPAY_APPID','wx2a77799a8e174cb3');
         Configuration::updateValue('WXPAY_MCHID','1341788101');
         Configuration::updateValue('WXPAY_KEY','e10blx3949ba59abbe56e057f20f883e');
