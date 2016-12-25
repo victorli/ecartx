@@ -63,7 +63,7 @@ $sql[] = 'CREATE TABLE IF NOT EXISTS `'._DB_PREFIX_.'wxpay_unifiedorder` (
 
 foreach ($sql as $query) {
     if (Db::getInstance()->execute($query) == false) {
-    	PrestashopLogger::addLog($query);
+    	PrestaShopLogger::addLog($query);
         return false;
     }
 }
