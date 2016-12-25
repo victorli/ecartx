@@ -2,7 +2,7 @@
 <module>
 	<name>wxpay</name>
 	<displayName><![CDATA[Weixin Pay]]></displayName>
-	<version><![CDATA[1.0.1]]></version>
+	<version><![CDATA[1.1.1]]></version>
 	<description><![CDATA[WxPay is integrated in the Weixin payment capabilities.
 The user can complete the rapid payment process through mobile. WxPay allows to bind the bank card\'s fast payment basis and to provide users with safe, fast and efficient payment services.]]></description>
 	<author><![CDATA[ecartx]]></author>
