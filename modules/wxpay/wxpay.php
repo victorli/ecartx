@@ -36,7 +36,7 @@ class Wxpay extends PaymentModule
     {
         $this->name = 'wxpay';
         $this->tab = 'payments_gateways';
-        $this->version = '1.0.1';
+        $this->version = '1.1.1';
         $this->author = 'ecartx';
         $this->need_instance = 0;
 
