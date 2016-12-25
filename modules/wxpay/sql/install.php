@@ -57,12 +57,13 @@ $sql[] = 'CREATE TABLE IF NOT EXISTS `'._DB_PREFIX_.'wxpay_unifiedorder` (
 	`code_url` varchar(64),
 	`err_code` varchar(32),
 	`err_code_des` varchar(128),
-	`created_at` datetimes,
+	`created_at` datetime,
     PRIMARY KEY  (`id`)
 ) ENGINE='._MYSQL_ENGINE_.' DEFAULT CHARSET=utf8;';
 
 foreach ($sql as $query) {
     if (Db::getInstance()->execute($query) == false) {
+    	PrestashopLogger::addLog($query);
         return false;
     }
 }
