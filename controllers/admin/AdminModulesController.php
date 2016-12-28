@@ -1479,7 +1479,7 @@ class AdminModulesControllerCore extends AdminController
                 continue;
             }
 			
-            //Using PRESTASTORE_LIVE switch whether need to check module's updation by victor @20161228
+            //Using PRESTASTORE_LIVE switch whether need to check module's updating
             if(Configuration::get('PRESTASTORE_LIVE')){
 	            // Upgrade Module process, init check if a module could be upgraded
 	            if (Module::initUpgradeModule($module)) {
@@ -1555,7 +1555,7 @@ class AdminModulesControllerCore extends AdminController
                 $module->categoryName = (isset($this->list_modules_categories[$module->tab]['name']) ? $this->list_modules_categories[$module->tab]['name'] : $this->list_modules_categories['others']['name']);
             }
             unset($object);
-            if ($module->installed && isset($module->version_addons) && $module->version_addons) {
+            if ($module->installed && Configuration::get('PRESTASTORE_LIVE') && isset($module->version_addons) && $module->version_addons) {
                 $upgrade_available[] = array('anchor' => ucfirst($module->name), 'name' => $module->name, 'displayName' => $module->displayName);
             }
 

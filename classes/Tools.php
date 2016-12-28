@@ -3345,7 +3345,7 @@ exit;
     protected static $is_addons_up = true;
     public static function addonsRequest($request, $params = array())
     {
-        if (!self::$is_addons_up) {
+        if (!self::$is_addons_up || !Configuration::get('PRESTASTORE_LIVE')) {
             return false;
         }
 
