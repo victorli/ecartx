@@ -1478,45 +1478,48 @@ class AdminModulesControllerCore extends AdminController
                 unset($modules[$km]);
                 continue;
             }
-
-            // Upgrade Module process, init check if a module could be upgraded
-            if (Module::initUpgradeModule($module)) {
-                // When the XML cache file is up-to-date, the module may not be loaded yet
-                if (!class_exists($module->name)) {
-                    if (!file_exists(_PS_MODULE_DIR_.$module->name.'/'.$module->name.'.php')) {
-                        continue;
-                    }
-                    require_once(_PS_MODULE_DIR_.$module->name.'/'.$module->name.'.php');
-                }
-
-                if ($object = Adapter_ServiceLocator::get($module->name)) {
-                    /** @var Module $object */
-                    $object->runUpgradeModule();
-                    if ((count($errors_module_list = $object->getErrors()))) {
-                        $module_errors[] = array('name' => $module->displayName, 'message' => $errors_module_list);
-                    } elseif ((count($conf_module_list = $object->getConfirmations()))) {
-                        $module_success[] = array('name' => $module->displayName, 'message' => $conf_module_list);
-                    }
-                    unset($object);
-                }
-            }
-            // Module can't be upgraded if not file exist but can change the database version...
-            // User has to be prevented
-            elseif (Module::getUpgradeStatus($module->name)) {
-                // When the XML cache file is up-to-date, the module may not be loaded yet
-                if (!class_exists($module->name)) {
-                    if (file_exists(_PS_MODULE_DIR_.$module->name.'/'.$module->name.'.php')) {
-                        require_once(_PS_MODULE_DIR_.$module->name.'/'.$module->name.'.php');
-                        $object = Adapter_ServiceLocator::get($module->name);
-                        $module_success[] = array('name' => $module->name, 'message' => array(
-                            0 => sprintf($this->l('Current version: %s'), $object->version),
-                            1 => $this->l('No file upgrades applied (none exist).'))
-                        );
-                    } else {
-                        continue;
-                    }
-                }
-                unset($object);
+			
+            //Using PRESTASTORE_LIVE switch whether need to check module's updation by victor @20161228
+            if(Configuration::get('PRESTASTORE_LIVE')){
+	            // Upgrade Module process, init check if a module could be upgraded
+	            if (Module::initUpgradeModule($module)) {
+	                // When the XML cache file is up-to-date, the module may not be loaded yet
+	                if (!class_exists($module->name)) {
+	                    if (!file_exists(_PS_MODULE_DIR_.$module->name.'/'.$module->name.'.php')) {
+	                        continue;
+	                    }
+	                    require_once(_PS_MODULE_DIR_.$module->name.'/'.$module->name.'.php');
+	                }
+	
+	                if ($object = Adapter_ServiceLocator::get($module->name)) {
+	                    /** @var Module $object */
+	                    $object->runUpgradeModule();
+	                    if ((count($errors_module_list = $object->getErrors()))) {
+	                        $module_errors[] = array('name' => $module->displayName, 'message' => $errors_module_list);
+	                    } elseif ((count($conf_module_list = $object->getConfirmations()))) {
+	                        $module_success[] = array('name' => $module->displayName, 'message' => $conf_module_list);
+	                    }
+	                    unset($object);
+	                }
+	            }
+	            // Module can't be upgraded if not file exist but can change the database version...
+	            // User has to be prevented
+	            elseif (Module::getUpgradeStatus($module->name)) {
+	                // When the XML cache file is up-to-date, the module may not be loaded yet
+	                if (!class_exists($module->name)) {
+	                    if (file_exists(_PS_MODULE_DIR_.$module->name.'/'.$module->name.'.php')) {
+	                        require_once(_PS_MODULE_DIR_.$module->name.'/'.$module->name.'.php');
+	                        $object = Adapter_ServiceLocator::get($module->name);
+	                        $module_success[] = array('name' => $module->name, 'message' => array(
+	                            0 => sprintf($this->l('Current version: %s'), $object->version),
+	                            1 => $this->l('No file upgrades applied (none exist).'))
+	                        );
+	                    } else {
+	                        continue;
+	                    }
+	                }
+	                unset($object);
+	            }
             }
 
             // Make modules stats
