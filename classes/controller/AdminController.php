@@ -3972,7 +3972,7 @@ class AdminControllerCore extends Controller
     }
 
     /** @var bool */
-    protected static $is_prestashop_up = true;
+    protected static $is_prestashop_up = true; //we can switch this var to false to stop prestashop update
 
     /**
      * @param string $file_to_refresh
@@ -3981,7 +3981,7 @@ class AdminControllerCore extends Controller
      */
     public function refresh($file_to_refresh, $external_file)
     {
-        if (self::$is_prestashop_up && $content = Tools::file_get_contents($external_file)) {
+        if (self::$is_prestashop_up && $content = Tools::file_get_contents($external_file) && Configuration::get('PRESTASTORE_LIVE')) {
             return (bool)file_put_contents(_PS_ROOT_DIR_.$file_to_refresh, $content);
         }
         self::$is_prestashop_up = false;
