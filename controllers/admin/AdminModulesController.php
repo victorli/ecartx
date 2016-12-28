@@ -1480,7 +1480,7 @@ class AdminModulesControllerCore extends AdminController
             }
             
             //Skip all the modules need to buy
-            if (Configuration::get('PRESTASTORE_LIVE') && isset($module->type) && $module->type == 'addonsMustHave'){
+            if (!Configuration::get('PRESTASTORE_LIVE') && isset($module->type) && $module->type == 'addonsMustHave'){
             	unset($modules[$km]);
             }
 			
