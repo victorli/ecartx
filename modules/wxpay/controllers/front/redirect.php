@@ -43,7 +43,7 @@ class WxpayRedirectModuleFrontController extends ModuleFrontController
                 'cart_id' => Context::getContext()->cart->id,
                 'secure_key' => Context::getContext()->customer->secure_key,
             	'url1'=>$url,
-            	'module_dir'=>$this->context->link->getModuleLink('wxpay'),
+            	'module_dir'=>$this->context->link->getModuleLink('wxpay',null),
             ));
 
             return $this->setTemplate('redirect.tpl');
