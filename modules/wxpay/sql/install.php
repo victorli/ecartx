@@ -28,6 +28,7 @@ $sql = array();
 
 $sql[] = 'CREATE TABLE IF NOT EXISTS `'._DB_PREFIX_.'wxpay_unifiedorder` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
+	`id_cart` int(11) not null default 0,
 	`appid` char(32) not null,
 	`mch_id` char(32) not null,
 	`device_info` varchar(32),

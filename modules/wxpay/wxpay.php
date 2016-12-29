@@ -278,11 +278,7 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
         require_once 'lib/WxPay.NativePay.php';
         $cart = new Cart($params['cart']->id);
         
-        do {
-                $reference = Order::generateReference();
-            } while (Order::getByReference($reference)->count());
-        
-        $order_id = $reference;
+        $order_id = Order::generateReference();
         $notify = new NativePay();
         $input = new WxPayUnifiedOrder();
         $input->SetAppid(Configuration::get('WXPAY_APPID'));
@@ -294,13 +290,13 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
 		$input->SetTotal_fee($this->formatTotalFee($cart->getOrderTotal()));
 		$input->SetTime_start(date("YmdHis"));
 		$input->SetTime_expire(date("YmdHis", time() + 1800));
-		//$input->SetGoods_tag("test");
-		$input->SetNotify_url($this->context->link->getModuleLink($this->name,'notify'));
+		$input->SetGoods_tag("test");
+		$input->SetNotify_url($this->context->link->getModuleLink($this->name,'notify',array(),true));
 		$input->SetTrade_type("NATIVE");
 		$input->SetProduct_id($order_id);
 		$result = $notify->GetPayUrl($input);
 		
-		$this->logUnfiedOrder($input->GetValues(), $result);
+		$this->logUnfiedOrder($cart,$input->GetValues(), $result);
 		
 		require_once 'lib/phpqrcode/phpqrcode.php';
 		$url = urldecode($result['code_url']);
@@ -361,7 +357,7 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
     	return $total_fee*100;
     }
 	
-	public function logUnfiedOrder($input,$result){
+	public function logUnfiedOrder($cart,$input,$result){
 		
 		$data = $input;
 		
@@ -380,6 +376,7 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
 			}
 		}
 		
+		$data['id_cart'] = $cart->id;
 		$data['created_at'] = date("Y-m-d H:i:s");
 		
 		return Db::getInstance()->insert('wxpay_unifiedorder', $data);
