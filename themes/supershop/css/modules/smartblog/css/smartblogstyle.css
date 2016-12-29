@@ -597,7 +597,7 @@ fieldset.account_creation {
     border: none;
     padding: 0 0 0 20px;
     margin: 0 0 20px 0;
-    font-family: Arial;
+    font-family: "Microsoft Yahei";
     padding-left: 20px;
     border: 1px solid #E8E8E8;
 }
@@ -923,7 +923,7 @@ form#searchbox .button.button-small i {
 p.sds_title_block {
     font-size: 18px;
     line-height: 24px;
-    font-family: Arial;
+    font-family: "Microsoft Yahei";
     margin-bottom: 5px;
     font-style: normal;
 }
@@ -931,7 +931,7 @@ p.sds_title_block {
     margin: 15px 0 0 0px;
     font-size: 14px;
     line-height: 20px;
-    font-family: Arial;
+    font-family: "Microsoft Yahei";
 }
 .sdsreadMore .more a {
     float: left;
@@ -939,7 +939,7 @@ p.sds_title_block {
     font-weight: normal;
     font-size: 14px;
     font-style: italic;
-    font-family: Arial;
+    font-family: "Microsoft Yahei";
 }
 .sdsarticleHeader {
     margin:0 0 20px 0;
@@ -948,7 +948,7 @@ p.sds_title_block {
     text-transform: uppercase;
     color: #666;
     font-style: normal;
-    font-family: Arial;
+    font-family: "Microsoft Yahei";
 }
 .sdsarticleCat {
     padding: 0;
@@ -984,7 +984,7 @@ h2.postcate_h2 {
     line-height: 20px;
     margin-bottom: 10px;
     font-size: 14px;
-    font-family: Arial;
+    font-family: "Microsoft Yahei";
     margin-top: 20px;
 }
 #module-smartblog-details .comment-reply-title { margin: 10px 0;}

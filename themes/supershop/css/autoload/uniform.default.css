@@ -343,7 +343,7 @@ input.uniform-input,
 select.uniform-multiselect,
 textarea.uniform {
   font-size: 13px;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "Helvetica Neue", "Microsoft Yahei", Helvetica, sans-serif;
   font-weight: normal;
   line-height: 18px;
   color: #777;

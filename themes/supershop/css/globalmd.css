@@ -233,7 +233,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Microsoft Yahei", Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #666;
@@ -365,7 +365,7 @@ cite {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Microsoft Yahei", Helvetica, sans-serif;
   font-weight: 500;
   line-height: 1.1; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
@@ -7086,7 +7086,7 @@ span.exclusive {
 }
 
 .button.button-small {
-    font:14px/18px Arial, Helvetica, sans-serif;
+    font:14px/18px "Microsoft Yahei", Helvetica, sans-serif;
     color: white;
     background: #666;
     border: none;
@@ -7457,7 +7457,7 @@ table.table_block td {
     line-height: 12px;
 }
 .price-percent-reduction.small {
-    font:12px/12px Arial, Helvetica, sans-serif;
+    font:12px/12px "Microsoft Yahei", Helvetica, sans-serif;
     padding: 1px 6px;
 }
 
@@ -7481,7 +7481,7 @@ table.table_block td {
 }
 .new-label, .sale-label {
     display: none;
-    font: 14px/28px Arial, Helvetica, sans-serif;
+    font: 14px/28px "Microsoft Yahei", Helvetica, sans-serif;
     color: white;
     text-transform: lowercase;
     padding: 0;
@@ -7530,7 +7530,7 @@ table.table_block td {
       #home-page-tabs > li {
         width: 100%; } }
     #home-page-tabs > li a {
-      font: 600 21px/24px "Arial", sans-serif;
+      font: 600 21px/24px ""Microsoft Yahei"", sans-serif;
       color: #555454;
       text-transform: uppercase;
       border: none;
@@ -7877,7 +7877,7 @@ form.compare-form {
 }
 .button.button-medium.bt_compare span {
     padding: 0 18px;
-    font-family: Arial;
+    font-family: "Microsoft Yahei";
 }
 .button.button-medium.bt_compare span i.right {
     margin-left: 6px;
@@ -9165,7 +9165,7 @@ font-weight: normal }
 .cart_voucher {
   vertical-align: top !important; }
   .cart_voucher h4 {
-    font: 600 18px/22px "Arial", sans-serif;
+    font: 600 18px/22px ""Microsoft Yahei"", sans-serif;
     color: #555454;
     text-transform: uppercase;
     padding: 7px 0 10px 0; }
@@ -9585,7 +9585,7 @@ p.cheque-indent {
   opacity: 1;
   line-height: inherit;
   text-transform: none;
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: "Microsoft Yahei", Helvetica, sans-serif; }
   #instant_search_results a.close:hover {
     color: #515151; }
 
@@ -9734,12 +9734,12 @@ table.discount i {
     #pagenotfound .pagenotfound .img-404 img {
       max-width: 100%; }
   #pagenotfound .pagenotfound h1 {
-    font: 600 28px/34px "Arial", sans-serif;
+    font: 600 28px/34px ""Microsoft Yahei"", sans-serif;
     color: #333333;
     text-transform: uppercase;
     margin-bottom: 7px; }
   #pagenotfound .pagenotfound p {
-    font: 600 16px/20px "Arial", sans-serif;
+    font: 600 16px/20px ""Microsoft Yahei"", sans-serif;
     color: #555454;
     text-transform: uppercase;
     border-bottom: 1px solid #ccc;
@@ -9948,7 +9948,7 @@ div.star.star_hover:after {
 #facebook_block h4 {
   padding: 35px 0 0 0;
   margin: 0 0 12px 0;
-  font: 300 21px/25px "Arial", sans-serif;
+  font: 300 21px/25px ""Microsoft Yahei"", sans-serif;
   color: #6f6d6d; }
   @media (max-width: 991px) {
     #facebook_block h4 {
@@ -10015,7 +10015,7 @@ div.star.star_hover:after {
     overflow: hidden; }
   #cmsinfo_block h3 {
     margin: 0 0 5px 0;
-    font: 300 21px/25px "Arial", sans-serif;
+    font: 300 21px/25px ""Microsoft Yahei"", sans-serif;
     color: #6f6d6d; }
     @media (max-width: 1199px) {
       #cmsinfo_block h3 {
@@ -12122,7 +12122,7 @@ form#searchbox .button.button-small i {
 }
 
 ul.address h3.page-subheading {
-    font-family: Arial;
+    font-family: "Microsoft Yahei";
     font-weight: normal;
 }
 
@@ -12402,7 +12402,7 @@ div#tags_block_footer {
 	border: none;
 	text-transform: uppercase;
     font-size: 18px;
-    font-family: Arial;
+    font-family: "Microsoft Yahei";
     font-weight: normal;
 }
 @media (max-width: 600px) {

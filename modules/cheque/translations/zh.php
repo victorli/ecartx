@@ -3,7 +3,7 @@
 global $_MODULE;
 $_MODULE = array();
 
-$_MODULE['<{cheque}prestashop>cheque_7b4cc4f79be9aae43efd53b4ae5cba4d'] = '检查';
+$_MODULE['<{cheque}prestashop>cheque_7b4cc4f79be9aae43efd53b4ae5cba4d'] = '支票';
 $_MODULE['<{cheque}prestashop>cheque_14e41f4cfd99b10766cc15676d8cda66'] = '这个模块允许支票支付';
 $_MODULE['<{cheque}prestashop>cheque_e09484ba6c16bc20236b63cc0d87ee95'] = '您确认要删除您的详细资料？';
 $_MODULE['<{cheque}prestashop>cheque_32776feb26ff6f9648054e796aa0e423'] = '“支付订单”和“地址”字段都必须在使用此模块之前配置。';

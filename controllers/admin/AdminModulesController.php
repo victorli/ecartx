@@ -1482,6 +1482,7 @@ class AdminModulesControllerCore extends AdminController
             //Skip all the modules need to buy or not on the disk added by victor @20161228
             if (!Configuration::get('PRESTASTORE_LIVE') && (isset($module->type) && $module->type == 'addonsMustHave' || isset($module->not_on_disk) && $module->not_on_disk)){
             	unset($modules[$km]);
+            	continue;
             }
 			
             //Using PRESTASTORE_LIVE switch whether need to check module's updating

@@ -51,7 +51,7 @@
     overflow: hidden; }
   #cmsinfo_block h3 {
     margin: 0 0 5px 0;
-    font: 300 21px/25px "Arial", sans-serif;
+    font: 300 21px/25px ""Microsoft Yahei"", sans-serif;
     color: #6f6d6d; }
     @media (max-width: 1199px) {
       #cmsinfo_block h3 {
@@ -2571,7 +2571,7 @@ form#searchbox .button.button-small i {
 }
 
 ul.address h3.page-subheading {
-    font-family: Arial;
+    font-family: "Microsoft Yahei";
     font-weight: normal;
 }
 
@@ -2851,7 +2851,7 @@ div#tags_block_footer {
 	border: none;
 	text-transform: uppercase;
     font-size: 18px;
-    font-family: Arial;
+    font-family: "Microsoft Yahei";
     font-weight: normal;
 }
 @media (max-width: 600px) {

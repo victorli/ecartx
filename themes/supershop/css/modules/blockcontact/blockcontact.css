@@ -46,7 +46,7 @@
 #contact_block p {
   margin-bottom: 4px; }
 #contact_block p.tel {
-  font: 400 17px/21px Arial, Helvetica, sans-serif;
+  font: 400 17px/21px "Microsoft Yahei", Helvetica, sans-serif;
   color: #333333;
   margin-bottom: 6px; }
   #contact_block p.tel i {
