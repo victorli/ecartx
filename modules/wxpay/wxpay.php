@@ -291,7 +291,7 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
 		$input->SetTime_start(date("YmdHis"));
 		$input->SetTime_expire(date("YmdHis", time() + 1800));
 		$input->SetGoods_tag("test");
-		$input->SetNotify_url($this->context->link->getModuleLink($this->name,'notify',array(),true));
+		$input->SetNotify_url($this->context->link->getModuleLink($this->name,'notify'));
 		$input->SetTrade_type("NATIVE");
 		$input->SetProduct_id($order_id);
 		$result = $notify->GetPayUrl($input);

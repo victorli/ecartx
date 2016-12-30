@@ -62,6 +62,52 @@ $sql[] = 'CREATE TABLE IF NOT EXISTS `'._DB_PREFIX_.'wxpay_unifiedorder` (
     PRIMARY KEY  (`id`)
 ) ENGINE='._MYSQL_ENGINE_.' DEFAULT CHARSET=utf8;';
 
+$sql[] = 'create table if not exists `'._DB_PREFIX_.'wxpay_notify`(
+		`id` int not null auto_increment,
+		`id_cart` int not null default 0,
+		`return_code` varchar(16) not null,
+		`return_msg` varchar(128),
+		`appid` char(32) not null,
+		`mch_id` char(32) not null,
+		`device_info` varchar(32),
+		`nonce_str` varchar(32),
+		`sign` varchar(32),
+		`sign_type` varchar(32),
+		`result_code` varchar(16),
+		`err_code` varchar(32),
+		`err_code_des` varchar(128),
+		`openid` varchar(128),
+		`is_subscribe` char(1),
+		`trade_type` varchar(16),
+		`bank_type` varchar(16),
+		`total_fee` int,
+		`settlement_total_fee` int,
+		`fee_type` varchar(8),
+		`cash_fee` int,
+		`cash_fee_type` varchar(16),
+		`coupon_fee` int,
+		`coupon_count` int,
+		`transaction_id` varchar(32),
+		`out_trade_no` varchar(32),
+		`attach` varchar(128),
+		`time_end` varchar(14),
+		`created_at` datetime,
+		primary key (`id`)
+		) ENGINE='._MYSQL_ENGINE_.' DEFAULT CHARSET=utf8';
+
+$sql[] = 'create table if not exists `'._DB_PREFIX_.'wxpay_coupon`(
+		`id` int not null auto_increment,
+		`id_cart` int not null default 0,
+		`out_trade_no` varchar(32),
+		`coupon_fee` int,
+		`coupon_count` int,
+		`coupon_type` varchar(128),
+		`coupon_id` varchar(20),
+		`coupon_fee` varchar(128),
+		`created_at` datetime,
+		primary key (`id`)
+		) ENGINE='._MYSQL_ENGINE_.' DEFAULT CHARSET=utf8';
+
 foreach ($sql as $query) {
     if (Db::getInstance()->execute($query) == false) {
     	PrestaShopLogger::addLog(Db::getInstance()->getMsgError());

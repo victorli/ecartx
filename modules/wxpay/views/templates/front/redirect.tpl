@@ -26,7 +26,7 @@
 <div>
 	<div class="alert alert-success">
 		{l s='Weixin Payment' mod='wxpay'}:
-		<img src="{$url1|escape:'htmlall':'UTF-8'}" style="width:260px;height:260px;"/>
-		<img src="{$readme_img_url|escape:'htmlall':'UTF-8'}"/>
+		<img src="{$url1|escape:'htmlall':'UTF-8'}" style="width:259px;height:259px;border:1px solid gray;"/>
+		<img src="{$readme_img_url|escape:'htmlall':'UTF-8'}" style="display:block;"/>
 	</div>
 </div>
