@@ -23,7 +23,7 @@ class WxpayNotifyModuleFrontController extends ModuleFrontController
         $currency_id = (int)Context::getContext()->currency->id;
 
         
-		require_once(dirname(__FILE__).'/../../lib/loader.php');
+		require_once(_PS_MODULE_DIR_.'wxpay/lib/PayNotify.php');
 		$notify = new PayNotify();
 		$notify->Handle(false);
         
