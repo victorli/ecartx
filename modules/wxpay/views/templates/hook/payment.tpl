@@ -28,7 +28,7 @@
 		<p class="payment_module" id="wxpay_payment_button">
 			
 				<a href="{$link->getModuleLink('wxpay', 'redirect', ['url1'=>($wxpay_payment_url|escape:'htmlall':'UTF-8')], true)|escape:'htmlall':'UTF-8'}" title="{l s='Pay with my payment module' mod='wxpay'}">
-					<img src="{$module_dir|escape:'htmlall':'UTF-8'}/logo.gif" alt="{l s='Pay with my payment module' mod='wxpay'}"  height="120" />
+					<img src="{$module_dir|escape:'htmlall':'UTF-8'}/logo.gif" alt="{l s='Pay with my payment module' mod='wxpay'}" />
 					{l s='Pay with WeiXin' mod='wxpay'}
 				</a>
 			
