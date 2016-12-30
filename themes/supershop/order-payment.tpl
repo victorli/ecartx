@@ -325,7 +325,7 @@
 						<a href="{$link->getPageLink('order', true, NULL, "step=2")|escape:'html':'UTF-8'}" title="{l s='Previous'}" class="button-exclusive btn btn-default">
 							<i class="icon-chevron-left"></i>
 							{l s='Continue shopping'}
-						</a>												<button type="submit" name="processPayment" class="button btn btn-default standard-checkout button-medium">							<span>								{l s='Proceed to continue'}								<i class="icon-chevron-right right"></i>							</span>						</button>
+						</a>
 					</p>
 				{else}
 					</div> <!-- end opc_payment_methods -->
