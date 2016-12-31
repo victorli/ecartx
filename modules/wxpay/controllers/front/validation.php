@@ -80,7 +80,7 @@ class WxpayValidationModuleFrontController extends ModuleFrontController
 			$input->SetProduct_id($this->module->currentOrder);
 			$result = $notify->GetPayUrl($input);
 			
-			Wxpay::logUnifiedOrder($cart, $input, $result);
+			Wxpay::logUnifiedOrder($cart, $input->getValues(), $result);
 			
 			//if errors occured
 			$err_msg = '';
