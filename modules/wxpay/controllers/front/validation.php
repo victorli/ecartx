@@ -60,7 +60,7 @@ class WxpayValidationModuleFrontController extends ModuleFrontController
 		$mailVars = null;
 
 		if($this->module->validateOrder($cart->id, Configuration::get('AWAITING_WEIXIN_PAYMENT'), $total, $this->module->displayName, NULL, $mailVars, (int)$currency->id, false, $customer->secure_key)){
-			require_once '../lib/WxPay.NativePay.php';
+			require_once '../../lib/WxPay.NativePay.php';
 			
 			$notify = new NativePay();
 			
