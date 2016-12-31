@@ -23,15 +23,10 @@
 *  International Registered Trademark & Property of PrestaShop SA
 *}
 
-<div class="row">
-	<div class="col-xs-12 col-md-12">
-		<p class="payment_module" id="wxpay_payment_button">
-			
-				<a href="{$link->getModuleLink('wxpay', 'payment', null, true)|escape:'htmlall':'UTF-8'}" title="{l s='Pay with my payment module' mod='wxpay'}">
-					<img src="{$module_dir|escape:'htmlall':'UTF-8'}/logo.gif" alt="{l s='Pay with my payment module' mod='wxpay'}" />
-					{l s='Pay with Weixin' mod='wxpay'}
-				</a>
-			
-		</p>
+<div>
+	<div class="alert alert-success">
+		{l s='Weixin Payment' mod='wxpay'}:
+		<img src="{$qr_url|escape:'htmlall':'UTF-8'}" style="width:259px;height:259px;border:1px solid gray;"/>
+		<img src="{$readme_img_url|escape:'htmlall':'UTF-8'}" style="display:block;"/>
 	</div>
 </div>

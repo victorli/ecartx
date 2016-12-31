@@ -56,6 +56,10 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
         $this->limited_currencies = array('CNY','USD');
 
         $this->ps_versions_compliancy = array('min' => '1.6', 'max' => _PS_VERSION_);
+        
+        $this->orderStatus = array(
+        	'AWAITING_WEIXIN_PAYMENT'=>array('color'=>'Green','unremovable'=>1,'name'=>$this->l('Waiting to pay by Weixin'),'send_email'=>true),
+        );
     }
 
     /**
@@ -94,7 +98,8 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
             $this->registerHook('backOfficeHeader') &&
             $this->registerHook('payment') &&
             $this->registerHook('paymentReturn') &&
-            $this->registerHook($admin_order_hook);
+            $this->registerHook($admin_order_hook) &&
+            $this->_addOrderStatus();
             //$this->registerHook('displayAdminOrder') &&
             //$this->registerHook('displayPayment') &&
             //$this->registerHook('displayPaymentReturn');
@@ -111,7 +116,7 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
 
         include(dirname(__FILE__).'/sql/uninstall.php');
 
-        return parent::uninstall();
+        return parent::uninstall() && $this->_removeOrderStatus();
     }
 
     /**
@@ -274,39 +279,6 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
             return false;
 
         $this->smarty->assign('module_dir', $this->_path);
-        
-        require_once 'lib/WxPay.NativePay.php';
-        $cart = new Cart($params['cart']->id);
-        
-        $order_id = Order::generateReference();
-        $notify = new NativePay();
-        $input = new WxPayUnifiedOrder();
-        $input->SetAppid(Configuration::get('WXPAY_APPID'));
-        $input->SetMch_id(Configuration::get('WXPAY_MCHID'));
-        $input->SetDevice_info('WEB');
-        $input->SetBody($this->getGoodsDescription());
-		$input->SetAttach("test");//using for reference
-		$input->SetOut_trade_no($order_id);
-		$input->SetTotal_fee($this->formatTotalFee($cart->getOrderTotal()));
-		$input->SetTime_start(date("YmdHis"));
-		$input->SetTime_expire(date("YmdHis", time() + 1800));
-		$input->SetGoods_tag("test");
-		$input->SetNotify_url($this->context->link->getModuleLink($this->name,'notify'));
-		$input->SetTrade_type("NATIVE");
-		$input->SetProduct_id($order_id);
-		$result = $notify->GetPayUrl($input);
-		
-		$this->logUnfiedOrder($cart,$input->GetValues(), $result);
-		
-		require_once 'lib/phpqrcode/phpqrcode.php';
-		$url = urldecode($result['code_url']);
-		
-        $this->smarty->assign(
-            array(
-                
-                'wxpay_payment_url' => $url
-            )
-        );
 
         return $this->display(__FILE__, 'views/templates/hook/payment.tpl');
     }
@@ -356,8 +328,39 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
     public function formatTotalFee($total_fee){
     	return $total_fee*100;
     }
+    
+	private function _addOrderStatus(){
+		foreach ($this->orderStatus as $state=>$param){
+			$orderState = new OrderState((int)Configuration::get($state));
+			if(!Validate::isLoadedObject($orderState)){
+				$orderState->color= $param['color'];
+				$orderState->unremovable = isset($param['unremovable'])? $param['unremovable'] : true;
+				$orderState->send_email = isset($param['send_email'])? $param['send_email'] : false;
+				$orderState->invoice = isset($param['invoice'])? $param['invoice'] : false;
+				$orderState->paid = isset($param['paid'])? $param['paid'] : false;
+				$orderState->name = array();
+				foreach (Language::getLanguages() as $lang)
+					$orderState->name[$lang['id_lang']] = $param['name'];
+				if(!$orderState->add())
+					return false;
+					
+				if(!Configuration::updateValue($state,$orderState->id))
+					return false;
+			}
+		}
+		
+		return true;
+	}
 	
-	public function logUnfiedOrder($cart,$input,$result){
+	private function _removeOrderStatus(){
+		foreach ($this->orderStatus as $state=>$param){
+			if(!Configuration::deleteByName($state))
+				return false;
+		}
+		return true;
+	}
+	
+	public static function logUnifiedOrder($cart,$input,$result){
 		
 		$data = $input;
 		

@@ -32,47 +32,69 @@ class WxpayValidationModuleFrontController extends ModuleFrontController
      */
     public function postProcess()
     {
-        /**
-         * If the module is not active anymore, no need to process anything.
-         */
-        if ($this->module->active == false) {
-            die;
-        }
+       $cart = $this->context->cart;
+       if ($cart->id_customer == 0 || $cart->id_address_delivery == 0 || !$this->module->active)
+			Tools::redirect('index.php?controller=order&step=1');
+			
+		$authorized = false;
+		foreach (Module::getPaymentModules() as $module)
+			if ($module['name'] == 'wxpay')
+			{
+				$authorized = true;
+				break;
+			}
+		if (!$authorized)
+			die($this->module->l('This payment method is not available.', 'validation'));
+			
+		$customer = new Customer($cart->id_customer);
+		if (!Validate::isLoadedObject($customer))
+			Tools::redirect('index.php?controller=order&step=1');
+			
+		$currency = $this->context->currency;
+		$total = (float)$cart->getOrderTotal(true, Cart::BOTH);
+		/*$mailVars = array(
+			'{bankwire_owner}' => Configuration::get('BANK_WIRE_OWNER'),
+			'{bankwire_details}' => nl2br(Configuration::get('BANK_WIRE_DETAILS')),
+			'{bankwire_address}' => nl2br(Configuration::get('BANK_WIRE_ADDRESS'))
+		);*/
+		$mailVars = null;
 
-        /**
-         * Since it is an example, we choose sample data,
-         * You'll have to get the correct values :)
-         */
-        $cart_id = 1;
-        $customer_id = 1;
-        $amount = 100.00;
+		if($this->module->validateOrder($cart->id, Configuration::get('AWAITING_WEIXIN_PAYMENT'), $total, $this->module->displayName, NULL, $mailVars, (int)$currency->id, false, $customer->secure_key)){
+			require_once '../lib/WxPay.NativePay.php';
+			
+			$notify = new NativePay();
+			
+	        $input = new WxPayUnifiedOrder();
+	        $input->SetAppid(Configuration::get('WXPAY_APPID'));
+	        $input->SetMch_id(Configuration::get('WXPAY_MCHID'));
+	        $input->SetDevice_info('WEB');
+	        $input->SetBody('');
+			$input->SetAttach("test");//using for reference
+			$input->SetOut_trade_no($this->module->currentOrder);
+			$input->SetTotal_fee($cart->getOrderTotal()*100);
+			$input->SetTime_start(date("YmdHis"));
+			$input->SetTime_expire(date("YmdHis", time() + 1800));
+			$input->SetGoods_tag("test");
+			$input->SetNotify_url($this->context->link->getModuleLink($this->name,'notify'));
+			$input->SetTrade_type("NATIVE");
+			$input->SetProduct_id($this->module->currentOrder);
+			$result = $notify->GetPayUrl($input);
+			
+			Wxpay::logUnifiedOrder($cart, $input, $result);
+			
+			//if errors occured
+			$err_msg = '';
+			
+			$url = "http://paysdk.weixin.qq.com/example/qrcode.php?data=";
+			$url .= urldecode($result['code_url']);
+			
+			$this->context->smarty->assign(array(
+				'qr_url' => $url,
+				'readme_img_url' => Media::getMediaPath(_PS_MODULE_DIR_.'wxpay/views/img/readme.png'),
+			));
+		}
 
-        /**
-         * Restore the context from the $cart_id & the $customer_id to process the validation properly.
-         */
-        Context::getContext()->cart = new Cart((int)$cart_id);
-        Context::getContext()->customer = new Customer((int)$customer_id);
-        Context::getContext()->currency = new Currency((int)Context::getContext()->cart->id_currency);
-        Context::getContext()->language = new Language((int)Context::getContext()->customer->id_lang);
-
-        $secure_key = Context::getContext()->customer->secure_key;
-
-        if ($this->isValidOrder() === true) {
-            $payment_status = Configuration::get('PS_OS_PAYMENT');
-            $message = null;
-        } else {
-            $payment_status = Configuration::get('PS_OS_ERROR');
-
-            /**
-             * Add a message to explain why the order has not been validated
-             */
-            $message = $this->module->l('An error occurred while processing payment');
-        }
-
-        $module_name = $this->module->displayName;
-        $currency_id = (int)Context::getContext()->currency->id;
-
-        return $this->module->validateOrder($cart_id, $payment_status, $amount, $module_name, $message, array(), $currency_id, false, $secure_key);
+		return $this->setTemplate('confirmation.tpl');
     }
 
     protected function isValidOrder()
