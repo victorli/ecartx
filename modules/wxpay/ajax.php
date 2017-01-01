@@ -1,3 +1,3 @@
 <?php 
-echo "okay";
+//modules/wxpay/ajax.php
 ?>
