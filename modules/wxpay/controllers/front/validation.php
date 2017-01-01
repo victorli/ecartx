@@ -75,7 +75,7 @@ class WxpayValidationModuleFrontController extends ModuleFrontController
 			$input->SetTime_start(date("YmdHis"));
 			$input->SetTime_expire(date("YmdHis", time() + 1800));
 			$input->SetGoods_tag("test");
-			$input->SetNotify_url($this->context->link->getModuleLink($this->name,'notify'));
+			$input->SetNotify_url($this->context->link->getModuleLink('wxpay','notify'));
 			$input->SetTrade_type("NATIVE");
 			$input->SetProduct_id($this->module->currentOrder);
 			$result = $notify->GetPayUrl($input);
