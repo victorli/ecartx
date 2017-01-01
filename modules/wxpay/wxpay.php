@@ -58,7 +58,7 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
         $this->ps_versions_compliancy = array('min' => '1.6', 'max' => _PS_VERSION_);
         
         $this->orderStatus = array(
-        	'AWAITING_WEIXIN_PAYMENT'=>array('color'=>'Green','unremovable'=>1,'name'=>$this->l('Waiting to pay by Weixin'),'send_email'=>true),
+        	'AWAITING_WEIXIN_PAYMENT'=>array('color'=>'#4169E1','unremovable'=>1,'name'=>$this->l('Waiting to pay by Weixin'),'send_email'=>false),
         );
     }
 
