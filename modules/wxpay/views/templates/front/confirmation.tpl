@@ -22,11 +22,19 @@
 *  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-
-<div>
-	<div class="alert alert-success">
-		{l s='Weixin Payment' mod='wxpay'}:
-		<img src="{$qr_url|escape:'htmlall':'UTF-8'}" style="width:259px;height:259px;border:1px solid gray;"/>
-		<img src="{$readme_img_url|escape:'htmlall':'UTF-8'}" style="display:block;"/>
+<div class="panel panel-default">
+	<div class="panel-body">
+	{if $err_msg}
+		<div class="alert alert-warning">
+			{l s='Error occured when accessing weixin payment gateway' mod='wxpay'}
+			{$err_msg}
+		</div>
+	{else}
+		<div class="alert alert-success">
+			{l s='Weixin Payment' mod='wxpay'}:
+			<img src="{$qr_url|escape:'htmlall':'UTF-8'}" style="width:259px;height:259px;border:1px solid gray;"/>
+			<img src="{$readme_img_url|escape:'htmlall':'UTF-8'}" style="display:block;"/>
+		</div>
+	{/if}
 	</div>
 </div>

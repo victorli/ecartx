@@ -384,4 +384,14 @@ The user can complete the rapid payment process through mobile. WxPay allows to 
 		
 		return Db::getInstance()->insert('wxpay_unifiedorder', $data);
 	}
+	
+	public static function logNotify($id_cart,$result){
+		$data = $result;
+		$data['id_cart'] = $id_cart;
+		//TODO need to process coupon info
+		
+		$data['created_at'] =date("Y-m-d H:i:s");
+		
+		return Db::getInstance()->insert('wxpay_notify, $data);
+	}
 }

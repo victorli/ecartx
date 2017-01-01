@@ -68,7 +68,7 @@ class WxpayValidationModuleFrontController extends ModuleFrontController
 	        $input->SetAppid(Configuration::get('WXPAY_APPID'));
 	        $input->SetMch_id(Configuration::get('WXPAY_MCHID'));
 	        $input->SetDevice_info('WEB');
-	        $input->SetBody('');
+	        $input->SetBody(Configuration::get('PS_SHOP_NAME'));
 			$input->SetAttach("test");//using for reference
 			$input->SetOut_trade_no($this->module->currentOrder);
 			$input->SetTotal_fee($cart->getOrderTotal()*100);
@@ -83,25 +83,21 @@ class WxpayValidationModuleFrontController extends ModuleFrontController
 			Wxpay::logUnifiedOrder($cart, $input->getValues(), $result);
 			
 			//if errors occured
-			$err_msg = '';
-			
-			$url = "http://paysdk.weixin.qq.com/example/qrcode.php?data=";
-			$url .= urldecode($result['code_url']);
-			
-			$this->context->smarty->assign(array(
-				'qr_url' => $url,
-				'readme_img_url' => Media::getMediaPath(_PS_MODULE_DIR_.'wxpay/views/img/readme.png'),
-			));
+			if($result['return_code'] !== 'SUCCESS'){
+				$this->context->smarty->assign(array(
+					'err_msg' => $result['return_msg']
+				));
+			}else{
+				$url = "http://paysdk.weixin.qq.com/example/qrcode.php?data=";
+				$url .= urldecode($result['code_url']);
+				
+				$this->context->smarty->assign(array(
+					'qr_url' => $url,
+					'readme_img_url' => Media::getMediaPath(_PS_MODULE_DIR_.'wxpay/views/img/readme.png'),
+				));
+			}
 		}
 
 		return $this->setTemplate('confirmation.tpl');
-    }
-
-    protected function isValidOrder()
-    {
-        /**
-         * Add your checks right there
-         */
-        return true;
     }
 }

@@ -23,7 +23,20 @@ class PayNotify extends WxPayNotify
 	//重写回调处理函数
 	public function NotifyProcess($data, &$msg)
 	{
+		if($data['return_code'] !== 'SUCCESS')
+			return false;
 		
+		$order_id = $data['out_trade_no'];
+		$order = new Order((int)$order_id);
+		if(is_object($order) && $order->id_order == $data['out_trade_no']){
+			if($order->hasBeenPaid())
+				return true;
+			
+			$oh = new OrderHistory();
+			$oh->changeIdOrderState(OrderState::FLAG_PAID,$order_id);
+			
+			Wxpay::logNotify(Order::getCartIdStatic($order_id), $data);
+		}
 		return true;
 	}
 }
