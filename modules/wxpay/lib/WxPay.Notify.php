@@ -6,6 +6,7 @@
  *
  */
 require_once "WxPay.Data.php";
+require_once "WxPay.Api.php";
 
 class WxPayNotify extends WxPayNotifyReply
 {
