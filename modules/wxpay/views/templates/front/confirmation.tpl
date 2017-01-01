@@ -22,6 +22,26 @@
 *  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
+{capture name=path}
+
+    {l s='Weixin payment.' mod='wxpay'}
+
+{/capture}
+
+
+
+<h1 class="page-heading">
+
+    {l s='Scan qrcode to pay' mod='wxpay'}
+
+</h1>
+
+
+
+{assign var='current_step' value='payment'}
+
+{include file="$tpl_dir./order-steps.tpl"}
+
 <div class="panel panel-default">
 	<div class="panel-body">
 	{if $err_msg}
@@ -30,11 +50,8 @@
 			{$err_msg}
 		</div>
 	{else}
-		<div class="alert alert-success">
-			{l s='Weixin Payment' mod='wxpay'}:
 			<img src="{$qr_url|escape:'htmlall':'UTF-8'}" style="width:259px;height:259px;border:1px solid gray;"/>
 			<img src="{$readme_img_url|escape:'htmlall':'UTF-8'}" style="display:block;"/>
-		</div>
 	{/if}
 	</div>
 </div>
