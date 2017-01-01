@@ -5,6 +5,8 @@
  * @author widyhu
  *
  */
+require_once "WxPay.Data.php";
+
 class WxPayNotify extends WxPayNotifyReply
 {
 	/**
