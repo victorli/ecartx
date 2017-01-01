@@ -28,7 +28,7 @@ class PayNotify extends WxPayNotify
 		
 		$order_id = $data['out_trade_no'];
 		$order = new Order((int)$order_id);
-		if(is_object($order) && $order->id_order == $data['out_trade_no']){
+		if(is_object($order)){
 			if($order->hasBeenPaid())
 				return true;
 			
