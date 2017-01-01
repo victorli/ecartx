@@ -33,7 +33,7 @@ class PayNotify extends WxPayNotify
 				return true;
 			
 			$oh = new OrderHistory();
-			$oh->changeIdOrderState(OrderState::FLAG_PAID,$order_id);
+			$oh->changeIdOrderState(Configuration::get('PS_OS_PREPARATION'),$order_id);
 			
 			Wxpay::logNotify(Order::getCartIdStatic($order_id), $data);
 		}
