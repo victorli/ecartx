@@ -61,7 +61,7 @@
 
             <h3 class="page-subheading">
 
-                {l s='Weixin payment.' mod='bankwire'}
+                {l s='Weixin payment.' mod='wxpay'}
 
             </h3>
 
