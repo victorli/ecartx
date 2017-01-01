@@ -1,0 +1,31 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{wxpay}prestashop>wxpay_bfa07c1260f99efe19a17ddf760b0fd1'] = '微信支付';
+$_MODULE['<{wxpay}prestashop>wxpay_eb896b60a9cf1c256c51eb01fe33fd9f'] = '等待微信支付';
+$_MODULE['<{wxpay}prestashop>wxpay_92d4773a9f32fc3333cb8238471cf763'] = '需要启用PHP模块：curl';
+$_MODULE['<{wxpay}prestashop>wxpay_cdbe2f170711683cb6624cf9c509cc99'] = '此模块在您所在国家不可用';
+$_MODULE['<{wxpay}prestashop>wxpay_f4f70727dc34561dfde1a3c529b6205c'] = '设置';
+$_MODULE['<{wxpay}prestashop>wxpay_00d23a76e43b46dae9ec7aa9dcbebb32'] = '启用';
+$_MODULE['<{wxpay}prestashop>wxpay_b9f5c797ebbf55adccdd8539a65a0241'] = '禁用';
+$_MODULE['<{wxpay}prestashop>wxpay_a32816c77eba92b7c7fa98b245720971'] = '输入微信提供的应用ID';
+$_MODULE['<{wxpay}prestashop>wxpay_2064351dea5ffb7f3b35d38b8b9ce352'] = '输入微信提供的商户ID';
+$_MODULE['<{wxpay}prestashop>wxpay_c9cc8cce247e49bae79f15173ce97354'] = '保存';
+$_MODULE['<{wxpay}prestashop>confirmation_66b914a3d0878daed70f10d165196200'] = '出错！请联系商户获取更多帮助。';
+$_MODULE['<{wxpay}prestashop>validation_e2b7dec8fa4b498156dfee6e4c84b156'] = '此支付方式暂不可用。';
+$_MODULE['<{wxpay}prestashop>confirmation_7f33227e6d29fbbf985a2c686ce2ea59'] = '访问微信网关时出错';
+$_MODULE['<{wxpay}prestashop>confirmation_2d1e940831ca501c1426b4d01a001ffc'] = '微信支付';
+$_MODULE['<{wxpay}prestashop>error_a25c753ee3e4be15ec0daa5a40deb7b8'] = '出错了:(';
+$_MODULE['<{wxpay}prestashop>payment_execution_4b91aba1020ede9a37e490001ca757fa'] = '微信支付';
+$_MODULE['<{wxpay}prestashop>payment_execution_f1d3b424cd68795ecaa552883759aceb'] = '订单概述';
+$_MODULE['<{wxpay}prestashop>payment_execution_879f6b8877752685a966564d072f498f'] = '您的购物车空空如也 :P';
+$_MODULE['<{wxpay}prestashop>payment_execution_eb81b5ef0a4eef8922b4322b4489c0f1'] = '请使用微信支付。';
+$_MODULE['<{wxpay}prestashop>payment_execution_c884ed19483d45970c5bf23a681e2dd2'] = '订单概要：';
+$_MODULE['<{wxpay}prestashop>payment_execution_0e9f239549ce43c869b24f8740bf3d01'] = '订单总金额：';
+$_MODULE['<{wxpay}prestashop>payment_execution_4e0a6564db8d309a46b75c7cd8a71e86'] = '商品总数量：';
+$_MODULE['<{wxpay}prestashop>payment_execution_b939c4940deb5588f47ee8f12c61f11f'] = '请确认订单无误之后，点击“确认订单”继续';
+$_MODULE['<{wxpay}prestashop>payment_execution_569fd05bdafa1712c4f6be5b153b8418'] = '其它支付方式';
+$_MODULE['<{wxpay}prestashop>payment_execution_46b9e3665f187c739c55983f757ccda0'] = '确认订单';
+$_MODULE['<{wxpay}prestashop>payment_444d4d1d26f8595be7d86bbf07787f8f'] = '使用微信支付模块支付';
+$_MODULE['<{wxpay}prestashop>payment_fd846bee45a81e923aef5181e8996213'] = '使用微信支付';
