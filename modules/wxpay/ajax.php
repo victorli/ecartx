@@ -8,7 +8,7 @@ $id_order = Tools::getValue('id_order');
 if(!isset($id_order) || empty($id_order))
 	die(Tools::jsonEncode(array('flag'=>'FAIL','msg'=>'order id is not valid')));
 
-$order = new Order($id_order);
+$order = new Order((int)$id_order);
 if(!is_object($order))
 	die(Tools::jsonEncode(array('flag'=>'FAIL','msg'=>'Order does not exist')));
 
