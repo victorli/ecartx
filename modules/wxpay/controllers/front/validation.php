@@ -94,6 +94,8 @@ class WxpayValidationModuleFrontController extends ModuleFrontController
 				$this->context->smarty->assign(array(
 					'qr_url' => $url,
 					'readme_img_url' => Media::getMediaPath(_PS_MODULE_DIR_.'wxpay/views/img/readme.png'),
+					'id_order' => $this->module->currentOrder,
+					'success_msg' => '<span class="alert alert-success">'.$this->_l('Congratulations, you have paid the order successfully.').'</span>',
 				));
 			}
 		}

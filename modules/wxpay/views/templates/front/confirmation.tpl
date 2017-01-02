@@ -43,7 +43,7 @@
 {include file="$tpl_dir./order-steps.tpl"}
 
 <div class="panel panel-default">
-	<div class="panel-body">
+	<div class="panel-body" id="payResultContainer">
 	{if $err_msg}
 		<div class="alert alert-warning">
 			{l s='Error occured when accessing weixin payment gateway' mod='wxpay'}
@@ -55,3 +55,32 @@
 	{/if}
 	</div>
 </div>
+
+{if !$err_msg}
+<script type="text/javascript">
+var id_order = "{$id_order}";
+var success_msg = "{$success_msg}";
+var timer = null;
+
+{literal}
+function checkPaymentResult(){
+	$.ajax({
+		type : 'POST',
+		url	 : baseDir + 'modules/wxpay/ajax.php',
+		data : 'id_order='+id_order,
+		dataType : 'json',
+		success : function(json){
+			if(json.flag == 'SUCCESS'){
+				$('#payResultContainer').html(success_msg);
+				window.clearInterval(timer);
+			}else{
+				
+			}
+		}
+	});
+}
+
+timer = window.setInterval('checkPaymentResult()',2*1000);
+{/literal}
+</script>
+{/if}
