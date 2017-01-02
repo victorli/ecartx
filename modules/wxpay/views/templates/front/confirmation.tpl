@@ -58,7 +58,7 @@
 <div class="panel panel-info" id="wxpayResultPanel" style="display:none;">
 	<div class="panel-body">
 		<div>{l s='Congratulations! You have paid the order successfully.' mod='wxpay'}</div>
-		<div>{l s='We will redirect you to the order history page after 5 seconds...'}</div>
+		<div>{l s='We will redirect you to the order history page after 5 seconds...' mod='wxpay'}</div>
 	</div>
 </div>
 
