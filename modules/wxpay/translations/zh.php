@@ -17,6 +17,7 @@ $_MODULE['<{wxpay}prestashop>confirmation_4b91aba1020ede9a37e490001ca757fa'] = '
 $_MODULE['<{wxpay}prestashop>confirmation_7631f40e98f95d9accb0497c8859b244'] = '扫描下方二维码支付';
 $_MODULE['<{wxpay}prestashop>confirmation_7f33227e6d29fbbf985a2c686ce2ea59'] = '访问微信网关时出错';
 $_MODULE['<{wxpay}prestashop>confirmation_8e97aa410f6628ac4964452cf308f035'] = '恭喜，您的订单已经支付成功！';
+$_MODULE['<{wxpay}prestashop>confirmation_74eca5497e600e95197a793611e72d9e'] = '系统会在5秒后跳转至您的订单列表页面...';
 $_MODULE['<{wxpay}prestashop>error_a25c753ee3e4be15ec0daa5a40deb7b8'] = '出错了:(';
 $_MODULE['<{wxpay}prestashop>payment_execution_4b91aba1020ede9a37e490001ca757fa'] = '微信支付';
 $_MODULE['<{wxpay}prestashop>payment_execution_f1d3b424cd68795ecaa552883759aceb'] = '订单概述';
