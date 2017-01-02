@@ -58,8 +58,8 @@
 
 {if !$err_msg}
 <script type="text/javascript">
-var id_order = "{$id_order}";
-var success_msg = "{$success_msg}";
+var id_order = '{$id_order}';
+var success_msg = '{$success_msg}';
 var timer = null;
 
 {literal}
