@@ -43,7 +43,7 @@ function alipay(){
 		<p class="payment_module" id="alipayx_payment_button">
 			
 				<a href="{$link->getModuleLink('alipayx', 'payment', [], true)|escape:'htmlall':'UTF-8'}" title="{l s='Pay with alipay payment module' mod='alipay'}">
-					<img src="{$module_dir|escape:'htmlall':'UTF-8'}/logo.gif" alt="{l s='Pay with alipay payment module' mod='alipayx'}" />
+					<img src="{$module_dir|escape:'htmlall':'UTF-8'}/views/img/logo.png" alt="{l s='Pay with alipay payment module' mod='alipayx'}" />
 					{l s='Pay with Alipay' mod='alipayx'}
 				</a>
 			
