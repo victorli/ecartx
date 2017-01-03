@@ -40,7 +40,7 @@ function alipay(){
 </script>
 <div class="row">
 	<div class="col-xs-12 col-md-12">
-		<p class="payment_module" id="alipayx_payment_button">
+		<p class="payment_module" id="alipay_payment_button">
 			
 				<a href="{$link->getModuleLink('alipayx', 'payment', [], true)|escape:'htmlall':'UTF-8'}" title="{l s='Pay with alipay payment module' mod='alipay'}">
 					<img src="{$module_dir|escape:'htmlall':'UTF-8'}/views/img/logo.png" alt="{l s='Pay with alipay payment module' mod='alipayx'}" />
