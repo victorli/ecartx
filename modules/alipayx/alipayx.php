@@ -32,6 +32,14 @@ public function __construct()
         	'CNY'
         );
 
+        $this->orderStatus = array(
+			//'BLX_OS_CREATED'=>array('color'=>'Darkred','unremovable'=>1,'name'=>$this->l('Waiting to pay'),'send_email'=>true),
+			'AWAITING_ALIPAY_PAYMENT'=>array('color'=>'#4169E1','unremovable'=>1,'name'=>$this->l('Waiting to pay by Alipay'),'send_email'=>true),
+			//'BLX_OS_TRADE_CLOSED'=>array('color'=>'LightSalmon','unremovable'=>1,'name'=>$this->l('Trade closed')),
+			//'BLX_OS_TRADE_SUCCESS'=>array('color'=>'LimeGreen','unremovable'=>1,'name'=>$this->l('Pay successful'),'invoice'=>true,'paid'=>true),
+			//'BLX_OS_TRADE_PENDING'=>array('color'=>'Olive','unremovable'=>1,'name'=>$this->l('Waiting saler to deposit')),
+			//'BLX_OS_TRADE_FINISHED'=>array('color'=>'Lime','unremovable'=>1,'name'=>$this->l('Trade finished'),'invoice'=>true,'send_email'=>true,'paid'=>true)
+		);
         
     }
     
@@ -68,7 +76,8 @@ public function __construct()
             $this->registerHook('backOfficeHeader') &&
             $this->registerHook('payment') &&
             $this->registerHook('paymentReturn') &&
-            $this->registerHook($admin_order_hook);
+            $this->registerHook($admin_order_hook) &&
+            $this->_addOrderStatus();
     }
     
 	public function uninstall()
@@ -81,7 +90,7 @@ public function __construct()
 
         //include(dirname(__FILE__).'/sql/uninstall.php');
 
-        return parent::uninstall();
+        return parent::uninstall() && $this->_removeOrderStatus();
     }
     
 	public function getContent()
@@ -301,4 +310,34 @@ public function __construct()
     {
         return $this->context->shop->name;
     }
+    
+	private function _addOrderStatus() {
+		foreach ( $this->orderStatus as $state => $param ) {
+			$orderState = new OrderState ( ( int ) Configuration::get ( $state ) );
+			if (! Validate::isLoadedObject ( $orderState )) {
+				$orderState->color = $param ['color'];
+				$orderState->unremovable = isset ( $param ['unremovable'] ) ? $param ['unremovable'] : true;
+				$orderState->send_email = isset ( $param ['send_email'] ) ? $param ['send_email'] : false;
+				$orderState->invoice = isset ( $param ['invoice'] ) ? $param ['invoice'] : false;
+				$orderState->paid = isset ( $param ['paid'] ) ? $param ['paid'] : false;
+				$orderState->name = array ();
+				foreach ( Language::getLanguages () as $lang )
+					$orderState->name [$lang ['id_lang']] = $param ['name'];
+				if (! $orderState->add ())
+					return false;
+				
+				if (! Configuration::updateValue ( $state, $orderState->id ))
+					return false;
+			}
+		}
+		
+		return true;
+	}
+	private function _removeOrderStatus() {
+		foreach ( $this->orderStatus as $state => $param ) {
+			if (! Configuration::deleteByName ( $state ))
+				return false;
+		}
+		return true;
+	}
 }

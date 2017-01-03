@@ -40,19 +40,13 @@ function alipay(){
 </script>
 <div class="row">
 	<div class="col-xs-12 col-md-12">
-		<p class="payment_module" id="alipay_payment_button">
-		<a href="{$alipay_payment_url|escape:'htmlall':'UTF-8'}" id="pay" style="display:none;"/>
-            <!-- <a href="{$alipay_payment_url|escape:'htmlall':'UTF-8'}" title="{l s='Pay with Alipay' mod='alipay'}"> -->
-            <a href="#" 
-            title="{l s='Pay with Alipay' mod='alipayx'}" onclick="alipay()">
-            
-                <span class="label_en">
-                    {l s='Pay with Alipay' mod='alipayx'}<br />
-                </span>
-                <span>
-                    {l s='使用支付宝安全付款' mod='alipayx'}
-                </span>
-            </a>
+		<p class="payment_module" id="alipayx_payment_button">
+			
+				<a href="{$link->getModuleLink('alipayx', 'payment', [], true)|escape:'htmlall':'UTF-8'}" title="{l s='Pay with alipay payment module' mod='alipay'}">
+					<img src="{$module_dir|escape:'htmlall':'UTF-8'}/logo.gif" alt="{l s='Pay with alipay payment module' mod='alipayx'}" />
+					{l s='Pay with Alipay' mod='alipayx'}
+				</a>
+			
 		</p>
 	</div>
 </div>
