@@ -2,7 +2,6 @@
 
 global $_MODULE;
 $_MODULE = array();
-
 $_MODULE['<{cheque}prestashop>cheque_7b4cc4f79be9aae43efd53b4ae5cba4d'] = '支票';
 $_MODULE['<{cheque}prestashop>cheque_14e41f4cfd99b10766cc15676d8cda66'] = '这个模块允许支票支付';
 $_MODULE['<{cheque}prestashop>cheque_e09484ba6c16bc20236b63cc0d87ee95'] = '您确认要删除您的详细资料？';
@@ -40,9 +39,3 @@ $_MODULE['<{cheque}prestashop>payment_return_0db71da7150c27142eef9d22b843b4a9'] 
 $_MODULE['<{cheque}prestashop>payment_return_decce112a9e64363c997b04aa71b7cb8'] = '客户服务';
 $_MODULE['<{cheque}prestashop>payment_return_9bdf695c5a30784327137011da6ef568'] = '我们在您的订单中发现一个问题。如果您认为这是一个错误，您可以联系我们';
 $_MODULE['<{cheque}prestashop>payment_4b80fae2153218ed763bdadc418e8589'] = '支票付款';
-$_MODULE['<{cheque}prestashop>payment_execution_0881a11f7af33bc1b43e437391129d66'] = '请点击\'确认订单\'确认您的订单';
-$_MODULE['<{cheque}prestashop>payment_return_d15feee53d81ea16269e54d4784fa123'] = '我们在您的订单中发现一个问题。如果您认为这是一个错误，您可以联系我们';
-$_MODULE['<{cheque}prestashop>payment_f05fd8637f8a6281466a507fcb56baec'] = '支票付款';
-
-
-return $_MODULE;
