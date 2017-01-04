@@ -16,7 +16,7 @@
  * return 签名结果
  */
 function rsaSign($data, $private_key_path) {
-    $priKey = file_get_contents(_PS_MODULE_DIR_.'ali'.$private_key_path);
+    $priKey = file_get_contents($private_key_path);
     $res = openssl_get_privatekey($priKey);
     openssl_sign($data, $sign, $res);
     openssl_free_key($res);
