@@ -33,7 +33,7 @@
 
 <h1 class="page-heading">
 
-    {l s='Order summary' mod='alipay'}
+    {l s='Order summary' mod='alipayx'}
 
 </h1>
 
@@ -49,14 +49,11 @@
 
 	<p class="alert alert-warning">
 
-        {l s='Your shopping cart is empty.' mod='alipay'}
+        {l s='Your shopping cart is empty.' mod='alipayx'}
 
     </p>
 
 {else}
-
-    <form action="{$link->getModuleLink('alipayx', 'validation', [], true)|escape:'html':'UTF-8'}" method="post">
-
         <div class="box cheque-box">
 
             <h3 class="page-subheading">
@@ -111,7 +108,7 @@
 
             class="button btn btn-default button-medium" 
 
-            type="submit">
+            type="button" onclick="getAlipayRequestUrl();">
 
                 <span>{l s='I confirm my order' mod='alipayx'}<i class="icon-chevron-right right"></i></span>
 
@@ -119,7 +116,24 @@
 
         </p>
 
-    </form>
-
 {/if}
+
+<script type="text/javascript">
+
+function getAlipayRequestUrl(){
+	$.ajax({
+		type : 'POST',
+		url	 : baseDir + 'module/alipayx/validation',
+		data : 'id_order='+id_order,
+		dataType : 'json',
+		success : function(json){
+			if(json.flag == 'SUCCESS'){
+				window.open(json.msg,'alipayDlg');
+			}else{
+				alert(json.msg);
+			}
+		}
+	});
+}
+</script>
 
