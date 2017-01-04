@@ -127,6 +127,7 @@ function getAlipayRequestUrl(){
 		dataType : 'json',
 		success : function(json){
 			if(json.flag == 'SUCCESS'){
+				console.log(json.msg);
 				window.open(json.msg,'alipayDlg');
 			}else{
 				alert(json.msg);
