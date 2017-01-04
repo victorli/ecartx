@@ -124,7 +124,6 @@ function getAlipayRequestUrl(){
 	$.ajax({
 		type : 'POST',
 		url	 : baseDir + 'module/alipayx/validation',
-		data : 'id_order='+id_order,
 		dataType : 'json',
 		success : function(json){
 			if(json.flag == 'SUCCESS'){
