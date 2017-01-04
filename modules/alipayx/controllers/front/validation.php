@@ -37,12 +37,13 @@ class AlipayxValidationModuleFrontController extends ModuleFrontController
 			Tools::redirect('index.php?controller=order&step=1');
 			
 		$authorized = false;
-		foreach (Module::getPaymentModules() as $module)
+		foreach (Module::getPaymentModules() as $module){
 			if ($module['name'] == 'alipayx')
 			{
 				$authorized = true;
 				break;
 			}
+		}
 		if (!$authorized)
 			die($this->module->l('This payment method is not available.', 'validation'));
 			
@@ -65,13 +66,6 @@ class AlipayxValidationModuleFrontController extends ModuleFrontController
 	        require_once(_PS_MODULE_DIR_."alipayx/alipay.config.php");
 			require_once(_PS_MODULE_DIR_."alipayx/lib/alipay_submit.class.php");
 	
-	
-	        $currency_id = $cart->id_currency;
-	        $currency = new Currency((int)$currency_id);
-
-	        if (in_array($currency->iso_code, $this->limited_currencies) == false) {
-	            return false;
-	        }
 	
 	        $alipaySubmit = new AlipaySubmit($alipay_config);
 	        

@@ -22,22 +22,7 @@
 *  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
 *  International Registered Trademark & Property of PrestaShop SA
 *}
-<script type="text/javascript">
-function alipay(){
-	$.ajax({
-		url:"{$link->getModuleLink('alipayx', 'redirect', ['order_no'=>$order_no], true)|escape:'htmlall':'UTF-8'}",
-		data:{},
-		type:'post',
-		dataType:'json',
-		success:function(data) {
-			//$('#pay').click();
-			document.getElementById("pay").click(); 
-			//window.location.href="{$alipay_payment_url|escape:'htmlall':'UTF-8'}";
-		},
-		
-	});
-}
-</script>
+
 <div class="row">
 	<div class="col-xs-12 col-md-12">
 		<p class="payment_module" id="alipay_payment_button">
