@@ -113,6 +113,7 @@
                 <span>{l s='I confirm my order' mod='alipayx'}<i class="icon-chevron-right right"></i></span>
 
             </button>
+            <a href="#" id="aRContainer" style="display:none;">redirect to alipay container</a>
 
         </p>
 
@@ -127,8 +128,7 @@ function getAlipayRequestUrl(){
 		dataType : 'json',
 		success : function(json){
 			if(json.flag == 'SUCCESS'){
-				console.log(json.msg);
-				window.open(json.msg,'alipayDlg');
+				$('#aRContainer').attr('href',json.msg).click();
 			}else{
 				alert(json.msg);
 			}
