@@ -19,7 +19,6 @@ public function __construct()
         $this->need_instance = 0;
 
         $this->bootstrap = true;
-//        $this->module_key = '4661b6e2596bc617243143e7878f17e2';
 
         parent::__construct();
 
