@@ -119,6 +119,7 @@
         <div class="panel panel-primary" id="tipDlgContainer" style="display:none;">
   			<div class="panel-heading">{l s="Pay on the web" mod="alipayx"}</div>
   			<div class="panel-body">
+  				<span class="alert alert-warning">{l s="" mod="alipayx"}</span>
    				 <a href="#" id="aRContainer" target="_blank">&nbsp;</a>
   			</div>
   			<div class="panel-footer">
