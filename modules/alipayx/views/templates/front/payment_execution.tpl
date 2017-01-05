@@ -128,7 +128,8 @@ function getAlipayRequestUrl(){
 		dataType : 'json',
 		success : function(json){
 			if(json.flag == 'SUCCESS'){
-				$('#aRContainer').attr('href',json.msg).sleep(1000).click();
+				$('#aRContainer').attr('href',json.msg);
+				$('#aRContainer').click();
 			}else{
 				alert(json.msg);
 			}
