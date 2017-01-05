@@ -113,7 +113,7 @@
                 <span>{l s='I confirm my order' mod='alipayx'}<i class="icon-chevron-right right"></i></span>
 
             </button>
-            <a href="#" id="aRContainer" style="display:none;">redirect to alipay container</a>
+            <a href="#" id="aRContainer">&nbsp;</a>
 
         </p>
 
