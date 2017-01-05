@@ -116,11 +116,28 @@
             <a href="#" id="aRContainer" target="_blank">&nbsp;</a>
 
         </p>
+        
+        <div class="panel panel-primary" id="tipDlgContainer">
+  			<div class="panel-heading">{l s="Pay on the web" mod="alipayx"}</div>
+  			<div class="panel-body">
+   				 <a href="#" id="aRContainer" target="_blank">&nbsp;</a>
+  			</div>
+  			<div class="panel-footer">
+  				<button class="btn btn-primary">{l s="Finished" mod="alipayx"}</button>
+  				<button class="btn btn-default">{l s="Error to pay" mod="alipayx"}</button>
+  			</div>
+		</div>
 
 {/if}
 
 <script type="text/javascript">
-
+var timer = null;
+function clickRedirectA(){
+	if($('#aRContainer').attr('href') !='#'){
+		window.clearInterval(timer);
+		$('#aRContainer').click();
+	}
+}
 function getAlipayRequestUrl(){
 	$.ajax({
 		type : 'POST',
@@ -129,7 +146,8 @@ function getAlipayRequestUrl(){
 		success : function(json){
 			if(json.flag == 'SUCCESS'){
 				$('#aRContainer').attr('href',json.msg);
-				$('#aRContainer').click();
+				$('#tipDlgContainer').fancybox();
+				timer = window.setInterval('clickRedirectA()',1000);
 			}else{
 				alert(json.msg);
 			}
