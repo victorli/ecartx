@@ -113,11 +113,10 @@
                 <span>{l s='I confirm my order' mod='alipayx'}<i class="icon-chevron-right right"></i></span>
 
             </button>
-            <a href="#" id="aRContainer" target="_blank">&nbsp;</a>
 
         </p>
         
-        <div class="panel panel-primary" id="tipDlgContainer">
+        <div class="panel panel-primary" id="tipDlgContainer" style="display:none;">
   			<div class="panel-heading">{l s="Pay on the web" mod="alipayx"}</div>
   			<div class="panel-body">
    				 <a href="#" id="aRContainer" target="_blank">&nbsp;</a>
@@ -146,7 +145,7 @@ function getAlipayRequestUrl(){
 		success : function(json){
 			if(json.flag == 'SUCCESS'){
 				$('#aRContainer').attr('href',json.msg);
-				$('#tipDlgContainer').fancybox();
+				$.fancybox('#tipDlgContainer');
 				timer = window.setInterval('clickRedirectA()',1000);
 			}else{
 				alert(json.msg);
