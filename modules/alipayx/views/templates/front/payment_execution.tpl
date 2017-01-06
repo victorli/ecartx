@@ -117,9 +117,9 @@
         <div class="panel panel-primary" id="tipDlgContainer" style="display:none;">
   			<div class="panel-heading">{l s="Pay on the web" mod="alipayx"}</div>
   			<div class="panel-body">
-  				<span class="alert alert-warning">{l s="Please finish the paying process on the new open window." mod="alipayx"}</span>
+  				<br/>{l s="Please finish the paying process on the new open window." mod="alipayx"}<br/>
   			</div>
-  			<div class="panel-footer">
+  			<div class="panel-footer" style="text-align:right;">
   				<a class="btn btn-primary" href="./order-history">{l s="Finished" mod="alipayx"}</a>
   				<a class="btn btn-default">{l s="Error to pay" mod="alipayx"}</a>
   			</div>
@@ -128,7 +128,7 @@
 {/if}
 
 <script type="text/javascript">
-
+{literal}
 function getAlipayRequestUrl(){
 	$.ajax({
 		type : 'POST',
@@ -138,12 +138,13 @@ function getAlipayRequestUrl(){
 			if(json.flag == 'SUCCESS'){
 				var newPage = window.open('about:blank');
 				newPage.location.href = json.msg;
-				$.fancybox('#tipDlgContainer');
+				$.fancybox('#tipDlgContainer',{modal:true});
 			}else{
 				alert(json.msg);
 			}
 		}
 	});
 }
+{/literal}
 </script>
 
