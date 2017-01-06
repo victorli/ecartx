@@ -81,7 +81,7 @@ class AlipayxValidationModuleFrontController extends ModuleFrontController
 			"anti_phishing_key"=>$alipay_config['anti_phishing_key'],
 			"exter_invoke_ip"=>$alipay_config['exter_invoke_ip'],
 			"out_trade_no"	=> $this->module->currentOrder,
-			"subject"	=> Configuration::get('PS_SHOP_NAME').$this->module->l('Products'),
+			"subject"	=> Configuration::get('PS_SHOP_NAME'),
 			"total_fee"	=> $cart->getOrderTotal(),
 			"body"	=> $lProduct ? $lProduct['name'] : Configuration::get('PS_SHOP_NAME').$this->module->l('Products'),
 			"_input_charset"	=> trim(strtolower($alipay_config['input_charset'])));
