@@ -54,6 +54,7 @@
     </p>
 
 {else}
+	<form action="#" method="get" target="_blank" id="reAlipayForm">
         <div class="box cheque-box">
 
             <h3 class="page-subheading">
@@ -61,7 +62,7 @@
                 {l s='Alipay payment.' mod='alipayx'}
 
             </h3>
-
+			
             <p class="cheque-indent">
 
                 <strong class="dark">
@@ -90,7 +91,7 @@
 
         </div><!-- .cheque-box -->
 
-
+	</form>
 
         <p class="cart_navigation clearfix" id="cart_navigation">
 
@@ -119,8 +120,7 @@
         <div class="panel panel-primary" id="tipDlgContainer" style="display:none;">
   			<div class="panel-heading">{l s="Pay on the web" mod="alipayx"}</div>
   			<div class="panel-body">
-  				<span class="alert alert-warning">{l s="" mod="alipayx"}</span>
-   				 <a href="#" id="aRContainer" target="_blank">&nbsp;</a>
+  				<span class="alert alert-warning">{l s="Please finish the paying process on the new open window." mod="alipayx"}</span>
   			</div>
   			<div class="panel-footer">
   				<button class="btn btn-primary">{l s="Finished" mod="alipayx"}</button>
@@ -133,9 +133,9 @@
 <script type="text/javascript">
 var timer = null;
 function clickRedirectA(){
-	if($('#aRContainer').attr('href') !='#'){
+	if($('form#reAlipayForm').attr('action') !='#'){
 		window.clearInterval(timer);
-		$('#aRContainer').click();
+		$('form#reAlipayForm').submit();
 	}
 }
 function getAlipayRequestUrl(){
@@ -145,7 +145,7 @@ function getAlipayRequestUrl(){
 		dataType : 'json',
 		success : function(json){
 			if(json.flag == 'SUCCESS'){
-				$('#aRContainer').attr('href',json.msg);
+				$('form#reAlipayForm').attr('action',json.msg);
 				$.fancybox('#tipDlgContainer');
 				timer = window.setInterval('clickRedirectA()',1000);
 			}else{
