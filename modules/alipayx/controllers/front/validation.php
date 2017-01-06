@@ -69,6 +69,7 @@ class AlipayxValidationModuleFrontController extends ModuleFrontController
 	
 	        $alipaySubmit = new AlipaySubmit($alipay_config);
 	        
+	        $lProduct = $cart->getLastProduct();
 	        $parameter = array(
 			"service"       => $alipay_config['service'],
 			"partner"       => $alipay_config['partner'],
@@ -80,9 +81,9 @@ class AlipayxValidationModuleFrontController extends ModuleFrontController
 			"anti_phishing_key"=>$alipay_config['anti_phishing_key'],
 			"exter_invoke_ip"=>$alipay_config['exter_invoke_ip'],
 			"out_trade_no"	=> $this->module->currentOrder,
-			"subject"	=> Configuration::get('PS_SHOP_NAME'),
+			"subject"	=> Configuration::get('PS_SHOP_NAME').$this->module->l('Products'),
 			"total_fee"	=> $cart->getOrderTotal(),
-			"body"	=> '订单号：'.$this->module->currentOrder,
+			"body"	=> $lProduct ? $lProduct['name'] : Configuration::get('PS_SHOP_NAME').$this->module->l('Products'),
 			"_input_charset"	=> trim(strtolower($alipay_config['input_charset'])));
 	        
 	        $url = $alipaySubmit->createUrl($parameter);
