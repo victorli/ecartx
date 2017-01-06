@@ -138,7 +138,7 @@ function getAlipayRequestUrl(){
 			if(json.flag == 'SUCCESS'){
 				var newPage = window.open('about:blank');
 				newPage.location.href = msg;
-				$('#tipDlgContainer').fancybox({'modal' : true});
+				$.fancybox('#tipDlgContainer');
 			}else{
 				alert(json.msg);
 			}
