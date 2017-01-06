@@ -131,13 +131,7 @@
 {/if}
 
 <script type="text/javascript">
-var timer = null;
-function clickRedirectA(){
-	if($('form#reAlipayForm').attr('action') !='#'){
-		window.clearInterval(timer);
-		$('form#reAlipayForm').submit();
-	}
-}
+
 function getAlipayRequestUrl(){
 	$.ajax({
 		type : 'POST',
@@ -147,7 +141,7 @@ function getAlipayRequestUrl(){
 			if(json.flag == 'SUCCESS'){
 				$('form#reAlipayForm').attr('action',json.msg);
 				$.fancybox('#tipDlgContainer');
-				timer = window.setInterval('clickRedirectA()',1000);
+				$('form#reAlipayForm').submit();
 			}else{
 				alert(json.msg);
 			}
