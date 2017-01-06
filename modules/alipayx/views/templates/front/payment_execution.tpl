@@ -54,7 +54,6 @@
     </p>
 
 {else}
-	<form action="#" method="get" target="_blank" id="reAlipayForm">
         <div class="box cheque-box">
 
             <h3 class="page-subheading">
@@ -91,8 +90,6 @@
 
         </div><!-- .cheque-box -->
 
-	</form>
-
         <p class="cart_navigation clearfix" id="cart_navigation">
 
         	<a 
@@ -123,8 +120,8 @@
   				<span class="alert alert-warning">{l s="Please finish the paying process on the new open window." mod="alipayx"}</span>
   			</div>
   			<div class="panel-footer">
-  				<button class="btn btn-primary">{l s="Finished" mod="alipayx"}</button>
-  				<button class="btn btn-default">{l s="Error to pay" mod="alipayx"}</button>
+  				<a class="btn btn-primary" href="./order-history">{l s="Finished" mod="alipayx"}</a>
+  				<a class="btn btn-default">{l s="Error to pay" mod="alipayx"}</a>
   			</div>
 		</div>
 
@@ -139,9 +136,9 @@ function getAlipayRequestUrl(){
 		dataType : 'json',
 		success : function(json){
 			if(json.flag == 'SUCCESS'){
-				$('form#reAlipayForm').attr('action',json.msg);
-				$.fancybox('#tipDlgContainer');
-				$('form#reAlipayForm').submit();
+				var newPage = window.open('about:blank');
+				newPage.location.href = msg;
+				$.fancybox('#tipDlgContainer',{modal:true});
 			}else{
 				alert(json.msg);
 			}
