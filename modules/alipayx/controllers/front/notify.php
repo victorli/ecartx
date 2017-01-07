@@ -2,6 +2,8 @@
 class AlipayxNotifyModuleFrontController extends ModuleFrontController
 {
 	public function initContent(){
+		parent::initContent();
+		
 		require_once _PS_MODULE_DIR_.'alipayx/lib/alipay_notify.class.php';
 		
 		$aliNotify = new AlipayNotify();
