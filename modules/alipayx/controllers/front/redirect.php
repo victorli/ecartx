@@ -26,75 +26,16 @@
 
 class AlipayxRedirectModuleFrontController extends ModuleFrontController
 {
-    /**
-     * Do whatever you have to before redirecting the customer on the website of your payment processor.
-     */
     public function postProcess()
     {
-        /**
-         * Oops, an error occured.
-         */
-        if (Tools::getValue('action') == 'error') {
-            return $this->displayError('An error occurred while trying to redirect the customer');
-        } else {
-        	
-        	//$url = $url.Tools::getValue("url1");
-//            $this->context->smarty->assign(array(
-//                'cart_id' => Context::getContext()->cart->id,
-//                'secure_key' => Context::getContext()->customer->secure_key,
-//            	'url1'=>$url,
-//            ));
-            $cart = Context::getContext()->cart;
-            $order_no = Tools::getValue("order_no");
-            $this->generateOrder($cart,$order_no);
-            //header('Location: '.$url);
-        	exit;
-			//echo "<script>document.location='".$url."';</script>";
-            
-        }
-    }
-
-    protected function displayError($message, $description = false)
-    {
-        /**
-         * Create the breadcrumb for your ModuleFrontController.
-         */
-        $this->context->smarty->assign('path', '
-			<a href="'.$this->context->link->getPageLink('order', null, null, 'step=3').'">'.$this->module->l('Payment').'</a>
-			<span class="navigation-pipe">&gt;</span>'.$this->module->l('Error'));
-
-        /**
-         * Set error message and description for the template.
-         */
-        array_push($this->errors, $this->module->l($message), $description);
-
-        return $this->setTemplate('error.tpl');
-    }
-    
-    private function generateOrder($cart,$order_no){
-    	$cart_id = $cart->id;
-        $secure_key = $cart->secure_key;
-
-        //$cart = new Cart((int)$cart_id);
-        $customer = new Customer((int)$cart->id_customer);
-
-        
-        $payment_status = 15;
-        $message = null; 
-
-
-        $module_name = $this->module->displayName;
-        $currency_id = (int)Context::getContext()->currency->id;
-        
-//        do {
-//                $reference = Order::generateReference();
-//            } while (Order::getByReference($reference)->count());
-//        
-//        $order_id = $reference;
-        $this->module->setRef($order_no);
-        $this->module->validateOrder($cart_id, $payment_status, $cart->getOrderTotal(), $module_name, $message, array(), $currency_id, false, $secure_key);
-        //$a = $this->addOrderNo($order_id);
-        //$_SESSION['currentOrderReference'] = $reference;
-        //Context::getContext()->currentOrderReference
+    	require_once _PS_MODULE_DIR_.'alipayx/alipay.config.php';
+		require_once _PS_MODULE_DIR_.'alipayx/lib/alipay_notify.class.php';
+		
+		$aliNotify = new AlipayNotify($alipay_config);
+		if($aliNotify->verifyReturn()){
+			die('okay');
+		}
+		
+		die('error');
     }
 }

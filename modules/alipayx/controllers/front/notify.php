@@ -23,6 +23,10 @@ class AlipayxNotifyModuleFrontController extends ModuleFrontController
 					die('success');
 				$order->setCurrentState(Configuration::get('PS_OS_PREPARATION'));
 			}
+		}elseif ($trade_status == 'TRADE_CLOSED'){
+			if($data['refund_status'] == 'REFUND_SUCCESS'){//全额退款成功
+				
+			}
 		}
 		
 		die('success');
