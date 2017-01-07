@@ -2,9 +2,10 @@
 class AlipayxNotifyModuleFrontController extends ModuleFrontController
 {
 	public function initContent(){
+		require_once _PS_MODULE_DIR_.'alipayx/alipay.config.php';
 		require_once _PS_MODULE_DIR_.'alipayx/lib/alipay_notify.class.php';
 		
-		$aliNotify = new AlipayNotify();
+		$aliNotify = new AlipayNotify($alipay_config);
 		if(!$aliNotify->verifyNotify()){
 			PrestaShopLogger::addLog('Veriy notify from alipay failed.',3);
 			die('FAIL');
