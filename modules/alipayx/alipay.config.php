@@ -30,7 +30,7 @@ $alipay_config['ali_public_key_path']= _PS_MODULE_DIR_.'alipayx/key/rsa_public_k
 $alipay_config['notify_url'] = "http://shop.ecartx.com/module/alipayx/notify";
 
 // 页面跳转同步通知页面路径 需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
-$alipay_config['return_url'] = "http://shop.ecartx.com/order-history";
+$alipay_config['return_url'] = "http://shop.ecartx.com/module/alipayx/redirect";
 
 //签名方式
 $alipay_config['sign_type']    = strtoupper('RSA');
