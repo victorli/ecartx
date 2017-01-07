@@ -11,17 +11,20 @@ class AlipayxNotifyModuleFrontController extends ModuleFrontController
 		}
 		
 		$data = $_POST;
+		$this->_storeNotifyResult($data);
+		
 		$trade_status = $data['trade_status'];
 		if($trade_status === 'TRADE_SUCCESS'){
 			$id_order = $data['out_trade_no'];
 			$order = new Order((int)$id_order);
 			if(is_object($order)){
 				if($order->hasBeenPaid())
-					return true;
-				
+					die('success');
 				$order->setCurrentState(Configuration::get('PS_OS_PREPARATION'));
 			}
 		}
+		
+		die('success');
 	}
 	
 	private function _storeNotifyResult($data){
