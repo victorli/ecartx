@@ -27,7 +27,7 @@ $alipay_config['private_key_path']	= _PS_MODULE_DIR_.'alipayx/key/rsa_private_ke
 $alipay_config['ali_public_key_path']= _PS_MODULE_DIR_.'alipayx/key/rsa_public_key.pem';
 
 // 服务器异步通知页面路径  需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
-$alipay_config['notify_url'] = "http://shop.ecartx.com/alipayx-notify";
+$alipay_config['notify_url'] = "http://shop.ecartx.com/module/alipayx/notify";
 
 // 页面跳转同步通知页面路径 需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
 $alipay_config['return_url'] = "http://shop.ecartx.com/order-history";
