@@ -4,6 +4,7 @@ class AlipayxNotifyModuleFrontController extends ModuleFrontController
 	public function initContent(){
 		parent::initContent();
 		
+		require_once _PS_MODULE_DIR_.'alipayx/alipay.config.php';
 		require_once _PS_MODULE_DIR_.'alipayx/lib/alipay_notify.class.php';
 		
 		$aliNotify = new AlipayNotify();
@@ -16,7 +17,7 @@ class AlipayxNotifyModuleFrontController extends ModuleFrontController
 		$this->_storeNotifyResult($data);
 		
 		$trade_status = $data['trade_status'];
-		if($trade_status === 'TRADE_SUCCESS'){
+		if($trade_status == 'TRADE_SUCCESS'){
 			$id_order = $data['out_trade_no'];
 			$order = new Order((int)$id_order);
 			if(is_object($order)){
