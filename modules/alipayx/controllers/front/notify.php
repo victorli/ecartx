@@ -6,7 +6,7 @@ class AlipayxNotifyModuleFrontController extends ModuleFrontController
 		
 		$aliNotify = new AlipayNotify();
 		if(!$aliNotify->verifyNotify()){
-			PrestaShopLogger::addLog('Veriy notify from alipay failed.',1);
+			PrestaShopLogger::addLog('Veriy notify from alipay failed.',3);
 			die('FAIL');
 		}
 		
@@ -32,7 +32,7 @@ class AlipayxNotifyModuleFrontController extends ModuleFrontController
 		$ret = Db::getInstance()->insert(_DB_PREFIX_.'alipayx_notify', $data);
 		
 		if(!$ret)
-			PrestaShopLogger::addLog('Error to insert notify result',1);
+			PrestaShopLogger::addLog('Error to insert notify result:'.Db::getInstance()->getMsgError(),3);
 		
 		return $ret;
 	}
