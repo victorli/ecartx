@@ -76,7 +76,8 @@ public function __construct()
             $this->registerHook('payment') &&
             $this->registerHook('paymentReturn') &&
             $this->registerHook($admin_order_hook) &&
-            $this->_addOrderStatus();
+            $this->_addOrderStatus() && 
+        	$this->_installDb();
     }
     
 	public function uninstall()
@@ -87,9 +88,7 @@ public function __construct()
         Configuration::deleteByName('ALIPAY_GATEWAY');
         Configuration::deleteByName('ALIPAY_GATEWAY_PROD');
 
-        //include(dirname(__FILE__).'/sql/uninstall.php');
-
-        return parent::uninstall() && $this->_removeOrderStatus();
+        return parent::uninstall() && $this->_removeOrderStatus() && $this->_uninstallDb();
     }
     
 	public function getContent()
@@ -246,6 +245,53 @@ public function __construct()
 	public function getGoodsDescription()
     {
         return $this->context->shop->name;
+    }
+    
+    private function _installDb(){
+    	$sql[] = 'create table if not exists `'._DB_PREFIX_.'alipayx_notify`(
+    			`id` int not null auto_increment,
+    			`notify_time` datetime,
+    			`notify_type` varchar(32),
+    			`notify_id` varchar(128),
+    			`sign_type` varchar(16),
+    			`sign` varchar(256),
+    			`out_trade_no` varchar(64),
+    			`subject` varchar(256),
+    			`payment_type` varchar(4),
+    			`trade_no` varchar(64),
+    			`trade_status` varchar(32),
+    			`gmt_payment` datetime,
+    			`refund_status` varchar(32),
+    			`gmt_refund` datetime,
+    			`seller_email` varchar(100),
+    			`buyer_email` varchar(100),
+    			`seller_id` varchar(30),
+    			`buyer_id` varchar(30),
+    			`price` decimal(),
+    			`total_fee` decimal(),
+    			`quantity` smallint,
+    			`body` varchar(1000),
+    			`discount` decimal(),
+    			`is_total_fee_adjust` char(1),
+    			`use_coupon` char(1),
+    			`extra_common_param` varchar(256),
+    			`business_scene` varchar(32),
+    			primary key(`id`)
+    			) ENGINE='._MYSQL_ENGINE_.' DEFAULT CHARSET=utf8';
+    	
+    	foreach ($sql as $query) {
+    		if (Db::getInstance()->execute($query) == false) {
+    			PrestaShopLogger::addLog(Db::getInstance()->getMsgError());
+    			$this->_errors[] = $this->l('Error to install SQL:'.$query);
+    			return false;
+    		}
+    	}
+    	
+    	return true;
+    }
+    
+    private function _uninstallDb(){
+    	return true;
     }
     
 	private function _addOrderStatus() {
