@@ -29,7 +29,7 @@ class AlipayxNotifyModuleFrontController extends ModuleFrontController
 	
 	private function _storeNotifyResult($data){
 		
-		$ret = Db::getInstance()->insert(_DB_PREFIX_.'alipayx_notify', $data);
+		$ret = Db::getInstance()->insert('alipayx_notify', $data);
 		
 		if(!$ret)
 			PrestaShopLogger::addLog('Error to insert notify result:'.Db::getInstance()->getMsgError(),3);
