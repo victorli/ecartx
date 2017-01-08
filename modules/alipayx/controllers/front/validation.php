@@ -61,8 +61,6 @@ class AlipayxValidationModuleFrontController extends ModuleFrontController
 		$mailVars = null;
 
 		if($this->module->validateOrder($cart->id, Configuration::get('AWAITING_ALIPAY_PAYMENT'), $total, $this->module->displayName, NULL, $mailVars, (int)$currency->id, false, $customer->secure_key)){
-			
-	        //include_once(_PS_MODULE_DIR_.'alipayx/api/loader.php');
 	        require_once(_PS_MODULE_DIR_."alipayx/alipay.config.php");
 			require_once(_PS_MODULE_DIR_."alipayx/lib/alipay_submit.class.php");
 	
