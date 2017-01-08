@@ -139,8 +139,8 @@ function getAlipayRequestUrl(){
 		dataType : 'json',
 		success : function(json){
 			if(json.flag == 'SUCCESS'){
-				$(btnUTPS).attr('href',$(btnUTPS).href + '?flag=UTPS&id_order='+json.id_order);
-				$(btnUTPF).attr('href',$(btnUTPF).href + '?flag=UTPF&id_order='+json.id_order);
+				$(btnUTPS).attr('href',$(btnUTPS).attr('href') + '?flag=UTPS&id_order='+json.id_order);
+				$(btnUTPF).attr('href',$(btnUTPF).attr('href') + '?flag=UTPF&id_order='+json.id_order);
 				
 				var newPage = window.open('about:blank');
 				newPage.focus();
