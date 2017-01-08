@@ -6,9 +6,16 @@ class AlipayxRedirectModuleFrontController extends ModuleFrontController
     	require_once _PS_MODULE_DIR_.'alipayx/alipay.config.php';
 		require_once _PS_MODULE_DIR_.'alipayx/lib/alipay_notify.class.php';
 		
-		$aliNotify = new AlipayNotify($alipay_config);
-		if($aliNotify->verifyReturn()){
-			Tools::redirect('index.php?controller=history');
+		$isAliNotify = isset(Tools::getValue('buyer_email')) && !empty(Tools::getValue('buyer_email')) && isset(Tools::getValue('notify_id')) && !empty(Tools::getValue('notify_id'));
+		
+		if($isAliNotify){
+			$aliNotify = new AlipayNotify($alipay_config);
+			if($aliNotify->verifyReturn()){
+				Tools::redirect('index.php?controller=history');
+			}else{
+				PrestaShopLogger::addLog('Bad request:'.$_SERVER['REQUEST_URI'],3);
+				die('Bad request detected!');
+			}
 		}
 		
 		$flag = Tools::getValue('flag');
