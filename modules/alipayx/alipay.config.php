@@ -16,6 +16,9 @@
 //↓↓↓↓↓↓↓↓↓↓请在这里配置您的基本信息↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 //合作身份者ID，签约账号，以2088开头由16位纯数字组成的字符串，查看地址：https://b.alipay.com/order/pidAndKey.htm
 $alipay_config['partner']		= '2088011173572766';
+if(isset(Configuration::get('ALIPAY_PARTNER_ID'))){
+	$alipay_config['partner_id'] = Configuration::get('ALIPAY_PARTNER_ID');
+}
 
 //收款支付宝账号，以2088开头由16位纯数字组成的字符串，一般情况下收款账号就是签约账号
 $alipay_config['seller_id']	= $alipay_config['partner'];
