@@ -7,7 +7,9 @@ class AlipayxRedirectModuleFrontController extends ModuleFrontController
 		require_once _PS_MODULE_DIR_.'alipayx/lib/alipay_notify.class.php';
 		
 		$isAliNotify = false;
-		if(isset(Tools::getValue('buyer_email')) && !empty(Tools::getValue('buyer_email')) && isset(Tools::getValue('notify_id')) && !empty(Tools::getValue('notify_id'))){
+		$buyer_email = Tools::getValue('buyer_email');
+		$notify_id = Tools::getValue('notify_id');
+		if(isset($buyer_email) && !empty($buyer_email) && isset($notify_id) && !empty($notify_id)){
 			$isAliNotify = true;
 		}
 		
