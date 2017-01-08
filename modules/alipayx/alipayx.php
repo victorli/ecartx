@@ -60,9 +60,9 @@ public function __construct()
 
         Configuration::updateValue('ALIPAY_LIVE_MODE', 0);
         Configuration::updateValue('ALIPAY_PARTNER_ID', '2088011173572766');//pid 2088911995662983
-        Configuration::updateValue('ALIPAY_SECRETE_KEY', 'xwjrglietxdntfwye41p610rd36ae0yc');//
-        Configuration::updateValue('ALIPAY_GATEWAY', 'https://mapi.alipay.com/gateway.do?');
-        Configuration::updateValue('ALIPAY_GATEWAY_PROD', 'https://mapi.alipay.com/gateway.do?');
+        //Configuration::updateValue('ALIPAY_SECRETE_KEY', 'xwjrglietxdntfwye41p610rd36ae0yc');//
+        //Configuration::updateValue('ALIPAY_GATEWAY', 'https://mapi.alipay.com/gateway.do?');
+        //Configuration::updateValue('ALIPAY_GATEWAY_PROD', 'https://mapi.alipay.com/gateway.do?');
         
         
         
@@ -84,16 +84,15 @@ public function __construct()
     {
         Configuration::deleteByName('ALIPAY_LIVE_MODE');
         Configuration::deleteByName('ALIPAY_PARTNER_ID');
-        Configuration::deleteByName('ALIPAY_SECRETE_KEY');
-        Configuration::deleteByName('ALIPAY_GATEWAY');
-        Configuration::deleteByName('ALIPAY_GATEWAY_PROD');
+        //Configuration::deleteByName('ALIPAY_SECRETE_KEY');
+        //Configuration::deleteByName('ALIPAY_GATEWAY');
+       // Configuration::deleteByName('ALIPAY_GATEWAY_PROD');
 
         return parent::uninstall() && $this->_removeOrderStatus() && $this->_uninstallDb();
     }
     
 	public function getContent()
     {
-        //require_once(dirname(__FILE__).'/AlipayBackEndForm.php');
         /**
          * If values have been submitted in the form, process.
          */
@@ -103,9 +102,7 @@ public function __construct()
         
         $this->context->smarty->assign('module_dir', $this->_path);
 
-        //$output = $this->context->smarty->fetch($this->local_path.'views/templates/admin/configure.tpl');
-
-        return $this->renderForm(); //$output.$this->renderForm();
+        return $this->renderForm(); 
     }
     
 	protected function renderForm()
@@ -165,9 +162,9 @@ public function __construct()
                         'col' => 4,
                         'type' => 'text',
                         'prefix' => '<i class="icon icon-user"></i>',
-                        'desc' => $this->l('Enter your SELLERID provided by Alipay'),
-                        'name' => 'SELLER_ID',
-                        'label' => $this->l('SELLER_ID'),//商户号
+                        'desc' => $this->l('Enter your PARTENER_ID provided by Alipay'),
+                        'name' => 'ALIPAY_PARTNER_ID',
+                        'label' => $this->l('PARTNER_ID'),//商户号
                     ),
                 ),
                 'submit' => array(
@@ -183,7 +180,7 @@ public function __construct()
         return array(
             'ALIPAY_LIVE_MODE' => Configuration::get('WXPAY_LIVE_MODE'),
             //'WXPAY_APPID' => Configuration::get('WXPAY_APPID', null),
-            'SELLER_ID' => Configuration::get('SELLER_ID', null),
+            'ALIPAY_PARTNER_ID' => Configuration::get('ALIPAY_PARTNER_ID', null),
         );
     }
     
@@ -222,29 +219,6 @@ public function __construct()
         );
 
         return $this->display(__FILE__, 'views/templates/hook/payment.tpl');
-    }
-    
-	public function build_order_no(){
-        return date('Ymd').substr(implode(NULL, array_map('ord', str_split(substr(uniqid(), 7, 13), 1))), 0, 8);
-    }
-    
-	public function getGoodsName($id_cart)
-    {
-        $cart = new Cart($id_cart);
-        $products = $cart->getProducts();
-        $goods_name = '';
-        foreach ($products as $product) {
-            $goods_name .= $product['name'].', ';
-        }
-        if ($goods_name) {
-            return Tools::substr($goods_name, 0, -2);
-        }
-        return $goods_name;
-    }
-    
-	public function getGoodsDescription()
-    {
-        return $this->context->shop->name;
     }
     
     private function _installDb(){

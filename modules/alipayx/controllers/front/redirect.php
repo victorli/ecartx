@@ -6,6 +6,9 @@ class AlipayxRedirectModuleFrontController extends ModuleFrontController
     	require_once _PS_MODULE_DIR_.'alipayx/alipay.config.php';
 		require_once _PS_MODULE_DIR_.'alipayx/lib/alipay_notify.class.php';
 		
+		$alipay_config['partner_id'] = Configuration::get('ALIPAY_PARTNER_ID');
+		$alipay_config['seller_id'] = $alipay_config['partner_id'];
+		
 		$isAliNotify = isset(Tools::getValue('buyer_email')) && !empty(Tools::getValue('buyer_email')) && isset(Tools::getValue('notify_id')) && !empty(Tools::getValue('notify_id'));
 		
 		if($isAliNotify){

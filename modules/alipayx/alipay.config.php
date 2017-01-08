@@ -64,8 +64,4 @@ $alipay_config['exter_invoke_ip'] = "";
 		
 //↑↑↑↑↑↑↑↑↑↑请在这里配置防钓鱼信息，如果没开通防钓鱼功能，为空即可 ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
-if(isset(Configuration::get('SELLER_ID'))){
-	$alipay_config['partner_id'] = Configuration::get('SELLER_ID');
-	$alipay_config['seller_id'] = $alipay_config['partner_id'];
-}
 ?>
