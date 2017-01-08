@@ -88,7 +88,7 @@ class AlipayxValidationModuleFrontController extends ModuleFrontController
 	        
 	        $url = $alipaySubmit->createUrl($parameter);
 			
-	        die(Tools::jsonEncode(array('flag'=>'SUCCESS','msg'=>$url)));
+	        die(Tools::jsonEncode(array('flag'=>'SUCCESS','msg'=>$url,'id_order'=>$parameter['out_trade_no'])));
 		}else{
 			die(Tools::jsonEncode(array('flag'=>'FAIL','msg'=>'Error to create order.')));
 		}

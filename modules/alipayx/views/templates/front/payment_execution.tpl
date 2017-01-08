@@ -120,8 +120,8 @@
   				<br/>{l s="Please finish the paying process on the new open window." mod="alipayx"}<br/>
   			</div>
   			<div class="panel-footer" style="text-align:right;">
-  				<a class="btn btn-primary" href="./order-history">{l s="Finished" mod="alipayx"}</a>
-  				<a class="btn btn-default">{l s="Error to pay" mod="alipayx"}</a>
+  				<a id="btnUserThinkPaySuccess" class="btn btn-primary" href="{$link->getModuleLink('alipayx', 'redirect', [], true)|escape:'htmlall':'UTF-8'}">{l s="Finished" mod="alipayx"}</a>
+  				<a id="btnUserThinkPayFailed" class="btn btn-default" href="{$link->getModuleLink('alipayx', 'redirect', [], true)|escape:'htmlall':'UTF-8'}">{l s="Error to pay" mod="alipayx"}</a>
   			</div>
 		</div>
 
@@ -129,6 +129,9 @@
 
 <script type="text/javascript">
 {literal}
+var btnUTPS = $('a#btnUserThinkPaySuccess');
+var btnUTPF = $('a#btnUserThinkPayFailed');
+
 function getAlipayRequestUrl(){
 	$.ajax({
 		type : 'POST',
@@ -136,6 +139,9 @@ function getAlipayRequestUrl(){
 		dataType : 'json',
 		success : function(json){
 			if(json.flag == 'SUCCESS'){
+				$(btnUTPS).attr('href',$(btnUTPS).href + '?flag=UTPS&id_order='+json.id_order);
+				$(btnUTPF).attr('href',$(btnUTPF).href + '?flag=UTPF&id_order='+json.id_order);
+				
 				var newPage = window.open('about:blank');
 				newPage.focus();
 				newPage.location.href = json.msg;
