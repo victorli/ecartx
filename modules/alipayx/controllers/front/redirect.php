@@ -1,29 +1,4 @@
 <?php
-/**
-* 2007-2015 PrestaShop
-*
-* NOTICE OF LICENSE
-*
-* This source file is subject to the Academic Free License (AFL 3.0)
-* that is bundled with this package in the file LICENSE.txt.
-* It is also available through the world-wide-web at this URL:
-* http://opensource.org/licenses/afl-3.0.php
-* If you did not receive a copy of the license and are unable to
-* obtain it through the world-wide-web, please send an email
-* to license@prestashop.com so we can send you a copy immediately.
-*
-* DISCLAIMER
-*
-* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
-* versions in the future. If you wish to customize PrestaShop for your
-* needs please refer to http://www.prestashop.com for more information.
-*
-*  @author    PrestaShop SA <contact@prestashop.com>
-*  @copyright 2007-2015 PrestaShop SA
-*  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
-*  International Registered Trademark & Property of PrestaShop SA
-*/
-
 class AlipayxRedirectModuleFrontController extends ModuleFrontController
 {
     public function postProcess()
@@ -33,9 +8,39 @@ class AlipayxRedirectModuleFrontController extends ModuleFrontController
 		
 		$aliNotify = new AlipayNotify($alipay_config);
 		if($aliNotify->verifyReturn()){
-			die('okay');
+			Tools::redirect('index.php?controller=history');
 		}
 		
-		die('error');
+		$flag = Tools::getValue('flag');
+		$id_order = Tools::getValue('id_order');
+		$order = new Order((int)$id_order);
+		if(!isset($flag) || !isset($id_order) || empty($flag) || empty($id_order) ||!is_object($order)){
+			PrestaShopLogger::addLog('unexpected request parameters:'.$_SERVER['REQUEST_URI'],2);
+			Tools::redirect('index.php?controller=history');
+		}
+		if($flag == 'UTPS'){ //user think pay success
+			if($order->hasBeenPaid()){
+				Tools::redirect('index.php?controller=history');
+			}
+			
+			if($this->_hasAlipayNotify($id_order)){
+				$order->setCurrentState(Configuration::get('PS_OS_PREPARATION'));
+				Tools::redirect('index.php?controller=history');
+			}
+			
+			PrestaShopLogger::addLog('User think paid successfully,but system can not confirm it.',2);
+			Tools::redirect('index.php?controller=history');
+			
+		}elseif($flag == 'UTPF'){ //user think pay failed
+			Tools::redirect('index.php?controller=history');
+		}
+    }
+    
+    private function _hasAlipayNotify($id_order,$trade_status='TRADE_SUCCESS'){
+    	$sql = "select * from "._DB_PREFIX_."alipayx_notify ";
+    	$sql .= "where out_trade_no=".$id_order." and trade_status='".$trade_status."'";
+    	
+    	$result = Db::getInstance()->query($sql);
+    	return $result;
     }
 }
