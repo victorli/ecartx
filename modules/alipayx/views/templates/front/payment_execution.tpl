@@ -115,13 +115,13 @@
         </p>
         
         <div class="panel panel-primary" id="tipDlgContainer" style="display:none;">
-  			<div class="panel-heading">{l s="Pay on the web" mod="alipayx"}</div>
+  			<div class="panel-heading">{l s='Pay on the web' mod='alipayx'}</div>
   			<div class="panel-body">
-  				<br/>{l s="Please finish the paying process on the new open window." mod="alipayx"}<br/>
+  				<br/>{l s='Please finish the paying process on the new open window.' mod='alipayx'}<br/>
   			</div>
   			<div class="panel-footer" style="text-align:right;">
-  				<a id="btnUserThinkPaySuccess" class="btn btn-primary" href="{$link->getModuleLink('alipayx', 'redirect', [], true)|escape:'htmlall':'UTF-8'}">{l s="Finished" mod="alipayx"}</a>
-  				<a id="btnUserThinkPayFailed" class="btn btn-default" href="{$link->getModuleLink('alipayx', 'redirect', [], true)|escape:'htmlall':'UTF-8'}">{l s="Error to pay" mod="alipayx"}</a>
+  				<a id="btnUserThinkPaySuccess" class="btn btn-primary" href="{$link->getModuleLink('alipayx', 'redirect', [], true)|escape:'htmlall':'UTF-8'}">{l s='Finished' mod='alipayx'}</a>
+  				<a id="btnUserThinkPayFailed" class="btn btn-default" href="{$link->getModuleLink('alipayx', 'redirect', [], true)|escape:'htmlall':'UTF-8'}">{l s='Error to pay' mod='alipayx'}</a>
   			</div>
 		</div>
 
