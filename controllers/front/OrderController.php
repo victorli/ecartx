@@ -123,6 +123,8 @@ class OrderControllerCore extends ParentOrderController
     public function initContent()
     {
         parent::initContent();
+        
+        $this->context->smarty->assign('hide_left_column',1);
 
         if (Tools::isSubmit('ajax') && Tools::getValue('method') == 'updateExtraCarrier') {
             // Change virtualy the currents delivery options
