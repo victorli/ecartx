@@ -30,5 +30,9 @@ $_MODULE['<{alipayx}prestashop>payment_execution_4e0a6564db8d309a46b75c7cd8a71e8
 $_MODULE['<{alipayx}prestashop>payment_execution_b939c4940deb5588f47ee8f12c61f11f'] = '请确认订单信息无误后点击“确认订单”按钮';
 $_MODULE['<{alipayx}prestashop>payment_execution_569fd05bdafa1712c4f6be5b153b8418'] = '其它支付方式';
 $_MODULE['<{alipayx}prestashop>payment_execution_46b9e3665f187c739c55983f757ccda0'] = '确认订单';
+$_MODULE['<{alipayx}prestashop>payment_execution_e0507d84d39caf9d1513a6b7ff64ffe0'] = '在线支付';
+$_MODULE['<{alipayx}prestashop>payment_execution_2cee64322f75716e8fd93695ac6194b8'] = '请在新打开的页面中完成后续支付。';
+$_MODULE['<{alipayx}prestashop>payment_execution_8f3d10eb21bd36347c258679eba9e92b'] = '支付成功';
+$_MODULE['<{alipayx}prestashop>payment_execution_e5d36de0c37eab50f15522f2c788e002'] = '付款出错';
 $_MODULE['<{alipayx}prestashop>payment_54edf017886d1c076507a53229dba152'] = '使用支付宝模块';
 $_MODULE['<{alipayx}prestashop>payment_1497a70e6b60363699b0f3c1fa5e1ea6'] = '支付宝支付';
