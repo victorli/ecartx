@@ -1,5 +1,5 @@
-﻿<?php
-header("Content-Type: text/html; charset=utf-8");
+<?php
+
 if (!defined('_PS_VERSION_')) {
     exit;
 }
@@ -60,14 +60,6 @@ public function __construct()
 
         Configuration::updateValue('ALIPAY_LIVE_MODE', 0);
         Configuration::updateValue('ALIPAY_PARTNER_ID', '2088011173572766');//pid 2088911995662983
-        //Configuration::updateValue('ALIPAY_SECRETE_KEY', 'xwjrglietxdntfwye41p610rd36ae0yc');//
-        //Configuration::updateValue('ALIPAY_GATEWAY', 'https://mapi.alipay.com/gateway.do?');
-        //Configuration::updateValue('ALIPAY_GATEWAY_PROD', 'https://mapi.alipay.com/gateway.do?');
-        
-        
-        
-
-        //include(dirname(__FILE__).'/sql/install.php');
 
         $admin_order_hook = (_PS_VERSION_ < '1.6' ? 'displayAdminOrder' : 'displayAdminOrderLeft');
         return parent::install() &&
@@ -84,9 +76,6 @@ public function __construct()
     {
         Configuration::deleteByName('ALIPAY_LIVE_MODE');
         Configuration::deleteByName('ALIPAY_PARTNER_ID');
-        //Configuration::deleteByName('ALIPAY_SECRETE_KEY');
-        //Configuration::deleteByName('ALIPAY_GATEWAY');
-       // Configuration::deleteByName('ALIPAY_GATEWAY_PROD');
 
         return parent::uninstall() && $this->_removeOrderStatus() && $this->_uninstallDb();
     }
@@ -164,7 +153,7 @@ public function __construct()
                         'prefix' => '<i class="icon icon-user"></i>',
                         'desc' => $this->l('Enter your PARTENER_ID provided by Alipay'),
                         'name' => 'ALIPAY_PARTNER_ID',
-                        'label' => $this->l('PARTNER_ID'),//商户号
+                        'label' => $this->l('PARTNER_ID'),
                     ),
                 ),
                 'submit' => array(
@@ -213,8 +202,6 @@ public function __construct()
         $this->smarty->assign(
             array(
                 'module_dir' => $this->_path,
-                //'alipay_payment_url' => $url,
-            	//'order_no' => $order_id
             )
         );
 
@@ -300,3 +287,5 @@ public function __construct()
 		return true;
 	}
 }
+
+?>
