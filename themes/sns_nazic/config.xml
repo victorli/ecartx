@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<theme>
+	<version value="1.0">
+		<ccc available="true" />
+		<guest_checkout available="true" />
+		<one_page_checkout available="true" />
+		<store_locator available="true" />
+	</version>
+	<fontsizes>
+		<fontsize>10px</fontsize>
+		<fontsize>11px</fontsize>
+		<fontsize>12px</fontsize> 
+		<fontsize>13px</fontsize>
+		<fontsize>14px</fontsize>
+		<fontsize>15px</fontsize>
+		<fontsize>16px</fontsize>
+	</fontsizes>
+	<fontfamilys>
+		<fontfamily>Arial</fontfamily>
+		<fontfamily>Tahoma</fontfamily>
+	</fontfamilys>
+	<googlefonts>
+		<googlefont>Anton|Anton</googlefont>
+		<googlefont>Roboto+Condensed|Roboto Condensed</googlefont>
+		<googlefont>Port+Lligat+Slab|Port Lligat Slab</googlefont>
+		<googlefont>PT+Sans:400,700|PT Sans</googlefont>
+		<googlefont>Open+Sans:300,400,600,700|Open Sans</googlefont>
+
+	</googlefonts>
+</theme>
+
+

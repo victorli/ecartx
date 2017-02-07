@@ -1,0 +1,18 @@
+/* line 3, ../../../sass/modules/mailalerts/mailalerts.scss */
+#mailalerts_block_account li.last_item {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+/* line 7, ../../../sass/modules/mailalerts/mailalerts.scss */
+#mailalerts_block_account li .products-block-image {
+  float: left;
+  margin-right: 19px;
+}
+/* line 11, ../../../sass/modules/mailalerts/mailalerts.scss */
+#mailalerts_block_account li .remove {
+  float: right;
+}
+/* line 13, ../../../sass/modules/mailalerts/mailalerts.scss */
+#mailalerts_block_account li .remove i {
+  cursor: pointer;
+}

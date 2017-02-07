@@ -1,0 +1,15 @@
+/* line 1, ../../../sass/modules/blockbanner/blockbanner.scss */
+#header .banner a {
+  display: block;
+  max-width: 1170px;
+  max-height: 65px;
+}
+
+/* line 6, ../../../sass/modules/blockbanner/blockbanner.scss */
+#header .banner a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 65px;
+  max-width: 1170px;
+}

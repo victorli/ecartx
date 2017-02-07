@@ -1,0 +1,222 @@
+/* line 4, ../../../sass/modules/productcomments/productcomments.scss */
+.comments_advices {
+  padding-top: 2px;
+}
+/* line 6, ../../../sass/modules/productcomments/productcomments.scss */
+.comments_advices li {
+  display: inline-block;
+  line-height: 30px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 6, ../../../sass/modules/productcomments/productcomments.scss */
+  .comments_advices li {
+    display: block;
+    line-height: 20px;
+  }
+}
+/* line 14, ../../../sass/modules/productcomments/productcomments.scss */
+.comments_advices a {
+  text-decoration: none;
+  color: #777;
+  position: relative;
+  margin-right: 8px;
+  line-height: 30px;
+  padding: 0;
+  display: inline-block;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* line 14, ../../../sass/modules/productcomments/productcomments.scss */
+  .comments_advices a {
+    float: none;
+    line-height: 20px;
+  }
+}
+/* line 26, ../../../sass/modules/productcomments/productcomments.scss */
+.comments_advices a:before {
+  background: #929292;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  color: white;
+  display: inline-block;
+  font-family: "FontAwesome";
+  font-size: 15px;
+  font-weight: normal;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 6px;
+  text-align: center;
+  width: 30px;
+  /*max 1199px*/
+}
+@media (max-width: 1199px) {
+  /* line 26, ../../../sass/modules/productcomments/productcomments.scss */
+  .comments_advices a:before {
+    display: none;
+  }
+}
+/* line 44, ../../../sass/modules/productcomments/productcomments.scss */
+.comments_advices a.reviews:before {
+  content: "\f0e5";
+}
+/* line 47, ../../../sass/modules/productcomments/productcomments.scss */
+.comments_advices a.open-comment-form:before {
+  content: "\f040";
+}
+/* line 50, ../../../sass/modules/productcomments/productcomments.scss */
+.comments_advices a:hover {
+  color: #333;
+}
+/* line 53, ../../../sass/modules/productcomments/productcomments.scss */
+.comments_advices a.reviews {
+  border-right: 1px solid #d6d4d4;
+  padding-right: 30px;
+  margin-right: 9px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 53, ../../../sass/modules/productcomments/productcomments.scss */
+  .comments_advices a.reviews {
+    margin-right: 0;
+    padding: 0;
+    border: none;
+  }
+}
+
+/* pop-in add grade/advice ********************************************************************* */
+/* line 69, ../../../sass/modules/productcomments/productcomments.scss */
+#fancybox-wrap {
+  width: 585px;
+}
+
+/* line 72, ../../../sass/modules/productcomments/productcomments.scss */
+#fancybox-content {
+  width: 585px;
+  border-width: 0;
+}
+
+/* line 76, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form {
+  overflow: hidden;
+  color: #333;
+  text-align: left;
+}
+/* line 80, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form h2 {
+  margin-bottom: 10px;
+}
+/* line 83, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form .title {
+  padding: 10px;
+  font-size: 13px;
+  color: #fff;
+  text-transform: uppercase;
+  background: #333;
+}
+/* line 90, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form ul.grade_content {
+  list-style-type: none;
+  margin: 0 0 20px 0;
+}
+/* line 93, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form ul.grade_content li {
+  width: 50%;
+}
+/* line 96, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form ul.grade_content span {
+  display: inline-block;
+  padding: 0 10px;
+  width: 150px;
+  font-weight: bold;
+}
+/* line 102, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form ul.grade_content .cancel {
+  margin-right: 5px;
+}
+/* line 106, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form .product {
+  padding: 15px;
+}
+/* line 108, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form .product img {
+  border: 1px solid #d6d4d4;
+}
+/* line 111, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form .product .product_desc {
+  line-height: 18px;
+  color: #666;
+}
+/* line 114, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form .product .product_desc .product_name {
+  padding: 10px 0 5px;
+  font-size: 13px;
+  color: #000;
+}
+/* line 121, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form .new_comment_form_content {
+  padding: 15px 25px 15px 15px;
+  background: #f8f8f8;
+}
+@media (max-width: 767px) {
+  /* line 121, ../../../sass/modules/productcomments/productcomments.scss */
+  #new_comment_form .new_comment_form_content {
+    padding-left: 25px;
+  }
+}
+/* line 127, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form .new_comment_form_content .intro_form {
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 12px;
+}
+/* line 133, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form label {
+  display: block;
+  margin: 12px 0 4px 0;
+  font-weight: bold;
+  font-size: 12px;
+}
+/* line 139, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form input,
+#new_comment_form textarea {
+  padding: 0 5px;
+  height: 28px;
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+/* line 147, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form textarea {
+  height: 80px;
+}
+/* line 150, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form .submit {
+  margin-top: 20px;
+  padding: 0;
+  font-size: 13px;
+  text-align: right;
+}
+/* line 157, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form #criterions_list {
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 15px;
+  list-style-type: none;
+}
+/* line 161, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form #criterions_list li {
+  margin-bottom: 10px;
+}
+/* line 164, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form #criterions_list label {
+  display: inline;
+  float: left;
+  margin: 0 10px 0 0;
+}
+/* line 169, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form #criterions_list .star_content {
+  float: left;
+}
+/* line 173, ../../../sass/modules/productcomments/productcomments.scss */
+#new_comment_form #new_comment_form_footer {
+  margin-top: 20px;
+  font-size: 12px;
+}

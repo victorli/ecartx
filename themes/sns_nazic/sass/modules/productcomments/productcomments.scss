@@ -1,0 +1,177 @@
+@import "compass";
+@import '../../_theme_mixin';
+
+.comments_advices {
+	padding-top: 2px;
+	li{
+		display:inline-block;
+		line-height: 30px;
+		@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {	//min 768px max 991px
+			display: block;	
+			line-height: 20px;
+		}
+	}
+	a {  
+		text-decoration: none;	
+		color: $base-body-color;
+		position:relative;	
+		margin-right: 8px;
+		line-height: 30px;
+		padding: 0;
+		display:inline-block;	
+		@media (min-width: $screen-sm) and (max-width: $screen-md-max) { //min 768px max 991px
+			float: none;
+			line-height: 20px;
+		}	
+		&:before{	
+			background: #929292;
+			@include border-radius(50px);
+			color: white;    
+			display: inline-block;
+			font-family: $font-icon;
+			font-size: 15px;
+			font-weight: normal;
+			height: 30px;
+			line-height: 30px;
+			margin-right: 6px;
+			text-align: center;
+			width: 30px;	
+			/*max 1199px*/
+			@media  (max-width: $screen-md-max) {
+				display:none;	
+			}
+		}
+		&.reviews:before{
+			content: "\f0e5";
+		}
+		&.open-comment-form:before{
+			content: "\f040";
+	}
+		&:hover {
+			color:$base-text-color
+		}
+		&.reviews{
+			border-right: 1px solid $base-border-color;
+			padding-right: 30px;
+			margin-right: 9px;
+
+			@media (min-width: $screen-sm) and (max-width: $screen-sm-max) { // min 768px max 991px
+				margin-right: 0;
+				padding: 0;
+				border: none;
+			} 
+		}
+	}
+}
+
+
+/* pop-in add grade/advice ********************************************************************* */
+#fancybox-wrap {
+	width: 585px; 
+}
+#fancybox-content {
+	width: 585px;
+	border-width: 0;
+}
+#new_comment_form {
+	overflow: hidden;
+	color: $base-text-color;
+	text-align: left;	
+	h2{
+		margin-bottom: 10px;
+	}			
+	.title {
+		padding: 10px;
+		font-size: 13px;
+		color: $light-text-color;
+		text-transform: uppercase;
+		background: $dark-background;
+	}
+	ul.grade_content {
+		list-style-type: none;
+		margin: 0 0 20px 0;
+		li{
+			width: 50%;
+		}
+		span{
+			display:inline-block;
+			padding: 0 10px;
+			width: 150px;
+			font-weight: bold;
+		}
+		.cancel {
+			margin-right: 5px;
+		}	
+	}			 
+	.product {
+		padding: 15px;
+		img{
+			border: $main_border;
+		}
+		.product_desc {									
+			line-height: 18px;
+			color: $description-color;
+			.product_name {
+				padding: 10px 0 5px;
+				font-size: 13px;
+				color: #000;
+			}
+		}
+	} 	
+	.new_comment_form_content {
+		padding: 15px 25px 15px 15px;
+		background: #f8f8f8;
+		@media (max-width: $screen-xs-max) { //max 767px
+			padding-left:25px;
+		}
+		.intro_form {
+			padding-bottom: 10px;
+			font-weight: bold;
+			font-size: 12px;
+		}
+	}			
+	label {
+		display: block;
+		margin: 12px 0 4px 0;
+		font-weight: bold;
+		font-size: 12px;
+	}
+	input,
+	textarea  {
+		padding: 0 5px;
+		height: 28px;
+		width: 100%;
+		border: 1px solid #ccc;
+		background: $light-background;
+	}
+	textarea {		
+		height: 80px;		
+	}
+	.submit {
+		margin-top: 20px;
+		padding: 0;
+		font-size: 13px;
+		text-align: right;
+	}
+
+	#criterions_list {
+		border-bottom: 1px solid #CCC;
+		padding-bottom: 15px;
+		list-style-type: none;
+		li{
+			margin-bottom: 10px;
+		}
+		label {
+			display: inline;
+			float: left;
+			margin: 0 10px 0 0;
+		}
+		.star_content {
+			float: left;
+		}
+	}
+	#new_comment_form_footer {
+		margin-top: 20px;
+		font-size: 12px;
+	}
+}

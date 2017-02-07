@@ -1,0 +1,142 @@
+
+.owl-item {
+    > * {
+      @include opacity(0.3);
+      @include scale(0.8);
+      @include transition(all 0.8s ease);
+    }
+    &.active {
+      > * {
+        @include opacity(1);
+        @include scale(1);
+      }
+    }
+  }
+
+.mrb {
+  margin-bottom: 30px;
+  &30 {
+    margin-bottom: 30px;
+  }
+  &50 {
+    margin-bottom: 50px;
+  }
+}
+.owl-pagination {
+	position:relative;
+	bottom:-5px;text-align:center;vertical-align:middle;
+	.owl-page {
+		background:#e4e4e4;
+		border-radius:50%;
+		@include square(12px);
+		display:inline-block;
+		margin:2px 4px;
+		&.active {margin:0 4px ;border:2px solid $color1;background:transparent; 	@include square(16px);}
+	}
+}
+
+
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  img {
+    width: 100%;
+    @include transition(#{"all 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955)"});
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    @include square(100%);
+    left: 0;
+    top: 0;
+    @include transition(#{"all 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955)"});
+    border: 0px solid fade-out($white, 100%);
+    z-index: 1;
+  }
+  &:hover{
+    &:before {
+      background: fade-out(#ffa200, 80%);
+    //  border: 10px solid fadeOut($white, 70%);
+      //box-shadow: 0 0 20px 20px $black inset;
+    }
+    img {
+      @include scale(1.05);
+    }
+  }
+  &.style1 {
+    &:before {display: none;}
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      @include transition(all 0.75s ease);
+      @include opacity(0);
+      border: 0px solid $white;
+      background: $black;
+      
+    }
+    &:hover{
+      &:after {
+        border: 35px solid $white;
+        @include opacity(0.1);
+        @include transition(all 0.3s ease);
+      }
+    }
+  }
+}
+
+
+.banner-slider {
+  display: none;
+  .owl-controls {
+    .owl-pagination {
+      position: absolute;
+      bottom: 10%;
+      left: 0;
+      right: 0;
+      text-align: center;
+      height: 0;
+      .owl-page {
+        @include inline-block();
+        margin: 0 5px;
+        &:hover, &.active {
+          span {
+            &:before {
+              border: 1px solid #fff;
+            }
+          }
+        }
+        span {
+          display: block;
+          @include square(10px);
+          background: #f2f2f2;
+          position: relative;
+          &:before {
+            position: absolute;
+            display: block;
+            @include square(16px);
+            top: 50%;
+            left: 50%;
+            margin: -8px 0 0 -8px;
+            content: '';
+          }
+        }
+      }
+    }
+  }
+}
+.banner2 img {
+  @media (max-width: 640px ){ 
+    width: 100%;
+  }
+}
+
+
+

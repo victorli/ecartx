@@ -1,0 +1,92 @@
+/* line 4, ../../../sass/modules/carriercompare/style.scss */
+#compare_shipping .form-group {
+  line-height: normal;
+  margin-bottom: 10px;
+}
+/* line 8, ../../../sass/modules/carriercompare/style.scss */
+#compare_shipping .form-group label {
+  margin-bottom: 6px;
+}
+/* line 10, ../../../sass/modules/carriercompare/style.scss */
+#compare_shipping .form-group .form-control {
+  width: 263px;
+}
+/* line 14, ../../../sass/modules/carriercompare/style.scss */
+#compare_shipping .form-group.last {
+  margin-bottom: 20px;
+}
+/* line 16, ../../../sass/modules/carriercompare/style.scss */
+#compare_shipping .form-group.last input {
+  margin-bottom: 3px;
+}
+/* line 20, ../../../sass/modules/carriercompare/style.scss */
+#compare_shipping .table {
+  background: #fff;
+}
+/* line 27, ../../../sass/modules/carriercompare/style.scss */
+#compare_shipping .table thead tr th {
+  background: #fff;
+  padding: 4px 10px 3px 10px;
+}
+/* line 35, ../../../sass/modules/carriercompare/style.scss */
+#compare_shipping .table tbody td {
+  margin: 0;
+}
+/* line 38, ../../../sass/modules/carriercompare/style.scss */
+#compare_shipping .table tbody td.carrier_action {
+  width: 54px;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+/* line 44, ../../../sass/modules/carriercompare/style.scss */
+#compare_shipping .table tbody td.carrier_action input {
+  margin: 0;
+}
+
+/* line 54, ../../../sass/modules/carriercompare/style.scss */
+#availableCarriers .table {
+  margin-bottom: 20px;
+}
+
+/* line 58, ../../../sass/modules/carriercompare/style.scss */
+#compare_shipping ul#carriercompare_errors_list {
+  color: red;
+}
+
+/* line 61, ../../../sass/modules/carriercompare/style.scss */
+#compare_shipping_form {
+  padding-bottom: 20px;
+}
+
+/* line 62, ../../../sass/modules/carriercompare/style.scss */
+#compare_shipping ul#carriercompare_errors_list li {
+  margin-left: 30px;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* line 68, ../../../sass/modules/carriercompare/style.scss */
+#SE_AjaxDisplay {
+  text-align: center;
+  display: none;
+}
+
+/* line 74, ../../../sass/modules/carriercompare/style.scss */
+#SE_AjaxDisplay img {
+  width: 15px;
+}
+
+/* line 80, ../../../sass/modules/carriercompare/style.scss */
+.SE_SubmitRefreshCard button {
+  float: left;
+}
+/* line 83, ../../../sass/modules/carriercompare/style.scss */
+.SE_SubmitRefreshCard button#carriercompare_submit {
+  margin-right: 10px;
+}
+
+/* line 88, ../../../sass/modules/carriercompare/style.scss */
+#carriercompare_errors {
+  display: none;
+}

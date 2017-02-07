@@ -1,0 +1,36 @@
+.price {
+	font-size: 100%;
+	font-weight: bold;
+	color: $color1;
+	white-space: nowrap;
+	
+	&.product-price {
+		font: 600 21px / 26px $font-custom;
+		color: $color1;
+	}
+}
+.old-price {
+	color: #ccc;
+	font-size: 92%;
+	text-decoration: line-through;
+	&.product-price {
+	//	margin-left: 5px;
+		margin-right: 5px;
+	}
+}
+.special-price {
+	color: $product-special-price-color;
+}
+.price-percent-reduction {
+	display: none;
+	background: #f13340;
+	border: 1px solid #d02a2c;
+	font: 600 21px / 24px $font-custom;
+	color: $light-text-color;
+	padding: 0 5px 0 3px;
+	&.small {
+		font: 700 14px / 17px $font-family;
+		padding: 1px 6px;
+	}
+}
+

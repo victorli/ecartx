@@ -1,0 +1,126 @@
+@media (max-width: 768px) {
+	#sns_cpanel {display: none;}
+}
+/* line 4, ../sass/sns-cpanel.scss */
+#sns_cpanel {
+  background: #FFF;
+  border: 1px solid #CCC;
+  border-bottom: 5px solid #CCC;
+  border-left: none;
+  color: #555;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  padding: 0 0 15px;
+  position: fixed;
+  top: 7%;
+  width: 310px;
+  z-index: 9999;
+  left: -311px;
+}
+/* line 18, ../sass/sns-cpanel.scss */
+#sns_cpanel .minicolors-input {
+  height: 34px;
+}
+/* line 21, ../sass/sns-cpanel.scss */
+#sns_cpanel .cpanel-head {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 15px 5px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #CCC;
+}
+/* line 29, ../sass/sns-cpanel.scss */
+#sns_cpanel #sns_config_btn {
+  width: 38px;
+  height: 123px;
+  background: url(../img/cpanel.png) no-repeat;
+  position: absolute;
+  right: -39px;
+  top: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-out 0s;
+  -o-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+/* line 37, ../sass/sns-cpanel.scss */
+#sns_cpanel #sns_config_btn i {
+  font-size: 20px;
+  position: absolute;
+  top: 18px;
+  left: 7px;
+  color: #ccc;
+}
+/* line 45, ../sass/sns-cpanel.scss */
+#sns_cpanel #sns_cpanel_accor {
+  padding: 15px 15px 0px;
+}
+/* line 47, ../sass/sns-cpanel.scss */
+#sns_cpanel #sns_cpanel_accor .accordion-heading {
+  border-top: 1px solid #dedede;
+  padding: 8px 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+}
+/* line 53, ../sass/sns-cpanel.scss */
+#sns_cpanel #sns_cpanel_accor .accordion-heading:first-child {
+  border-top: none;
+}
+/* line 56, ../sass/sns-cpanel.scss */
+#sns_cpanel #sns_cpanel_accor .accordion-heading a {
+  color: #333;
+}
+/* line 58, ../sass/sns-cpanel.scss */
+#sns_cpanel #sns_cpanel_accor .accordion-heading a:hover, #sns_cpanel #sns_cpanel_accor .accordion-heading a:active, #sns_cpanel #sns_cpanel_accor .accordion-heading a:focus {
+  color: #333;
+}
+/* line 64, ../sass/sns-cpanel.scss */
+#sns_cpanel #sns_cpanel_accor .collapse .accordion-inner {
+  padding: 5px 0 10px;
+}
+/* line 69, ../sass/sns-cpanel.scss */
+#sns_cpanel .button-action {
+  margin: 0 15px;
+  padding-top: 15px;
+  border-top: 1px solid #dedede;
+  text-align: right;
+}
+/* line 74, ../sass/sns-cpanel.scss */
+#sns_cpanel .button-action .btn {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+/* line 79, ../sass/sns-cpanel.scss */
+#sns_cpanel .bg-pattern {
+  max-height: 150px;
+  overflow: auto;
+}
+/* line 82, ../sass/sns-cpanel.scss */
+#sns_cpanel .bg-pattern label {
+  padding: 0;
+  margin: 0 5px 5px 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+}
+/* line 87, ../sass/sns-cpanel.scss */
+#sns_cpanel .bg-pattern label.active {
+  border: 1px solid #FF0A0A;
+}
+/* line 91, ../sass/sns-cpanel.scss */
+#sns_cpanel .bg-pattern input {
+  display: none;
+}
+#sns_cpanel .radio_img_group {
+	max-height: 110px;
+	overflow: auto;
+}
+#sns_cpanel .radio_img_group label {
+	margin-bottom: 0;
+}
+#scsscompile {
+	position: fixed;
+	top: 50%;
+	right: 20px;
+}
