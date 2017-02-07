@@ -52,7 +52,8 @@ class AlipayxRedirectModuleFrontController extends ModuleFrontController
     	$sql = "select * from "._DB_PREFIX_."alipayx_notify ";
     	$sql .= "where out_trade_no=".$id_order." and trade_status='".$trade_status."'";
     	
-    	$result = Db::getInstance()->query($sql);
-    	return $result;
+    	$result = Db::getInstance()->executeS($sql);
+    	
+    	return is_array($result) ? ((count($result) > 0) ? true : false) : false;
     }
 }
