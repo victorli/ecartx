@@ -3752,6 +3752,34 @@ exit;
         }
         return $base;
     }
+    
+    public static function sendSMS($vendor='aliyun',$signName,$tplCode,$recNum,$parms){
+    	
+    	if(!isset($vendor) || $vendor == 'aliyun'){
+    		require_once _PS_CLASS_DIR_.'aliyun-php-sdk-sms/aliyun-php-sdk-core/Config.php';
+    		use Sms\Request\V20160927 as Sms;
+    		
+    		$iClientProfile = DefaultProfile::getProfile($regionId, $accessKeyId, $accessSecret);
+    		$client = new DefaultAcsClient($iClientProfile);
+    		$request = new Sms\SingleSendSmsRequest();
+    		$request->setSignName($signName);
+    		$request->setTemplateCode($tplCode);
+    		$request->setRecNum($recNum);
+    		$request->setParamString($parms);
+    		
+    		try{
+    			$response = $client->getAcsResponse($request);
+    			if(isset($response->Model) || isset($response->RequestId))
+    				return true;
+    		}catch(ClientException $e){
+    			PrestaShopLogger::addLog('Error to send sms by aliyun for code: '.$e->getErrorCode().' and message: '.$e->getErrorMessage());
+    		}catch(ServerException $e){
+    			PrestaShopLogger::addLog('Error to send sms by aliyun for code: '.$e->getErrorCode().' and message: '.$e->getErrorMessage());
+    		}
+    	}
+    	
+    	return false;
+    }
 }
 
 /**
