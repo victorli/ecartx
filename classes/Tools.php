@@ -3756,12 +3756,12 @@ exit;
     public static function sendSMS($vendor='aliyun',$signName,$tplCode,$recNum,$parms){
     	
     	if(!isset($vendor) || $vendor == 'aliyun'){
-    		require_once _PS_CLASS_DIR_.'aliyun-php-sdk-sms/aliyun-php-sdk-core/Config.php';
-    		use Sms\Request\V20160927 as Sms;
+    		require_once _PS_CLASS_DIR_.'sms/aliyun-php-sdk-core/Config.php';
+    		require_once _PS_CLASS_DIR_.'sms/SingleSendSmsRequest.php';
     		
     		$iClientProfile = DefaultProfile::getProfile($regionId, $accessKeyId, $accessSecret);
     		$client = new DefaultAcsClient($iClientProfile);
-    		$request = new Sms\SingleSendSmsRequest();
+    		$request = new SingleSendSmsRequest();
     		$request->setSignName($signName);
     		$request->setTemplateCode($tplCode);
     		$request->setRecNum($recNum);
