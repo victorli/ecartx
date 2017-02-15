@@ -19,14 +19,6 @@
 		<fontfamily>Arial</fontfamily>
 		<fontfamily>Tahoma</fontfamily>
 	</fontfamilys>
-	<googlefonts>
-		<googlefont>Anton|Anton</googlefont>
-		<googlefont>Roboto+Condensed|Roboto Condensed</googlefont>
-		<googlefont>Port+Lligat+Slab|Port Lligat Slab</googlefont>
-		<googlefont>PT+Sans:400,700|PT Sans</googlefont>
-		<googlefont>Open+Sans:300,400,600,700|Open Sans</googlefont>
-
-	</googlefonts>
 </theme>
 
 
