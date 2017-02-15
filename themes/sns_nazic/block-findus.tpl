@@ -1,3 +1,4 @@
+{******
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 <script>
 	jQuery(document).ready(function($){
@@ -62,4 +63,4 @@
 	});
 </script>
 <!-- end google map -->
-
+******}
