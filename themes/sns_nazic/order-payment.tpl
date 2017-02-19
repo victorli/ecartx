@@ -199,10 +199,10 @@
 												</div>
 											</td>
 										{/if}
-										<td colspan="{if !$voucherAllowed}3{else}2{/if}" class="text-right total_price_container">
+										<td colspan="{if !$voucherAllowed}4{else}2{/if}" class="text-right total_price_container">
 											<span>{l s='Total'}</span>
 										</td>
-										<td colspan="1" class="price total_price_container" id="total_price_container">
+										<td colspan="2" class="price total_price_container" id="total_price_container">
 											<span id="total_price">{displayPrice price=$total_price_without_tax}</span>
 										</td>
 									</tr>

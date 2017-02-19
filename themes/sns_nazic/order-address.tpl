@@ -38,7 +38,7 @@
 {/if}
 <div class="addresses clearfix">
 	<div class="row">
-		<div class="col-xs-12 col-sm-6">
+		<div class="col-xs-12 col-sm-6" {if !$use_invoice_address} style="margin-bottom:5px;"{/if}>
 			<div class="address_delivery select form-group selector1">
 				<label for="id_address_delivery">{if $cart->isVirtualCart()}{l s='Choose a billing address:'}{else}{l s='Choose a delivery address:'}{/if}</label>
 				<select name="id_address_delivery" id="id_address_delivery" class="address_select form-control">
@@ -49,12 +49,12 @@
 					{/foreach}
 				</select><span class="waitimage"></span>
 			</div>
-			<p class="checkbox addressesAreEquals"{if $cart->isVirtualCart()} style="display:none;"{/if}>
+			<p class="checkbox addressesAreEquals"{if $cart->isVirtualCart()  || !$use_invoice_address} style="display:none;"{/if}>
 				<input type="checkbox" name="same" id="addressesAreEquals" value="1"{if $cart->id_address_invoice == $cart->id_address_delivery || $addresses|@count == 1} checked="checked"{/if} />
 				<label for="addressesAreEquals">{l s='Use the delivery address as the billing address.'}</label>
 			</p>
 		</div>
-		<div class="col-xs-12 col-sm-6">
+		<div class="col-xs-12 col-sm-6"  {if !$use_invoice_address} style="display:none;"{/if}>
 			<div id="address_invoice_form" class="select form-group selector1"{if $cart->id_address_invoice == $cart->id_address_delivery} style="display: none;"{/if}>
 				{if $addresses|@count > 1}
 					<label for="id_address_invoice" class="strong">{l s='Choose a billing address:'}</label>
@@ -81,7 +81,7 @@
 			<ul class="address item box" id="address_delivery">
 			</ul>
 		</div>
-		<div class="col-xs-12 col-sm-6">
+		<div class="col-xs-12 col-sm-6" {if !$use_invoice_address}style="display:none;"{/if}>
 			<ul class="address alternate_item{if $cart->isVirtualCart()} full_width{/if} box" id="address_invoice">
 			</ul>
 		</div>
