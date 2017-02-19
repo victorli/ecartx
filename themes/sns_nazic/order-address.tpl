@@ -38,7 +38,7 @@
 {/if}
 <div class="addresses clearfix">
 	<div class="row">
-		<div class="col-xs-12 col-sm-6" {if !$use_invoice_address} style="margin-bottom:5px;"{/if}>
+		<div class="col-xs-12 {if $use_invoice_address} col-sm-6 {else} col-sm-12 {/if}" {if !$use_invoice_address} style="margin-bottom:5px;"{/if}>
 			<div class="address_delivery select form-group selector1">
 				<label for="id_address_delivery">{if $cart->isVirtualCart()}{l s='Choose a billing address:'}{else}{l s='Choose a delivery address:'}{/if}</label>
 				<select name="id_address_delivery" id="id_address_delivery" class="address_select form-control">
