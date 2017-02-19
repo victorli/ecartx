@@ -22,7 +22,7 @@ if (!defined('_PS_VERSION_')) exit;
 
 class SNSToolbar extends Module {
 
-    private $qr_api_url = '//chart.apis.google.com/chart?';
+    private $qr_api_url = 'http://pan.baidu.com/share/qrcode?';
     
 	public function __construct()
 	{
@@ -70,7 +70,7 @@ class SNSToolbar extends Module {
 	}
     private function _generateQR()
     {
-        $image_link = $this->qr_api_url.'chs=150x150&cht=qr&chld=L|0&chl='.urlencode(Tools::getProtocol(Tools::usingSecureMode()).$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']); 
+        $image_link = $this->qr_api_url.'w=150&h=150&url='.urlencode(Tools::getProtocol(Tools::usingSecureMode()).$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']); 
         $this->smarty->assign(array(
             'size' => 150,
             'image_link' => $image_link

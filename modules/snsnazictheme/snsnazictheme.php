@@ -440,12 +440,14 @@ class SNSNazicTheme extends SNSNazicCore {
 		$SNS_NAZ_BODYCOLOR  		= $snsvar['SNS_NAZ_BODYCOLOR'];
 		$SNS_NAZ_BODYIMG    		= $snsvar['SNS_NAZ_BODYIMG'];
 		
+		/**
 		$googlefontName = explode('|', $SNS_NAZ_GOOGLEFONT);
 		$this->context->controller->addCSS('https://fonts.googleapis.com/css?family=' . $googlefontName[0], 'all');
 		$gfontcss = '';
 		if($SNS_NAZ_GOOGLETARGETS) {
 			$gfontcss .= $SNS_NAZ_GOOGLETARGETS . '{ font-family: '.$googlefontName[1].' !important; }';
 		}
+		***/
 		$patternsURL = $this->getBaseUrl().__PS_BASE_URI__."themes/"._THEME_NAME_."/img/patterns/";
 		$SNS_NAZ_STYLE = '<style type="text/css">';
 		$SNS_NAZ_STYLE .= 'body{ 
