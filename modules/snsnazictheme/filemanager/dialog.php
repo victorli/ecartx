@@ -180,7 +180,7 @@ else
 				height: 100%;
 			}
 		</style><![endif]-->
-		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript">
 			if (typeof jQuery === 'undefined') {
 				document.write(unescape("%3Cscript src='js/jquery.js' type='text/javascript'%3E%3C/script%3E"));

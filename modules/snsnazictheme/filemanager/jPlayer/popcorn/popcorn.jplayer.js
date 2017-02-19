@@ -22,7 +22,7 @@
 
 (function(Popcorn) {
 
-	var JQUERY_SCRIPT = 'http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js', // Used if jQuery not already present.
+	var JQUERY_SCRIPT = 'http://lib.sinaapp.com/js/jquery/1.8/jquery.min.js', // Used if jQuery not already present.
 	JPLAYER_SCRIPT = 'http://www.jplayer.org/2.4.0/js/jquery.jplayer.min.js', // Used if jPlayer not already present.
 	JPLAYER_SWFPATH = 'http://www.jplayer.org/2.4.0/js/Jplayer.swf', // Used if not specified in jPlayer options via SRC Object.
 	SOLUTION = 'html,flash', // The default solution option.
