@@ -243,7 +243,7 @@
 
 
 
-						<div id="sns_main" class="center_column col-xs-12 col-md-{$cols|intval}">
+						<div id="sns_main" class="center_column col-xs-12 col-md-{$cols|intval}" style="background-color:white;">
 	                        <div id="sns_maintop"></div>
 	                        <div id="sns_mainmidle">
 	                        	<div id="center_column">
