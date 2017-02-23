@@ -22,6 +22,8 @@ class WxpayPaymentModuleFrontController extends ModuleFrontController{
 	public function initContent(){
 		parent::initContent();
 		
+		$this->context->smarty->assign('hide_left_column',1);
+		
 		$cart = $this->context->cart;
 		
 		$this->context->smarty->assign(array(
