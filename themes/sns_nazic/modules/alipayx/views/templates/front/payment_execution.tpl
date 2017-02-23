@@ -98,7 +98,7 @@
 
             </a>
 
-            <button  class="btnsns"  type="button" onclick="getAlipayRequestUrl();">
+            <button  class="btnsns pull-right"  type="button" onclick="getAlipayRequestUrl();">
 
                 <span>{l s='I confirm my order' mod='alipayx'}<i class="icon-chevron-right right"></i></span>
 
