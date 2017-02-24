@@ -22,6 +22,8 @@ class AlipayxPaymentModuleFrontController extends ModuleFrontController{
 	public function initContent(){
 		parent::initContent();
 		
+		$this->addjqueryPlugin('fancybox');
+		
 		$this->context->smarty->assign('hide_left_column',1);
 
 		$cart = $this->context->cart;
