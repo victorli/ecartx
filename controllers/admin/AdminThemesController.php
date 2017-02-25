@@ -1778,7 +1778,7 @@ class AdminThemesControllerCore extends AdminController
                 }
             }
 
-            $fields_form[2] = array(
+            $fields_form[3] = array(
                 'form' => array(
                     'tinymce' => false,
                     'legend' => array(
