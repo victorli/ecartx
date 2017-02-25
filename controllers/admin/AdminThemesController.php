@@ -1743,6 +1743,27 @@ class AdminThemesControllerCore extends AdminController
                     )
                 ),
             );
+            
+            $fields_form[2] = array(
+            		'form' => array(
+            				'tinymce' => false,
+            				'legend' => array(
+            						'title' => $this->l('Install from the directory'),
+            						'icon' => 'icon-picture'
+            				),
+            				'input' => array(
+            						array(
+            								'type' => 'text',
+            								'label' => $this->l('Theme directory name'),
+            								'desc' => $this->l('Using to install theme has beed deploy.'),
+            								'name' => 'themedirname'
+            						),
+            				),
+            				'submit' => array(
+            						'title' => $this->l('Save'),
+            				)
+            		),
+            );
 
             $theme_archive_server = array();
             $files = scandir(_PS_ALL_THEMES_DIR_);
