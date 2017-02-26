@@ -1489,6 +1489,15 @@ class AdminThemesControllerCore extends AdminController
                 } else {
                     $this->errors[] = $this->l('Zip file seems to be broken');
                 }
+            }elseif(Tools::getValue('themedirname') != ''){
+            	$theme_dir = _PS_ALL_THEMES_DIR_.Tools::getValue('themedirname');
+            	if(file_exists($theme_dir)){
+            		if(!$this->installTheme($theme_dir)){
+            			$this->errors[] = $this->l('Error to install theme %s',Tools::getValue('themedirname'));
+            		}
+            	}else{
+            		$this->errors[] = $this->l('Theme directory does not exist.');
+            	}
             } else {
                 $this->errors[] = $this->l('You must upload or enter a location of your zip');
             }
