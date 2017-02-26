@@ -6,19 +6,6 @@
 		<one_page_checkout available="true" />
 		<store_locator available="true" />
 	</version>
-	<fontsizes>
-		<fontsize>10px</fontsize>
-		<fontsize>11px</fontsize>
-		<fontsize>12px</fontsize> 
-		<fontsize>13px</fontsize>
-		<fontsize>14px</fontsize>
-		<fontsize>15px</fontsize>
-		<fontsize>16px</fontsize>
-	</fontsizes>
-	<fontfamilys>
-		<fontfamily>Arial</fontfamily>
-		<fontfamily>Tahoma</fontfamily>
-	</fontfamilys>
 </theme>
 
 
