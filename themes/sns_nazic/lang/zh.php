@@ -646,6 +646,7 @@ $_LANG['product_861c0c6ef832cd96c5fe152f9d610973'] = '您节省';
 $_LANG['product_887ee91702c962a70b87cbef07bbcaec'] = '不含税';
 $_LANG['product_8c751c4aab0db0b811cdfbddf0b4ea56'] = '库存：';
 $_LANG['product_98edb85b00d9527ad5acebe451b3fae6'] = '配件';
+$_LANG['product_9981d2af851e4b4a4ea612d59f08ab9c'] = '其它视图';
 $_LANG['product_9a9a97ca85af73f90515e72745f730f0'] = '代替';
 $_LANG['product_9dea4016dbcc290b773ab2fae678aaa8'] = '项';
 $_LANG['product_a134618182b99ff9151d7e0b6b92410a'] = '（不受打折影响）';
