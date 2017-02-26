@@ -1493,7 +1493,9 @@ class AdminThemesControllerCore extends AdminController
             	$theme_dir = _PS_ALL_THEMES_DIR_.Tools::getValue('themedirname');
             	if(file_exists($theme_dir)){
             		$theme = new Theme();
+            		$theme->name = Tools::getValue('themedirname');
             		$theme->directory = Tools::getValue('themedirname');
+            		
             		if(!$theme->add()){
             			$this->errors[] = $this->l('Error to install theme '.Tools::getValue('themedirname'));
             		}
