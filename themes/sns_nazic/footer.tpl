@@ -54,11 +54,11 @@
 			
 			
 			{if 
-				!($mobile_device) &&
+				!$mobile_device && (
 				(isset($SNS_NAZ_FMIDDLE1) && $SNS_NAZ_FMIDDLE1) || 
 				(isset($SNS_NAZ_FMIDDLE2) && $SNS_NAZ_FMIDDLE2) || 
 				(isset($SNS_NAZ_FMIDDLE3) && $SNS_NAZ_FMIDDLE3) ||
-				(isset($SNS_NAZ_FMIDDLE4) && $SNS_NAZ_FMIDDLE4)
+				(isset($SNS_NAZ_FMIDDLE4) && $SNS_NAZ_FMIDDLE4))
 			}
 			<div id="sns_footer_top" class="footer wrap">
 				<div class="container">
