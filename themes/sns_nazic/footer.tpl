@@ -54,6 +54,7 @@
 			
 			
 			{if 
+				!($mobile_device) &&
 				(isset($SNS_NAZ_FMIDDLE1) && $SNS_NAZ_FMIDDLE1) || 
 				(isset($SNS_NAZ_FMIDDLE2) && $SNS_NAZ_FMIDDLE2) || 
 				(isset($SNS_NAZ_FMIDDLE3) && $SNS_NAZ_FMIDDLE3) ||
@@ -136,7 +137,6 @@
 						<div class="col-sm-6">
 							<div class="sns-copyright">
 								{$SNS_NAZ_COPYRIGHT}
-								Designed by <a href="http://www.snstheme.com/" data-toggle="tooltip" data-original-title="Visit SNSTheme.Com!" title="">SNSTheme.Com</a>.
 							</div>
 						</div>
 						<div class="col-sm-6">
